@@ -148,7 +148,6 @@
   height: 105px;
   display: table-cell;
   width: 1%;
-  padding: 12px 12px 0;
 }
 .navbar__link {
   color: #fff;
@@ -158,8 +157,6 @@
 
 .logo__box {
   display: block;
-  position: relative;
-  top: -35px;
 }
 .logo__image {
   display: inline-block;
