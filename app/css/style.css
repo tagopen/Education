@@ -38,6 +38,7 @@
   border: 1px solid #CCC;
   color: #4F4F4F;
   font: 400 12px/1 "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+  -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
@@ -138,43 +139,24 @@
 /* ---------------------------------------- */
 /* header style */
 .navbar {
-  height: 85px;
+  position: relative;
   background-color: #122d4f;
+  text-align: center;
 }
-.navbar__item {
+
+.nav__item {
   padding-top: 25px;
 }
-.navbar__logo {
-  height: 105px;
-  display: table-cell;
-  width: 1%;
-}
-.navbar__link {
+.nav__link {
+  padding: 25px 15px;
   color: #fff;
   text-transform: uppercase;
   font: 400 13px/16px "LetoSansBold", sans-serif;
 }
 
-.logo__box {
-  display: block;
-}
-.logo__image {
-  display: inline-block;
-  vertical-align: top;
-}
-.logo__text {
-  display: inline-block;
-}
-
-@media only screen and (min-width: 992px) {
-  .navbar {
-    height: 105px;
-  }
-  .navbar__item {
-    padding-top: 40px;
-  }
-  .navbar__logo {
-    height: 125px;
-    padding: 0 18px 0;
-  }
+.navbar-header {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
 }
