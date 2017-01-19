@@ -1,93 +1,128 @@
 <!DOCTYPE html>
 <html lang="ru" prefix="og: http://ogp.me/ns#">
-  <head>
-    <title>Главная страница</title>  
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<head>
+  <title>Главная страница</title>  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <!-- Meta SEO - Description, Keywords, Title -->
-    <meta name="title" content="" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
+  <!-- Meta SEO - Description, Keywords, Title -->
+  <meta name="title" content="" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
 
-    <!-- Multilanguage localization -->
-    <link rel="alternate" href="/" hreflang="x-default" />
-    <link rel="alternate" href="/en/" hreflang="en" />
-    <link rel="alternate" href="/ru/" hreflang="ru" />
-    
-    <!-- Mobile viewport optimization -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="HandheldFriendly" content="true" />
-    <meta name="MobileOptimized" content="320" />
-    <!--[if IEMobile]><meta http-equiv="cleartype" content="on" /><![endif]-->
+  <!-- Multilanguage localization -->
+  <link rel="alternate" href="/" hreflang="x-default" />
+  <link rel="alternate" href="/en/" hreflang="en" />
+  <link rel="alternate" href="/ru/" hreflang="ru" />
 
-    <!-- Replace favicon.ico and apple-touch-icon.png -->
-    <link rel="shortcut icon" type="image/png" href="img/logo/favicon.png" />
-    <link rel="apple-touch-icon" type="image/png" href="img/logo/apple-touch-icon.png" />
+  <!-- Mobile viewport optimization -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="MobileOptimized" content="320" />
+  <!--[if IEMobile]><meta http-equiv="cleartype" content="on" /><![endif]-->
 
-    <!-- Disables automatic  of possible phone numbers and address in Safari on iOS -->
-    <meta name="format-detection" content="telephone=no">
-    <meta name="format-detection" content="address=no"/>
+  <!-- Replace favicon.ico and apple-touch-icon.png -->
+  <link rel="shortcut icon" type="image/png" href="img/logo/favicon.png" />
+  <link rel="apple-touch-icon" type="image/png" href="img/logo/apple-touch-icon.png" />
 
-    <!-- Microformats Open Graph -->
-    <meta property="og:title" content="My Site"/>
-    <meta property="og:site_name" content="My Site"/>
-    <meta property="og:description" content="My Site is cool"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:locale" content="ru_RU" />
-    <meta property="og:locale:alternate" content="en_US" />
-    <meta property="og:image" content="img/logo/microformat.png"/>
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:url" content="http://url.com"/>
+  <!-- Disables automatic  of possible phone numbers and address in Safari on iOS -->
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="address=no"/>
 
-    <!-- Microformats Twitter Cards -->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@flickr" />
-    <meta name="twitter:title" content="My Site" />
-    <meta name="twitter:description" content="My Site is cool" />
-    <meta name="twitter:image" content="img/logo/microformat.png" />
+  <!-- Microformats Open Graph -->
+  <meta property="og:title" content="My Site"/>
+  <meta property="og:site_name" content="My Site"/>
+  <meta property="og:description" content="My Site is cool"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:image" content="img/logo/microformat.png"/>
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:url" content="http://url.com"/>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Microformats Twitter Cards -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@flickr" />
+  <meta name="twitter:title" content="My Site" />
+  <meta name="twitter:description" content="My Site is cool" />
+  <meta name="twitter:image" content="img/logo/microformat.png" />
 
-    <!-- Font-Awesome CSS -->
-    <link rel="stylesheet" href="css/font-awesome.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.css">
 
-    <!-- Custom CSS  -->
-    <link rel="stylesheet" href="css/style.css">
+  <!-- Font-Awesome CSS -->
+  <link rel="stylesheet" href="css/font-awesome.css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <!-- jQuery -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
-    <script src="js/jquery.js"></script>
+  <!-- Custom CSS  -->
+  <link rel="stylesheet" href="css/style.css">
 
-    <!-- Bootstrap JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+  <header class="header">
+     <nav class="navbar" role="navigation">
+      <div class="container-fluid navbar__container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="pull-right navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse--1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar navbar-toggle__icon-bar"></span>
+            <span class="icon-bar navbar-toggle__icon-bar navbar-toggle__icon-bar--middle"></span>
+            <span class="icon-bar navbar-toggle__icon-bar"></span>
+          </button>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-collapse--1">
+          <ul class="nav nav-justified">
+            <li class="navbar__item active"><a class="navbar__link" href="#">Наши преподаватели</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#">Учебные программы</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#">Другие услуги</a></li>
+            <div class="navbar__logo logo">
+              <a href="/" class="row logo__box">
+                <span class="col-xs-6 logo__text logo__text--small">in<br>focus</span>
+                <span class="col-xs-6 logo__image">
+                  <img class="img-responsive" src="img/logo/logo320.png" alt="Logo">
+                </span>  
+                <span class="col-xs-12 logo__text logo__text--big">EDUCATION</span>
+              </a>
+            </div>
+            <li class="navbar__item"><a class="navbar__link" href="#">Стоимость обучения</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#">Отзывы учеников</a></li>
+            <li class="navbar__item"><a class="navbar__link" href="#">Свяжитесь с нами</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav><!-- /.navbar -->
+  </header>
+  <!-- jQuery -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+  <script src="js/jquery.js"></script>
 
-    <!-- Old browsers reject JavaScript -->
-    <script src="js/jquery.reject.js"></script>
+  <!-- Bootstrap JavaScript -->
+  <script src="js/bootstrap.min.js"></script>
 
-    <!-- Equial Heights JavaScript -->
-    <script src="js/jQuery.equalHeights.js"></script>
+  <!-- Old browsers reject JavaScript -->
+  <script src="js/jquery.reject.js"></script>
 
-    <!-- Navbar-fixed-top JavaScript -->
-    <script src="js/classie.js"></script>
-    <script src="js/cbpAnimatedHeader.min.js"></script>
+  <!-- Equial Heights JavaScript -->
+  <script src="js/jQuery.equalHeights.js"></script>
 
-    <!-- Validation Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
-    
-    <!-- Slick-Slider JavaScript -->
-    <script src="js/slick.js"></script>
+  <!-- Navbar-fixed-top JavaScript -->
+  <script src="js/classie.js"></script>
+  <script src="js/cbpAnimatedHeader.min.js"></script>
 
-    <!-- Custom JavaScript -->
-    <script src="js/main.js"></script>
-  </body>
+  <!-- Validation Form JavaScript -->
+  <script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js"></script>
+
+  <!-- Slick-Slider JavaScript -->
+  <script src="js/slick.js"></script>
+
+  <!-- Custom JavaScript -->
+  <script src="js/main.js"></script>
+</body>
 </html>

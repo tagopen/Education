@@ -1,3 +1,4 @@
+/* fonts */
 /* ------------------------------------------------------------------ */
 /* O L D - B R O W S E R    J R E J E C T    N O T I F I C A T I O N  */
 /* ------------------------------------------------------------------ */
@@ -100,6 +101,27 @@
 /* ---------------------------------------- */
 /* G E N E R A L    S T Y L E               */
 /* ---------------------------------------- */
+@font-face {
+  font-family: "LetoSans";
+  src: url("../font/LetoSans/LetoSans.eot");
+  src: url("../font/LetoSans/LetoSans.eot?#iefix") format("embedded-opentype"), url("../font/LetoSans/LetoSans.woff2") format("woff2"), url("../font/LetoSans/LetoSans.woff") format("woff"), url("../font/LetoSans/LetoSans.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LetoSansThin";
+  src: url("../font/LetoSansThin/LetoSansThin.eot");
+  src: url("../font/LetoSansThin/LetoSansThin.eot?#iefix") format("embedded-opentype"), url("../font/LetoSansThin/LetoSansThin.woff2") format("woff2"), url("../font/LetoSansThin/LetoSansThin.woff") format("woff"), url("../font/LetoSansThin/LetoSansThin.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LetoSansBold";
+  src: url("../font/LetoSansBold/LetoSansBold.eot");
+  src: url("../font/LetoSansBold/LetoSansBold.eot?#iefix") format("embedded-opentype"), url("../font/LetoSansBold/LetoSansBold.woff2") format("woff2"), url("../font/LetoSansBold/LetoSansBold.woff") format("woff"), url("../font/LetoSansBold/LetoSansBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 .ic {
   display: inline-block;
   vertical-align: middle;
@@ -114,6 +136,48 @@
 /* ---------------------------------------- */
 /* H O M E    P A G E    S T Y L E          */
 /* ---------------------------------------- */
-body {
-  background-color: yellow;
+/* header style */
+.navbar {
+  height: 85px;
+  background-color: #122d4f;
+}
+.navbar__item {
+  padding-top: 25px;
+}
+.navbar__logo {
+  height: 105px;
+  display: table-cell;
+  width: 1%;
+  padding: 12px 12px 0;
+}
+.navbar__link {
+  color: #fff;
+  text-transform: uppercase;
+  font: 400 13px/16px "LetoSansBold", sans-serif;
+}
+
+.logo__box {
+  display: block;
+  position: relative;
+  top: -35px;
+}
+.logo__image {
+  display: inline-block;
+  vertical-align: top;
+}
+.logo__text {
+  display: inline-block;
+}
+
+@media only screen and (min-width: 992px) {
+  .navbar {
+    height: 105px;
+  }
+  .navbar__item {
+    padding-top: 40px;
+  }
+  .navbar__logo {
+    height: 125px;
+    padding: 0 18px 0;
+  }
 }
