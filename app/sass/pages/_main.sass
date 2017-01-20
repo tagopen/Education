@@ -3,6 +3,9 @@
 +font('LetoSansThin', 'LetoSansThin')
 +font('LetoSansBold', 'LetoSansBold')
 +ic
+@each $ic in uk, scroll
+  .ic--#{$ic}
+    +sb(#{$ic})
 html
   position: relative
   min-height: 100%
@@ -10,7 +13,7 @@ body
   margin-bottom: $footer-height
   padding-top: 93px
 +comment("home page style")
-+cm("header style")
++cm("navbar style")
 .navbar
   background-color: #122d4f
   text-align: center
@@ -37,14 +40,121 @@ body
     &--footer
       background-color: #192840
   &__icon
-    color: #fff    
-+r(768)
+    color: #fff   
 +r(992)
   .navbar-header
     position: absolute
     left: 50%
     top: 0
-    transform: translateX(-50%)
+    transform: translateX(-50%) 
++cm("header slider style")   
+.slider
+  &__heading 
+    color: #fff
+    font: 400 28px/32px $font-leto
+    margin: 0 0 25px
+    text-transform: uppercase
+  &__subheading
+    color: #fff
+    font: 400 17px/20px $font-leto 
+    margin: 0 
+  &__item
+    &--1
+      background: url(../img/slider1.jpg) no-repeat
+      +cover
+    &--2
+      background: url(../img/slider1.jpg) no-repeat
+      +cover
+    &--3
+      background: url(../img/slider1.jpg) no-repeat
+      +cover
+.item
+  padding: 90px 0 150px    
++r(768)
+  .slider
+    &__heading
+      margin-bottom: 45px
+  .item
+    padding: 110px 0 170px
++r(992)
+  .slider
+    &__heading
+      margin-bottom: 40px
+      font: 400 44px/48px $font-leto
+    &__subheading
+      margin-bottom: 40px  
+  .item
+    padding: 200px 0 170px
++cm("header box style")  
+.header
+  position: relative
+  &__box
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    padding-top: 35px
+  &__link
+    display: inline-block
+    background-color: #343434
+    color: #fff
+    text-align: center
+    height: 43px
+    width: 43px  
+    margin-right: 5px
+    .fa
+      font-size: 20px
+      line-height: 40px
+  &__text
+    color: #fff
+    font: 400 13px/16px $font-leto-bold   
+    margin-bottom: 5px
+  &__number
+    color: #fff  
+    font: 400 22px/24px $font-leto-bold  
+    &:hover,
+    &:focus
+      text-decoration: none
+  &__mail
+    color: #fff  
+    font: 400 16px/18px $font-leto-bold  
+    &:hover,
+    &:focus
+      text-decoration: none  
+.btn
+  &__teacher
+    background-color: #223a5f
+    border-radius: 21px
+    box-shadow: 0 35px 29px rgba(18, 45, 79, 0.15)
+    color: #fff
+    padding: 12px 20px 10px 25px
+    font: 400 18px/20px $font-leto-bold  
+    .ic
+      margin-left: 15px  
+  &__register
+    background-color: #ba3742
+    border-radius: 27px
+    box-shadow: 0 35px 29px rgba(168, 31, 44, 0.15) 
+    color: #fff   
+    font: 400 16px/18px $font-leto-bold  
+.scroll
+  display: inline-block
+  width: 200px
+  &__text
+    color: #fff
+    font: 400 11px/12px $font-leto 
+    float: left
+    width: 160px
+  .ic
+    float: left
+    width: 27px
+    margin-right: 13px
++r(992)
+.btn
+  &__teacher
+    font: 400 22px/24px $font-leto-bold           
++cm("footer style")    
 .footer
   position: absolute
   padding-top: 47px

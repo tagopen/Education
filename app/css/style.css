@@ -133,6 +133,18 @@
   vertical-align: middle;
 }
 
+.ic--uk:before {
+  width: 25px;
+  height: 15px;
+  background: url('../img/icons-s3bc810ab0f.png') 0 0 no-repeat;
+}
+
+.ic--scroll:before {
+  width: 27px;
+  height: 52px;
+  background: url('../img/icons-s3bc810ab0f.png') -25px 0 no-repeat;
+}
+
 html {
   position: relative;
   min-height: 100%;
@@ -146,7 +158,7 @@ body {
 /* ---------------------------------------- */
 /* H O M E    P A G E    S T Y L E          */
 /* ---------------------------------------- */
-/* header style */
+/* navbar style */
 .navbar {
   background-color: #122d4f;
   text-align: center;
@@ -193,6 +205,152 @@ body {
             transform: translateX(-50%);
   }
 }
+/* header slider style */
+.slider__heading {
+  color: #fff;
+  font: 400 28px/32px "LetoSans", sans-serif;
+  margin: 0 0 25px;
+  text-transform: uppercase;
+}
+.slider__subheading {
+  color: #fff;
+  font: 400 17px/20px "LetoSans", sans-serif;
+  margin: 0;
+}
+.slider__item--1 {
+  background: url(../img/slider1.jpg) no-repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.slider__item--2 {
+  background: url(../img/slider1.jpg) no-repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.slider__item--3 {
+  background: url(../img/slider1.jpg) no-repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.item {
+  padding: 90px 0 150px;
+}
+
+@media only screen and (min-width: 768px) {
+  .slider__heading {
+    margin-bottom: 45px;
+  }
+
+  .item {
+    padding: 110px 0 170px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .slider__heading {
+    margin-bottom: 40px;
+    font: 400 44px/48px "LetoSans", sans-serif;
+  }
+  .slider__subheading {
+    margin-bottom: 40px;
+  }
+
+  .item {
+    padding: 200px 0 170px;
+  }
+}
+/* header box style */
+.header {
+  position: relative;
+}
+.header__box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: 35px;
+}
+.header__link {
+  display: inline-block;
+  background-color: #343434;
+  color: #fff;
+  text-align: center;
+  height: 43px;
+  width: 43px;
+  margin-right: 5px;
+}
+.header__link .fa {
+  font-size: 20px;
+  line-height: 40px;
+}
+.header__text {
+  color: #fff;
+  font: 400 13px/16px "LetoSansBold", sans-serif;
+  margin-bottom: 5px;
+}
+.header__number {
+  color: #fff;
+  font: 400 22px/24px "LetoSansBold", sans-serif;
+}
+.header__number:hover, .header__number:focus {
+  text-decoration: none;
+}
+.header__mail {
+  color: #fff;
+  font: 400 16px/18px "LetoSansBold", sans-serif;
+}
+.header__mail:hover, .header__mail:focus {
+  text-decoration: none;
+}
+
+.btn__teacher {
+  background-color: #223a5f;
+  -webkit-border-radius: 21px;
+          border-radius: 21px;
+  -webkit-box-shadow: 0 35px 29px rgba(18, 45, 79, 0.15);
+          box-shadow: 0 35px 29px rgba(18, 45, 79, 0.15);
+  color: #fff;
+  padding: 12px 20px 10px 25px;
+  font: 400 18px/20px "LetoSansBold", sans-serif;
+}
+.btn__teacher .ic {
+  margin-left: 15px;
+}
+.btn__register {
+  background-color: #ba3742;
+  -webkit-border-radius: 27px;
+          border-radius: 27px;
+  -webkit-box-shadow: 0 35px 29px rgba(168, 31, 44, 0.15);
+          box-shadow: 0 35px 29px rgba(168, 31, 44, 0.15);
+  color: #fff;
+  font: 400 16px/18px "LetoSansBold", sans-serif;
+}
+
+.scroll {
+  display: inline-block;
+  width: 200px;
+}
+.scroll__text {
+  color: #fff;
+  font: 400 11px/12px "LetoSans", sans-serif;
+  float: left;
+  width: 160px;
+}
+.scroll .ic {
+  float: left;
+  width: 27px;
+  margin-right: 13px;
+}
+
+.btn__teacher {
+  font: 400 22px/24px "LetoSansBold", sans-serif;
+}
+
+/* footer style */
 .footer {
   position: absolute;
   padding-top: 47px;
