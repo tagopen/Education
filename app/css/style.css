@@ -262,17 +262,21 @@ body {
     margin-bottom: 40px;
     font: 400 44px/48px "LetoSans", sans-serif;
   }
-  .slider__subheading {
-    margin-bottom: 40px;
-  }
 
   .item {
-    padding: 200px 0 170px;
+    padding: 200px 0 280px;
   }
 }
 /* header box style */
 .header {
   position: relative;
+}
+.header__container {
+  position: relative;
+}
+.header__col {
+  position: absolute;
+  bottom: -122px;
 }
 .header__box {
   position: absolute;
@@ -300,6 +304,10 @@ body {
   font: 400 13px/16px "LetoSansBold", sans-serif;
   margin-bottom: 5px;
 }
+.header__call, .header__mail {
+  display: inline-block;
+  width: 48%;
+}
 .header__number {
   color: #fff;
   font: 400 22px/24px "LetoSansBold", sans-serif;
@@ -307,12 +315,49 @@ body {
 .header__number:hover, .header__number:focus {
   text-decoration: none;
 }
-.header__mail {
+.header__email {
   color: #fff;
   font: 400 16px/18px "LetoSansBold", sans-serif;
 }
-.header__mail:hover, .header__mail:focus {
+.header__email:hover, .header__email:focus {
   text-decoration: none;
+}
+.header__form {
+  padding: 30px 45px 45px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 30px 29px rgba(41, 41, 41, 0.16);
+          box-shadow: 0 30px 29px rgba(41, 41, 41, 0.16);
+  border-top: 5px solid #ba3742;
+}
+
+.form__head {
+  padding: 0 15px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.form__heading {
+  color: #282828;
+  font: 400 17px/18px "LetoSans", sans-serif;
+  margin-bottom: 10px;
+}
+.form__subheading {
+  color: #ba3742;
+  font: 400 21px/22px "LetoSansBold", sans-serif;
+}
+.form__input {
+  background-color: #f9f9f9;
+  border: 1px solid #e4e4e4;
+  -webkit-border-radius: 27px;
+          border-radius: 27px;
+  padding: 16px 10px 16px 25px;
+}
+.form__number {
+  border: 1px dashed #223a5f;
+  -webkit-border-radius: 26px;
+          border-radius: 26px;
+  padding: 16px 10px 16px 30px;
+  color: #122d4f;
+  font: 400 24px/26px "LetoSans", sans-serif;
 }
 
 .btn__teacher {
@@ -337,6 +382,10 @@ body {
   color: #fff;
   font: 400 16px/18px "LetoSansBold", sans-serif;
 }
+.btn__register--size {
+  width: 100%;
+  padding: 18px 0;
+}
 
 .scroll {
   display: inline-block;
@@ -354,10 +403,30 @@ body {
   margin-right: 13px;
 }
 
-.btn__teacher {
-  font: 400 22px/24px "LetoSansBold", sans-serif;
+@media only screen and (min-width: 768px) {
+  .form__register {
+    font: 400 18px/20px "LetoSansBold", sans-serif;
+  }
 }
+@media only screen and (min-width: 992px) {
+  .form__head {
+    padding: 0 30px;
+  }
+  .form__subheading {
+    font: 400 30px/32px "LetoSansBold", sans-serif;
+  }
 
+  .btn__teacher {
+    font: 400 22px/24px "LetoSansBold", sans-serif;
+  }
+  .btn__register {
+    font: 400 22px/24px "LetoSansBold", sans-serif;
+  }
+
+  .carousel-indicators {
+    bottom: 200px;
+  }
+}
 /* footer style */
 .footer {
   position: absolute;

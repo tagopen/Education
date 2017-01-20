@@ -88,13 +88,16 @@ body
     &__heading
       margin-bottom: 40px
       font: 400 44px/48px $font-leto
-    &__subheading
-      margin-bottom: 40px  
   .item
-    padding: 200px 0 170px
+    padding: 200px 0 280px
 +cm("header box style")  
 .header
   position: relative
+  &__container
+    position: relative
+  &__col
+    position: absolute
+    bottom: -122px
   &__box
     position: absolute
     top: 0
@@ -117,18 +120,50 @@ body
     color: #fff
     font: 400 13px/16px $font-leto-bold   
     margin-bottom: 5px
+  &__call,
+  &__mail
+    display: inline-block
+    width: 48%  
   &__number
     color: #fff  
     font: 400 22px/24px $font-leto-bold  
     &:hover,
     &:focus
       text-decoration: none
-  &__mail
+  &__email
     color: #fff  
     font: 400 16px/18px $font-leto-bold  
     &:hover,
     &:focus
       text-decoration: none  
+  &__form
+    padding: 30px 45px 45px
+    background-color: #fff
+    box-shadow: 0 30px 29px rgba(41, 41, 41, 0.16)
+    border-top: 5px solid #ba3742
+.form
+  &__head
+    padding: 0 15px
+    margin-bottom: 12px
+    text-align: center
+    &ing
+      color: #282828
+      font: 400 17px/18px $font-leto  
+      margin-bottom: 10px
+  &__subheading
+    color: #ba3742
+    font: 400 21px/22px $font-leto-bold    
+  &__input
+    background-color: #f9f9f9
+    border: 1px solid #e4e4e4
+    border-radius: 27px    
+    padding: 16px 10px 16px 25px
+  &__number
+    border: 1px dashed #223a5f
+    border-radius: 26px  
+    padding: 16px 10px 16px 30px
+    color: #122d4f
+    font: 400 24px/26px $font-leto   
 .btn
   &__teacher
     background-color: #223a5f
@@ -144,7 +179,10 @@ body
     border-radius: 27px
     box-shadow: 0 35px 29px rgba(168, 31, 44, 0.15) 
     color: #fff   
-    font: 400 16px/18px $font-leto-bold  
+    font: 400 16px/18px $font-leto-bold 
+    &--size
+      width: 100%
+      padding: 18px 0 
 .scroll
   display: inline-block
   width: 200px
@@ -156,11 +194,25 @@ body
   .ic
     float: left
     width: 27px
-    margin-right: 13px
+    margin-right: 13px   
++r(768)   
+  .form  
+    &__register  
+      font: 400 18px/20px $font-leto-bold 
 +r(992)
-.btn
-  &__teacher
-    font: 400 22px/24px $font-leto-bold           
+  .form
+    &__head
+      padding: 0 30px
+    &__subheading
+      font: 400 30px/32px $font-leto-bold
+  .btn
+    &__teacher
+      font: 400 22px/24px $font-leto-bold    
+    &__register  
+      font: 400 22px/24px $font-leto-bold 
+  .carousel
+    &-indicators
+      bottom: 200px           
 +cm("footer style")    
 .footer
   position: absolute

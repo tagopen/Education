@@ -139,32 +139,49 @@
       </div><!--/.slider-->
       <!-- Содержимое header -->
       <div class="header__box">
-        <div class="container">
+        <div class="container header__container">
           <div class="row">
-            <div class="col-sm-7">
-             
-            </div>
-            <div class="col-sm-5"></div>
-          </div>
-          <div class="row">
-            <div class="col-sm-3">
+          <!-- Форма -->
+            <div class="col-sm-5 pull-right">
+             <form name="Регистрация" class="clearfix header__form" method="post" action="mail/mail.php">
+              <div class="form__head">
+                <div class="form__heading">Запишитесь на</div>
+                <div class="form__subheading">бесплатный первый урок</div>
+              </div>
+              <div class="form-group">
+                <div href="tel:+74991234567" class="form__number">+7 499 123 45 67</div>
+              </div>
+              <div class="form-group">
+                <input aria-invalid="false" class="form-control form__input" placeholder="Ваше имя" required data-validation-required-message="Please enter your name." name="name" type="text">
+              </div>
+              <div class="form-group">
+                <input aria-invalid="false" class="form-control form__input" placeholder="Ваш телефон" required data-validation-required-message="Please enter your phone number." name="phone" type="tel">
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn__register btn__register--size" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">записаться</button>
+              </div>
+            </form>
+          </div><!--/.Форма-->
+          <!-- Нижняя часть хедера -->
+          <div class="col-xs-12 header__col">
+            <!-- Телефон + почта -->
+            <div class="col-sm-6">
               <div class="header__call">
                 <div class="header__text">Звоните</div>
                 <a href="tel:+74997558265" class="header__number">+7 499 755 8265</a>
               </div>
-            </div>
-            <div class="col-sm-3">
               <div class="header__mail">
                 <div class="header__text">Электронная почта</div>
-                <a href="mailto:mail@infocuseducation.ru" class="header__mail">mail@infocuseducation.ru</a>
+                <a href="mailto:mail@infocuseducation.ru" class="header__email">mail@infocuseducation.ru</a>
               </div>
-            </div>
-            <div class="col-xs-12">
-              <button class="btn btn__register">записаться на бесплатный урок</button>
-            </div>
+            </div><!-- /.Телефон + почта -->
+            <!-- Кнопка -->
             <div class="col-xs-12 col-sm-3 text-xs-left text-center">
               <button class="btn btn__teacher">For teachers<i class="ic ic--uk"></i></button>
+              <button class="hidden-md hidden-lg btn btn__register">записаться на бесплатный урок</button>
             </div>
+            <!-- /.Кнопка -->
+            <!-- Соц.сети -->
             <div class="col-sm-3 text-right">
                <div class="header__links">
                 <a href="#" class="header__link"><i class="fa fa-vk" aria-hidden="true"></i></a>
@@ -172,16 +189,21 @@
                 <a href="#" class="header__link"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                 <a href="#" class="header__link"><i class="fa fa-youtube" aria-hidden="true"></i></a>
               </div>
-            </div>
+            </div><!-- /. Соц.сети -->
+          </div><!-- /.Нижняя часть хедера -->
+          </div><!--/.row-->
 
-            <a href="#" class="clearfix scroll">
-              <i class="ic ic--scroll"></i>
-              <div class="scroll__text">прокрутить вниз, чтобы 
-                ознакомиться с нашими преимуществами</div>
-              </a>
+          
+            
 
-          </div>
-        </div>
+       <!--      <a href="#" class="clearfix scroll">
+                 <i class="ic ic--scroll"></i>
+                 <div class="scroll__text">прокрутить вниз, чтобы 
+       ознакомиться с нашими преимуществами</div>
+                 </a> -->
+                   
+
+        </div><!-- /.header container -->
       </div><!-- /.Содержимое header -->
     </header><!--/.header -->
 
