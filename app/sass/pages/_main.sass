@@ -9,14 +9,44 @@ html
 body
   margin-bottom: $footer-height
   padding-top: 93px
++rx(991)
+  .container-fluid
+    & > .navbar-header
+      margin-right: -15px
+      margin-left: -15px 
+    & > .navbar-collapse
+      margin-right: -15px
+      margin-left: -15px
+  .navbar-header
+    float: none
+  .navbar-left,.navbar-right 
+    float: none !important
+  .navbar-toggle
+    display: block
+  .navbar-collapse
+    border-top: 1px solid transparent
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1)
+  .navbar-fixed-top
+    top: 0
+    border-width: 0 0 1px
+  .navbar-collapse.collapse
+    display: none!important
+  .navbar-nav
+    float: none!important
+    margin-top: 7.5px
+  .navbar-nav>li
+    float: none
+  .navbar-nav>li>a
+    padding-top: 10px
+    padding-bottom: 10px
+  .collapse.in
+    display: block !important
 +comment("home page style")
 +cm("header style")
 .navbar
   background-color: #122d4f
   text-align: center
 .nav
-  &__item
-    padding: 30px 15px
   &__link
     display: inline-block
     color: #fff
@@ -46,11 +76,22 @@ body
     line-height: 50px    
 +r(768)
 +r(992)
+  .nav
+    &__item
+      padding: 23px 15px
   .navbar-header
     position: absolute
     left: 50%
     top: 0
     transform: translateX(-50%)
+  .logo
+    width: 185px
++r(1200)
+  .nav
+    &__item
+      padding: 30px 15px
+  .logo
+    width: auto
 .footer
   position: absolute
   padding-top: 47px
