@@ -38,7 +38,6 @@
   border: 1px solid #CCC;
   color: #4F4F4F;
   font: 400 12px/1 "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
-  -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
@@ -144,11 +143,8 @@
   text-align: center;
 }
 
-.nav__item {
-  padding-top: 25px;
-}
 .nav__link {
-  padding: 25px 15px;
+  padding: 35px 15px;
   color: #fff;
   text-transform: uppercase;
   font: 400 13px/16px "LetoSansBold", sans-serif;
@@ -158,5 +154,7 @@
   position: absolute;
   left: 50%;
   top: 0;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
