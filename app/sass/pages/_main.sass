@@ -14,12 +14,11 @@ html
   position: relative
   min-height: 100%
   padding-bottom: $footer-height
-  padding-top: 93px
+  padding-top: 90px
   transition: .3s transform ease-out
   &--collapsed
     overflow: hidden
     transform: translateX(-$collapse-width)
-  
 .heading
   color: #131313
   font: 400 24px/30px $font-leto-thin
@@ -45,19 +44,12 @@ html
   .navbar-left,
   .navbar-right 
     float: none !important
-  .navbar-fixed-top
-    top: 0
-    border-width: 0 0 1px
   .navbar-nav
     float: none!important
-    margin-top: 7.5px
   .navbar-nav>li
     float: none
-  .navbar-nav>li>a
-    padding-top: 10px
-    padding-bottom: 10px
 +comment("home page style")
-+cm("navbar style")
++comment("navbar style")
 .navbar
   position: absolute
   top: 0  
@@ -102,7 +94,6 @@ html
       top: 8px
     &:after
       top: -8px
-
 .nav
   &__link
     display: inline-block
@@ -127,24 +118,6 @@ html
     &:focus
       text-decoration: none
       color: #fff  
-.social
-  &__list
-  &__item
-    display: inline-block
-    vertical-align: top
-    padding: 2px
-  &__link
-    display: block
-    width: 50px
-    height: 50px
-    background-color: #343434
-    text-align: center
-    &--footer
-      background-color: #192840
-  &__icon
-    color: #fff
-    font-size: 25px
-    line-height: 50px
 +rx(991)
   .nav
     &__link
@@ -191,7 +164,25 @@ html
       padding: 30px 15px
   .logo
     width: auto
-+cm("header slider style")   
+.social
+  &__list
+  &__item
+    display: inline-block
+    vertical-align: top
+    padding: 2px
+  &__link
+    display: block
+    width: 50px
+    height: 50px
+    background-color: #343434
+    text-align: center
+    &--footer
+      background-color: #192840
+  &__icon
+    color: #fff
+    font-size: 25px
+    line-height: 50px
++comment("section header style")   
 .slider
   &__heading 
     color: #fff

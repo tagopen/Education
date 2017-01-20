@@ -421,7 +421,7 @@ html {
   position: relative;
   min-height: 100%;
   padding-bottom: 304px;
-  padding-top: 93px;
+  padding-top: 90px;
   -webkit-transition: 0.3s -webkit-transform ease-out;
   transition: 0.3s -webkit-transform ease-out;
   transition: 0.3s transform ease-out;
@@ -471,29 +471,20 @@ html {
     float: none !important;
   }
 
-  .navbar-fixed-top {
-    top: 0;
-    border-width: 0 0 1px;
-  }
-
   .navbar-nav {
     float: none !important;
-    margin-top: 7.5px;
   }
 
   .navbar-nav > li {
     float: none;
   }
-
-  .navbar-nav > li > a {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
 }
 /* ---------------------------------------- */
 /* H O M E    P A G E    S T Y L E          */
 /* ---------------------------------------- */
-/* navbar style */
+/* ---------------------------------------- */
+/* N A V B A R    S T Y L E                 */
+/* ---------------------------------------- */
 .navbar {
   position: absolute;
   top: 0;
@@ -590,27 +581,6 @@ html {
   color: #fff;
 }
 
-.social__item {
-  display: inline-block;
-  vertical-align: top;
-  padding: 2px;
-}
-.social__link {
-  display: block;
-  width: 50px;
-  height: 50px;
-  background-color: #343434;
-  text-align: center;
-}
-.social__link--footer {
-  background-color: #192840;
-}
-.social__icon {
-  color: #fff;
-  font-size: 25px;
-  line-height: 50px;
-}
-
 @media only screen and (max-width: 991px) {
   .nav__link {
     display: block;
@@ -677,7 +647,30 @@ html {
     width: auto;
   }
 }
-/* header slider style */
+.social__item {
+  display: inline-block;
+  vertical-align: top;
+  padding: 2px;
+}
+.social__link {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #343434;
+  text-align: center;
+}
+.social__link--footer {
+  background-color: #192840;
+}
+.social__icon {
+  color: #fff;
+  font-size: 25px;
+  line-height: 50px;
+}
+
+/* ------------------------------------------ */
+/* S E C T I O N    H E A D E R    S T Y L E  */
+/* ------------------------------------------ */
 .slider__heading {
   color: #fff;
   font: 400 28px/32px "LetoSans", sans-serif;
