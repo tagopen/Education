@@ -426,6 +426,11 @@ body {
   text-align: center;
   margin: 0;
 }
+.heading--text {
+  display: inline-block;
+  padding: 8px 8px 6px 15px;
+  background-color: rgba(226, 248, 62, 0.25);
+}
 
 @media only screen and (min-width: 768px) {
   .heading {
@@ -842,11 +847,6 @@ body {
 .format__heading {
   margin-bottom: 30px;
 }
-.format__heading--text {
-  display: inline-block;
-  padding: 8px 8px 6px 15px;
-  background-color: rgba(226, 248, 62, 0.25);
-}
 .format__text {
   text-align: center;
   color: #131313;
@@ -952,5 +952,41 @@ body {
 @media only screen and (min-width: 992px) {
   .teacher {
     padding: 70px 0 100px;
+  }
+}
+/* section about style */
+.about {
+  padding: 45px 0;
+  text-align: center;
+}
+.about__heading {
+  margin-bottom: 40px;
+}
+.about__subheading {
+  color: #131313;
+  font: 400 16px/19px "LetoSans", sans-serif;
+  margin-bottom: 30px;
+}
+.about__subheading--span {
+  font-family: "LetoSansBold", sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+  .about {
+    padding: 45px 0 60px;
+  }
+  .about__heading {
+    margin-bottom: 70px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .about {
+    padding: 100px 0;
+  }
+  .about__heading {
+    margin-bottom: 60px;
+  }
+  .about__subheading {
+    font: 400 24px/32px "LetoSans", sans-serif;
   }
 }
