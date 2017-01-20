@@ -3,6 +3,9 @@
 +font('LetoSansThin', 'LetoSansThin')
 +font('LetoSansBold', 'LetoSansBold')
 +ic
+@each $ic in uk, scroll
+  .ic--#{$ic}
+    +sb(#{$ic})
 html
   position: relative
   min-height: 100%
@@ -42,7 +45,7 @@ body
   .collapse.in
     display: block !important
 +comment("home page style")
-+cm("header style")
++cm("navbar style")
 .navbar
   background-color: #122d4f
   text-align: center
@@ -83,7 +86,7 @@ body
     position: absolute
     left: 50%
     top: 0
-    transform: translateX(-50%)
+    transform: translateX(-50%) 
   .logo
     width: 185px
 +r(1200)
@@ -92,6 +95,166 @@ body
       padding: 30px 15px
   .logo
     width: auto
++cm("header slider style")   
+.slider
+  &__heading 
+    color: #fff
+    font: 400 28px/32px $font-leto
+    margin: 0 0 25px
+    text-transform: uppercase
+  &__subheading
+    color: #fff
+    font: 400 17px/20px $font-leto 
+    margin: 0 
+  &__item
+    &--1
+      background: url(../img/slider1.jpg) no-repeat
+      +cover
+    &--2
+      background: url(../img/slider1.jpg) no-repeat
+      +cover
+    &--3
+      background: url(../img/slider1.jpg) no-repeat
+      +cover
+.item
+  padding: 90px 0 150px    
++r(768)
+  .slider
+    &__heading
+      margin-bottom: 45px
+  .item
+    padding: 110px 0 170px
++r(992)
+  .slider
+    &__heading
+      margin-bottom: 40px
+      font: 400 44px/48px $font-leto
+  .item
+    padding: 200px 0 280px
++cm("header box style")  
+.header
+  position: relative
+  &__container
+    position: relative
+  &__col
+    position: absolute
+    bottom: -122px
+  &__box
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    padding-top: 35px
+  &__link
+    display: inline-block
+    background-color: #343434
+    color: #fff
+    text-align: center
+    height: 43px
+    width: 43px  
+    margin-right: 5px
+    .fa
+      font-size: 20px
+      line-height: 40px
+  &__text
+    color: #fff
+    font: 400 13px/16px $font-leto-bold   
+    margin-bottom: 5px
+  &__call,
+  &__mail
+    display: inline-block
+    width: 48%  
+  &__number
+    color: #fff  
+    font: 400 22px/24px $font-leto-bold  
+    &:hover,
+    &:focus
+      text-decoration: none
+  &__email
+    color: #fff  
+    font: 400 16px/18px $font-leto-bold  
+    &:hover,
+    &:focus
+      text-decoration: none  
+  &__form
+    padding: 30px 45px 45px
+    background-color: #fff
+    box-shadow: 0 30px 29px rgba(41, 41, 41, 0.16)
+    border-top: 5px solid #ba3742
+.form
+  &__head
+    padding: 0 15px
+    margin-bottom: 12px
+    text-align: center
+    &ing
+      color: #282828
+      font: 400 17px/18px $font-leto  
+      margin-bottom: 10px
+  &__subheading
+    color: #ba3742
+    font: 400 21px/22px $font-leto-bold    
+  &__input
+    background-color: #f9f9f9
+    border: 1px solid #e4e4e4
+    border-radius: 27px    
+    padding: 16px 10px 16px 25px
+  &__number
+    border: 1px dashed #223a5f
+    border-radius: 26px  
+    padding: 16px 10px 16px 30px
+    color: #122d4f
+    font: 400 24px/26px $font-leto   
+.btn
+  &__teacher
+    background-color: #223a5f
+    border-radius: 21px
+    box-shadow: 0 35px 29px rgba(18, 45, 79, 0.15)
+    color: #fff
+    padding: 12px 20px 10px 25px
+    font: 400 18px/20px $font-leto-bold  
+    .ic
+      margin-left: 15px  
+  &__register
+    background-color: #ba3742
+    border-radius: 27px
+    box-shadow: 0 35px 29px rgba(168, 31, 44, 0.15) 
+    color: #fff   
+    font: 400 16px/18px $font-leto-bold 
+    &--size
+      width: 100%
+      padding: 18px 0 
+.scroll
+  display: inline-block
+  width: 200px
+  &__text
+    color: #fff
+    font: 400 11px/12px $font-leto 
+    float: left
+    width: 160px
+  .ic
+    float: left
+    width: 27px
+    margin-right: 13px   
++r(768)   
+  .form  
+    &__register  
+      font: 400 18px/20px $font-leto-bold 
++r(992)
+  .form
+    &__head
+      padding: 0 30px
+    &__subheading
+      font: 400 30px/32px $font-leto-bold
+  .btn
+    &__teacher
+      font: 400 22px/24px $font-leto-bold    
+    &__register  
+      font: 400 22px/24px $font-leto-bold 
+  .carousel
+    &-indicators
+      bottom: 200px           
++cm("footer style")    
 .footer
   position: absolute
   padding-top: 47px
