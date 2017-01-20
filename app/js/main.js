@@ -1,9 +1,3 @@
-/*!
- * Start Bootstrap - Agency Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
-
 // Old browser notification
 $(function() { 
   $.reject({
@@ -21,6 +15,14 @@ $(function() {
     paragraph2: 'Пожалуйста, установите современный браузер:',
     closeMessage: 'Закрывая это уведомление вы соглашаетесь с тем, что сайт в вашем браузере может отображаться некорректно.',
     closeLink: 'Закрыть это уведомление',
+  });
+});
+
+$(document).ready(function() {
+  $('.navbar-toggle').click(function() {
+    $(this).toggleClass('navbar-toggle--open');
+    $('.body').toggleClass('body--collapsed');
+    $('.collapse').toggleClass('collapse--open');
   });
 });
 
@@ -81,11 +83,6 @@ $('.dropdown, .dropup').each(function() {
   if (event.keyCode == 27) {
     $(this).parrent().find('.dropdown-toggle').dropdown('toggle');
   }
-});*/
-
-// Closes the Responsive Menu on Menu Item Click
-/*$('.navbar-collapse ul li a').click(function() {
-    $('.navbar-toggle:visible').click();
 });*/
 
 // Equal height

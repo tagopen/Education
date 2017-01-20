@@ -9,31 +9,30 @@
 html
   position: relative
   min-height: 100%
-body
-  margin-bottom: $footer-height
+  height: 100%
+.body
+  min-height: 100%
+  padding-bottom: $footer-height
   padding-top: 93px
+  transition: .3s transform ease-out
+  &--collapsed
+    overflow: hidden
+    transform: translateX(-$collapse-width)
+  
++cm('navbar toggle 768-991')
 +rx(991)
   .container-fluid
     & > .navbar-header
       margin-right: -15px
       margin-left: -15px 
-    & > .navbar-collapse
-      margin-right: -15px
-      margin-left: -15px
   .navbar-header
     float: none
-  .navbar-left,.navbar-right 
+  .navbar-left,
+  .navbar-right 
     float: none !important
-  .navbar-toggle
-    display: block
-  .navbar-collapse
-    border-top: 1px solid transparent
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1)
   .navbar-fixed-top
     top: 0
     border-width: 0 0 1px
-  .navbar-collapse.collapse
-    display: none!important
   .navbar-nav
     float: none!important
     margin-top: 7.5px
@@ -42,13 +41,53 @@ body
   .navbar-nav>li>a
     padding-top: 10px
     padding-bottom: 10px
-  .collapse.in
-    display: block !important
 +comment("home page style")
 +cm("navbar style")
 .navbar
-  background-color: #122d4f
+  position: absolute
+  top: 0  
+  left: 0
+  right: 0
+  background-color: $navbar-bg
   text-align: center
+  &__container
+    position: relative
+.navbar-toggle
+  margin: 25px
+  &--open
+    .navbar-toggle__lines
+      background: transparent
+      transform: scale3d(0.8, 0.8, 0.8)
+      &:before,
+      &:after
+        transform-origin: 50% 50%
+        top: 0
+      &:before
+        transform: rotate3d(0, 0, 1, 45deg)
+      &:after
+        transform: rotate3d(0, 0, 1, -45deg)
+  &__lines,
+  &__lines:before,
+  &__lines:after
+    display: inline-block
+    background-color: #f6f7fb
+  &__lines
+    position: relative
+    width: 30px
+    height: 5px
+    &:before,
+    &:after
+      content: ''
+      position: absolute
+      left: 0
+      width: 100%
+      height: 100%
+      transition: .3s all ease-out
+    &:before
+      top: 8px
+    &:after
+      top: -8px
+
 .nav
   &__link
     display: inline-block
@@ -59,6 +98,20 @@ body
 .logo
   background-color: #223a5f
   box-shadow: 0 30px 29px rgba(41, 41, 41, 0.16)
+.phone,
+.email
+  padding: 28px 0
+  text-align: left
+  &__text
+    color: #fff
+    font: 400 11px/15px $font-leto 
+  &__link
+    color: #fff
+    font: 400 14px/16px $font-leto 
+    &:hover,
+    &:focus
+      text-decoration: none
+      color: #fff  
 .social
   &__list
   &__item
@@ -76,8 +129,35 @@ body
   &__icon
     color: #fff
     font-size: 25px
-    line-height: 50px    
-+r(768)
+    line-height: 50px
++rx(991)
+  .nav
+    &__link
+      display: block
+      padding: 10px 0
+  .navbar
+    &__logo
+      margin-left: 15px
+  .navbar-toggle
+    display: block
+  .collapse
+    position: fixed
+    top: 0
+    left: 100%
+    width: $collapse-width
+    height: 100vh
+    overflow-y: auto
+    padding:
+      top: 25px
+      bottom: 25px
+    background: $navbar-bg
+    &--open
+      display: block
+  .logo
+    position: absolute
+    left: 0
+    top: 0
+    width: 200px
 +r(992)
   .nav
     &__item
@@ -85,8 +165,9 @@ body
   .navbar-header
     position: absolute
     left: 50%
-    top: 0
     transform: translateX(-50%) 
+  .collapse
+    display: block
   .logo
     width: 185px
 +r(1200)
@@ -156,27 +237,7 @@ body
     margin-right: 5px
     .fa
       font-size: 20px
-      line-height: 40px
-  &__text
-    color: #fff
-    font: 400 13px/16px $font-leto-bold   
-    margin-bottom: 5px
-  &__call,
-  &__mail
-    display: inline-block
-    width: 48%  
-  &__number
-    color: #fff  
-    font: 400 22px/24px $font-leto-bold  
-    &:hover,
-    &:focus
-      text-decoration: none
-  &__email
-    color: #fff  
-    font: 400 16px/18px $font-leto-bold  
-    &:hover,
-    &:focus
-      text-decoration: none  
+      line-height: 40px 
   &__form
     padding: 30px 45px 45px
     background-color: #fff

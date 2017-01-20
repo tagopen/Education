@@ -61,25 +61,32 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body class="body">
     <nav class="navbar navbar-fixed-top">
-      <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="container navbar__container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse--1">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar navbar-toggle__icon-bar"></span>
-            <span class="icon-bar navbar-toggle__icon-bar navbar-toggle__icon-bar--middle"></span>
-            <span class="icon-bar navbar-toggle__icon-bar"></span>
+          <button type="button" class="navbar-toggle">
+            <span class="navbar-toggle__lines"></span>
           </button>
+          <div class="visible-sm col-sm-3 col-sm-offset-4">
+            <div class="phone">
+              <div class="phone__text">Звоните</div>
+              <a href="tel:+74997558265" class="phone__link">+7 499 755 8265</a>
+            </div>
+          </div>
+          <div class="visible-sm col-sm-3">
+            <div class="email">
+              <div class="email__text">Электронная почта</div>
+              <a href="mailto:mail@infocuseducation.ru" class="email__link">mail@infocuseducation.ru</a>
+            </div>
+          </div>
           <div class="navbar__logo logo">
             <a href="/" class="logo__link">
               <img class="img-responsive logo__img" src="img/logo/logo.jpg" alt="Illuminate Confirme">
             </a>
           </div>
         </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-collapse--1">
+        <div class="collapse">
           <ul class="col-md-5 nav nav-justified navbar-left">
             <li class="nav__item nav__item--active"><a class="nav__link" href="#">Наши <br>преподаватели</a></li>
             <li class="nav__item"><a class="nav__link" href="#">Учебные <br>программы</a></li>
@@ -90,14 +97,12 @@
             <li class="nav__item"><a class="nav__link" href="#">Отзывы <br>учеников</a></li>
             <li class="nav__item"><a class="nav__link" href="#">Свяжитесь <br>с нами</a></li>
           </ul>
-        </div><!-- /.navbar-collapse -->
+        </div><!-- /.collapse -->
       </div>
     </nav><!-- /.navbar -->
 
-    <header class="header">
-      <!-- Slider -->
+    <header class="hidden header">
       <div id="header__slider" class="carousel slide slider" data-ride="carousel">
-        <!-- Маркеры слайдов -->
         <ol class="carousel-indicators">
           <li data-target="#header__slider" data-slide-to="0" class="active"></li>
           <li data-target="#header__slider" data-slide-to="1"></li>
@@ -114,8 +119,8 @@
                 </div>
               </div>
             </div>
-          </div>
-           <div class="item slider__item--2">
+          </div><!-- /.item -->
+          <div class="item slider__item--2">
             <div class="container">
               <div class="row">
                 <div class="col-xs-12 col-sm-7">
@@ -124,8 +129,8 @@
                 </div>
               </div>
             </div>
-          </div>
-           <div class="item slider__item--3">
+          </div><!-- /.item -->
+          <div class="item slider__item--3">
             <div class="container">
               <div class="row">
                 <div class="col-xs-12 col-sm-7">
@@ -134,8 +139,8 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+          </div><!-- /.item -->
+        </div><!--/.carousel-inner -->
       </div><!--/.slider-->
       <!-- Содержимое header -->
       <div class="header__box">
@@ -149,7 +154,7 @@
                 <div class="form__subheading">бесплатный первый урок</div>
               </div>
               <div class="form-group">
-                <div href="tel:+74991234567" class="form__number">+7 499 123 45 67</div>
+                <div class="form__number">+7 499 123 45 67</div>
               </div>
               <div class="form-group">
                 <input aria-invalid="false" class="form-control form__input" placeholder="Ваше имя" required data-validation-required-message="Please enter your name." name="name" type="text">
@@ -164,7 +169,6 @@
           </div><!--/.Форма-->
           <!-- Нижняя часть хедера -->
           <div class="col-xs-12 header__col">
-            <!-- Телефон + почта -->
             <div class="col-sm-6">
               <div class="header__call">
                 <div class="header__text">Звоните</div>
@@ -174,22 +178,19 @@
                 <div class="header__text">Электронная почта</div>
                 <a href="mailto:mail@infocuseducation.ru" class="header__email">mail@infocuseducation.ru</a>
               </div>
-            </div><!-- /.Телефон + почта -->
-            <!-- Кнопка -->
+            </div>
             <div class="col-xs-12 col-sm-3 text-xs-left text-center">
               <button class="btn btn__teacher">For teachers<i class="ic ic--uk"></i></button>
               <button class="hidden-md hidden-lg btn btn__register">записаться на бесплатный урок</button>
             </div>
-            <!-- /.Кнопка -->
-            <!-- Соц.сети -->
-            <div class="col-sm-3 text-right">
-               <div class="header__links">
-                <a href="#" class="header__link"><i class="fa fa-vk" aria-hidden="true"></i></a>
-                <a href="#" class="header__link"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="#" class="header__link"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                <a href="#" class="header__link"><i class="fa fa-youtube" aria-hidden="true"></i></a>
-              </div>
-            </div><!-- /. Соц.сети -->
+            <div class="list-unstyled text-right social">
+              <ul class="social__list">
+                <li class="social__item"><a href="#" class="social__link"><i class="fa fa-vk social__icon"></i></a></li>
+                <li class="social__item"><a href="#" class="social__link"><i class="fa fa-facebook social__icon"></i></a></li>
+                <li class="social__item"><a href="#" class="social__link"><i class="fa fa-instagram social__icon"></i></a></li>
+                <li class="social__item"><a href="#" class="social__link"><i class="fa fa-youtube social__icon"></i></a></li>
+              </ul>
+            </div><!-- /.social -->
           </div><!-- /.Нижняя часть хедера -->
           </div><!--/.row-->
 

@@ -4469,7 +4469,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     margin-right: 15px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar-left {
     float: left !important;
   }
