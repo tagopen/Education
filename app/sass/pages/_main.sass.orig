@@ -8,17 +8,21 @@ html
   min-height: 100%
 body
   margin-bottom: $footer-height
-  padding-top: 93px
 +comment("home page style")
 +cm("header style")
 .navbar
   background-color: #122d4f
   text-align: center
 .nav
+<<<<<<< HEAD
+  &__link
+    padding: 35px 15px
+=======
   &__item
     padding: 30px 15px
   &__link
     display: inline-block
+>>>>>>> cca17d8d569a8e2fe2a7fa8a065e37f8bcc42300
     color: #fff
     text-transform: uppercase  
     font: 400 13px/16px $font-leto-bold
@@ -37,7 +41,7 @@ body
     &--footer
       background-color: #192840
   &__icon
-    color: #fff    
+    color: #fff
 +r(768)
 +r(992)
   .navbar-header

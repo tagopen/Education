@@ -62,8 +62,8 @@
     <![endif]-->
   </head>
   <body>
-    <nav class="navbar">
-      <div class="container-fluid navbar__container">
+    <nav class="navbar navbar-fixed-top">
+      <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse--1">
@@ -81,22 +81,87 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-collapse--1">
           <ul class="col-md-5 nav nav-justified navbar-left">
-            <li class="nav__item nav__item--active"><a class="nav__link" href="#">Наши преподаватели</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">Учебные программы</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">Другие услуги</a></li>
+            <li class="nav__item nav__item--active"><a class="nav__link" href="#">Наши <br>преподаватели</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Учебные <br>программы</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Другие <br>услуги</a></li>
           </ul>
           <ul class="col-md-5 nav nav-justified navbar-right">
-            <li class="nav__item"><a class="nav__link" href="#">Стоимость обучения</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">Отзывы учеников</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">Свяжитесь с нами</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Стоимость <br>обучения</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Отзывы <br>учеников</a></li>
+            <li class="nav__item"><a class="nav__link" href="#">Свяжитесь <br>с нами</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div>
-    </nav><!--/.navbar -->
+    </nav><!-- /.navbar -->
 
     <header class="header">
+      <div class="container">
+        <!-- Slider -->
+        <div id="header__slider" class="carousel slide" data-ride="carousel">
+          <!-- Маркеры слайдов -->
+          <ol class="carousel-indicators">
+            <li data-target="#header__slider" data-slide-to="0" class="active"></li>
+            <li data-target="#header__slider" data-slide-to="1"></li>
+            <li data-target="#header__slider" data-slide-to="2"></li>
+            </ol>
+          <!-- Содержимое слайдов -->
+          <div class="carousel-inner">
+            <div class="item active">
+             <div class="row">
+               <div class="col-xs-12 col-sm-7">
+                 <h1 class="slider__heading">Английский с носителем языка</h1>
+                 <h2 class="slider__subheading">у Вас в офисе, дома, в кафе или онлайн в Skype</h2>
+                 <div class="scroll"></div>
+               </div>
+             </div>
+            </div>
+            <div class="item">
+              <div class="row">
+               <div class="col-xs-12 col-sm-7">
+                 <h1 class="slider__heading">Английский с носителем языка</h1>
+                 <h2 class="slider__subheading">у Вас в офисе, дома, в кафе или онлайн в Skype</h2>
+                 <div class="scroll"></div>
+               </div>
+             </div>
+            </div>
+            <div class="item">
+              <div class="row">
+               <div class="col-xs-12 col-sm-7">
+                 <h1 class="slider__heading">Английский с носителем языка</h1>
+                 <h2 class="slider__subheading">у Вас в офисе, дома, в кафе или онлайн в Skype</h2>
+                 <div class="scroll"></div>
+               </div>
+             </div>
+            </div>
+          </div>
+        </div><!--/.slider-->
+      </div><!--/.container-->
     </header><!--/.header -->
-    
+
+    <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">
+          
+        </div>
+        <div class="col-md-3">
+          <div class="footer__logo logo">
+            <a href="/" class="logo__link">
+              <img class="img-responsive logo__img" src="img/logo/logo.jpg" alt="Illuminate Confirme">
+            </a>
+          </div><!-- /.logo -->
+          <div class="list-unstyled social">
+            <ul class="social__list">
+              <li class="social__item"><a href="#" class="social__link social__link--footer"><i class="fa fa-vk social__icon"></i></a></li>
+              <li class="social__item"><a href="#" class="social__link social__link--footer"><i class="fa fa-facebook social__icon"></i></a></li>
+              <li class="social__item"><a href="#" class="social__link social__link--footer"><i class="fa fa-instagram social__icon"></i></a></li>
+            </ul>
+          </div><!-- /.social -->
+        </div>
+      </div>
+    </div>
+    </footer><!-- /.footer -->
+
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
