@@ -63,10 +63,7 @@ $slick-opacity-not-active: 0.25 !default
 .slick-next 
     position: absolute
     display: block
-    height: 20px
     width: 20px
-    line-height: 0px
-    font-size: 0px
     cursor: pointer
     background: transparent
     color: transparent
@@ -89,15 +86,12 @@ $slick-opacity-not-active: 0.25 !default
         opacity: $slick-opacity-not-active
     
     &:before 
-        font-family: $slick-font-family
-        font-size: 20px
-        line-height: 1
-        color: $slick-arrow-color
+        font-family: 'FontAwesome'
+        color: #666  
+        font-size: 36px
         opacity: $slick-opacity-default
         -webkit-font-smoothing: antialiased
         -moz-osx-font-smoothing: grayscale
-    
-
 
 .slick-prev 
     left: -25px
@@ -105,10 +99,7 @@ $slick-opacity-not-active: 0.25 !default
         left: auto
         right: -25px
     
-    &:before 
-        content: $slick-prev-character
-        [dir="rtl"] & 
-            content: $slick-next-character
+
         
     
 
@@ -118,11 +109,7 @@ $slick-opacity-not-active: 0.25 !default
     [dir="rtl"] & 
         left: -25px
         right: auto
-    
-    &:before 
-        content: $slick-next-character
-        [dir="rtl"] & 
-            content: $slick-prev-character
+
         
     
 
@@ -145,17 +132,18 @@ $slick-opacity-not-active: 0.25 !default
     li 
         position: relative
         display: inline-block
-        height: 20px
-        width: 20px
+        height: 12px
+        width: 12px
         margin: 0 5px
         padding: 0
         cursor: pointer
         button 
-            border: 0
             background: transparent
             display: block
-            height: 20px
-            width: 20px
+            height: 10px
+            width: 10px
+            border: 2px solid #b2b2b2
+            border-radius: 50%
             outline: none
             line-height: 0px
             font-size: 0px
@@ -172,9 +160,8 @@ $slick-opacity-not-active: 0.25 !default
                 position: absolute
                 top: 0
                 left: 0
-                content: $slick-dot-character
-                width: 20px
-                height: 20px
+                width: 12px
+                height: 12px
                 font-family: $slick-font-family
                 font-size: $slick-dot-size
                 line-height: 20px
@@ -185,9 +172,11 @@ $slick-opacity-not-active: 0.25 !default
                 -moz-osx-font-smoothing: grayscale
             
         
-        &.slick-active button:before 
-            color: $slick-dot-color-active
-            opacity: $slick-opacity-default
+        &.slick-active button
+            background-color: #b2b2b2
+            &:before 
+                color: $slick-dot-color-active
+                opacity: $slick-opacity-default
         
     
 

@@ -3,7 +3,7 @@
 +font('LetoSansThin', 'LetoSansThin')
 +font('LetoSansBold', 'LetoSansBold')
 +ic
-@each $ic in uk, scroll
+@each $ic in uk, scroll, format1, format2, format3, format4, format5, format6
   .ic--#{$ic}
     +sb(#{$ic})
 html
@@ -12,6 +12,17 @@ html
 body
   margin-bottom: $footer-height
   padding-top: 93px
+.heading
+  color: #131313
+  font: 400 24px/30px $font-leto-thin
+  text-align: center
+  margin: 0
++r(768)
+  .heading
+    font: 400 28px/38px $font-leto-thin 
++r(992)   
+  .heading 
+    font: 400 37px/45px $font-leto-thin
 +rx(991)
   .container-fluid
     & > .navbar-header
@@ -200,11 +211,15 @@ body
     border-radius: 27px    
     padding: 16px 10px 16px 25px
   &__number
+    display: block
     border: 1px dashed #223a5f
     border-radius: 26px  
     padding: 16px 10px 16px 30px
     color: #122d4f
-    font: 400 24px/26px $font-leto   
+    font: 400 24px/26px $font-leto  
+    &:hover,
+    &:focus
+      text-decoration: none 
 .btn
   &__teacher
     background-color: #223a5f
@@ -263,3 +278,124 @@ body
   width: 100%
   height: $footer-height
   background-color: #223a5f
++cm("section intro style") 
+.intro
+  padding: 30px 0 40px
+  background: url(../img/introbg.jpg) repeat
+  color: #fff
+  text-align: center
+  &__heading
+    font: 400 14px/20px $font-leto-thin
+    margin-bottom: 20px
+  &__subheading  
+    font: 400 16px/20px $font-leto-bold
+    margin-bottom: 20px
+  &__btn
+    min-width: 275px
+    padding: 20px 0   
++r(768) 
+  .intro
+    padding: 60px 0 40px  
+    &__heading
+      margin-bottom: 25px
+    &__subheading
+      margin-bottom: 25px    
++r(992)
+  .intro
+    padding: 90px 0 65px    
+    &__heading
+      margin-bottom: 40px
+    &__subheading
+      margin-bottom: 40px  
++cm("section format style")  
+.format
+  padding: 30px 0     
+  &__heading
+    margin-bottom: 30px
+    &--text
+      display: inline-block
+      padding: 8px 8px 6px 15px
+      background-color: rgba(226,248,62,0.25)
+  &__text
+    text-align: center
+    color: #131313
+    font: 400 15px/18px $font-leto 
+  &__box
+    padding: 20px 0 20px
+  &__image
+    text-align: center
+    margin-bottom: 20px    
++r(768) 
+  .format
+    &__col
+      border: 1px solid #d6d6d6
+      border-collapse: collapse
+    &__box
+      padding: 30px 0 30px     
++r(992) 
+  .format  
+    &__box
+      padding: 50px 0 60px 
++cm("section teachers style")
+.teacher
+  padding: 30px 0 45px
+  &__slider
+    .slick
+      &-slide
+        margin: 0 5px
+      &-list 
+        margin: 0 -5px  
+      &-prev
+        left: -32px
+      &-next
+        right: -32px    
+  &__box
+    text-align: center
+    border: 1px solid #e4e4e4
+    padding-bottom: 25px
+  &__heading
+    margin-bottom: 30px  
+  &__image  
+    margin-bottom: 30px
+    img
+      display: inline-block
+      max-height: 160px
+      width: 100%
+  &__name
+    margin-bottom: 15px
+    color: #131313
+    font: 400 24px/26px $font-leto-bold
+  &__country
+    margin-bottom: 15px  
+    color: #666  
+    font: 400 12px/14px $font-leto
+  &__skills 
+    color: #666  
+    font: 400 12px/14px $font-leto 
+    margin-bottom: 20px
+    &:after
+      content: ''
+      display: block
+      margin: 0 auto
+      width: 54px
+      height: 2px
+      background-color: #666
+      margin-top: 18px
+  &__link
+    color: #223a5f  
+    font: 400 15px/18px $font-leto-bold  
+    &:hover,
+    &:focus
+      text-decoration: none
++r(768)    
+  .teacher
+    padding: 40px 0 45px  
+    &__slider
+      .slick
+        &-prev
+          left: -50px
+        &-next
+          right: -50px    
++r(992)      
+  .teacher
+    padding: 70px 0 100px
