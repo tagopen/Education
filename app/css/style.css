@@ -446,6 +446,10 @@ html {
   background-color: rgba(226, 248, 62, 0.25);
 }
 
+.video__box {
+  padding-bottom: 56.3%;
+}
+
 @media only screen and (min-width: 768px) {
   .heading {
     font: 400 28px/38px "LetoSansThin", sans-serif;
@@ -976,13 +980,8 @@ html {
 .teacher__heading {
   margin-bottom: 30px;
 }
-.teacher__image {
+.teacher__video {
   margin-bottom: 30px;
-}
-.teacher__image img {
-  display: inline-block;
-  max-height: 160px;
-  width: 100%;
 }
 .teacher__name {
   margin-bottom: 15px;
