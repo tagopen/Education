@@ -190,7 +190,7 @@
 /* S L I C K - S L I D E R    T H E M E    S T Y L E  */
 /* -------------------------------------------------- */
 .slick-loading .slick-list {
-  background: #fff url('../img/ajax-loader.gif') center center no-repeat;
+  background: #fff url('../img/ajax-loader.gif?1485005529') center center no-repeat;
 }
 
 /* Icons */
@@ -457,6 +457,10 @@ html {
   padding: 8px 8px 6px 15px;
   background-color: rgba(226, 248, 62, 0.25);
   font-family: "LetoSans", sans-serif;
+}
+.heading--span {
+  background-color: transparent;
+  padding: 0;
 }
 
 @media only screen and (min-width: 768px) {
@@ -794,8 +798,8 @@ html {
 .form__input {
   background-color: #f9f9f9;
   border: 1px solid #e4e4e4;
-  -webkit-border-radius: 27px;
-          border-radius: 27px;
+  -webkit-border-radius: 43px;
+          border-radius: 43px;
   padding: 16px 10px 16px 25px;
 }
 .form__number {
@@ -1058,22 +1062,11 @@ html {
 .about__item {
   list-style-type: none;
 }
-.about__item:before {
-  content: "";
-  display: inline-block;
-  height: 10px;
-  width: 10px;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
-  background-color: #ffefef;
-  margin: 10px 20px 0 0;
-  float: left;
-}
 .about__text {
   display: block;
   color: #131313;
   font: 400 16px/19px "LetoSans", sans-serif;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 .about__text--span {
   font-family: "LetoSansBold", sans-serif;
@@ -1122,7 +1115,18 @@ html {
     padding: 45px 0 60px;
   }
   .about__heading {
-    margin-bottom: 70px;
+    margin-bottom: 30px;
+  }
+  .about__heading:after {
+    content: "";
+    display: block;
+    height: 12px;
+    width: 12px;
+    margin: 0 auto;
+    background-color: #f1e2e4;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    margin-top: 20px;
   }
   .about__list {
     text-align: center;
@@ -1145,14 +1149,22 @@ html {
   .about {
     padding: 100px 0;
   }
-  .about__heading {
-    margin-bottom: 60px;
-  }
   .about__text {
     font: 400 24px/32px "LetoSans", sans-serif;
   }
   .about__list {
     text-align: left;
+  }
+  .about__item:before {
+    content: "";
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    background-color: #ffefef;
+    margin: 10px 20px 0 0;
+    float: left;
   }
   .about__box {
     padding: 55px 60px 30px;
@@ -1169,9 +1181,6 @@ html {
 }
 .blog__heading {
   margin-bottom: 65px;
-}
-.blog--text {
-  background: transparent;
 }
 .blog__box {
   padding: 20px 18px 25px;
@@ -1214,6 +1223,20 @@ html {
   .blog {
     padding: 70px 0 40px;
   }
+  .blog__heading {
+    margin-bottom: 35px;
+  }
+  .blog__heading:after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    height: 12px;
+    width: 12px;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    background-color: #d9d9d9;
+    margin-top: 10px;
+  }
   .blog__naming {
     margin-bottom: 25px;
   }
@@ -1234,8 +1257,8 @@ html {
   .blog {
     padding: 85px 0 70px;
   }
-  .blog__heading {
-    margin-bottom: 85px;
+  .blog__heading:after {
+    margin-top: 30px;
   }
   .blog__title {
     margin-bottom: 25px;
@@ -1262,5 +1285,73 @@ html {
   }
   .blog__btn {
     font: 400 22px/24px "LetoSansBold", sans-serif;
+  }
+}
+/* section subscribe style */
+.subscribe {
+  padding: 25px 0 35px;
+  background: url(../img/subscribebg.jpg) no-repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.subscribe__heading {
+  margin-bottom: 25px;
+  color: #fff;
+}
+.subscribe__heading:after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  height: 12px;
+  width: 12px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: #aa2337;
+  margin-top: 20px;
+}
+.subscribe__btn {
+  width: 100%;
+  padding: 20px 0;
+}
+.subscribe__input {
+  font: 400 16px/18px "LetoSans", sans-serif;
+  padding: 18px 10px 18px 45px;
+  border: 3px solid #d9d9d9;
+  -webkit-box-shadow: 0 35px 29px rgba(168, 31, 44, 0.15);
+          box-shadow: 0 35px 29px rgba(168, 31, 44, 0.15);
+  background: transparent;
+}
+
+@media only screen and (min-width: 768px) {
+  .subscribe {
+    padding: 45px 0 60px;
+  }
+  .subscribe:after {
+    margin-top: 30px;
+  }
+  .subscribe__form {
+    position: relative;
+  }
+  .subscribe__btn {
+    position: absolute;
+    top: 0;
+    right: -6px;
+    min-width: 210px;
+    width: auto;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .subscribe {
+    padding: 45px 0 55px;
+  }
+  .subscribe__heading {
+    margin-bottom: 40px;
+  }
+  .subscribe__input {
+    font: 400 19px/20px "LetoSans", sans-serif;
+  }
+  .subscribe__btn {
+    padding: 18px 0;
   }
 }
