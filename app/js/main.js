@@ -168,3 +168,40 @@ $('.teacher__slider').slick({
     }
   ]
 });
+
+$('.blog__slider').slick({
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  arrows: true,
+  mobileFirst: true,
+  prevArrow: '<button type="button" data-role="none" class="slick-prev fa fa-angle-left" aria-label="Previous" tabindex="0" role="button"></button>',
+  nextArrow: '<button type="button" data-role="none" class="slick-next fa fa-angle-right" aria-label="Next" tabindex="0" role="button"></button>',
+  responsive: [
+    {
+      breakpoint: 959,
+      settings: {
+        arrows: true,
+        slidesToShow: 4,
+        slidesToScroll: 4
+      }
+    },
+      {
+      breakpoint: 767,
+      settings: {
+        arrows: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      }
+    },
+    {
+      breakpoint: 0,
+      settings: {
+        dots: false,
+        arrows: true,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
