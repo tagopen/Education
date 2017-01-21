@@ -28,6 +28,7 @@ html
     display: inline-block
     padding: 8px 8px 6px 15px
     background-color: rgba(226,248,62,0.25)
+    font-family: $font-leto
 +r(768)
   .heading
     font: 400 28px/38px $font-leto-thin 
@@ -537,9 +538,73 @@ html
 .blog
   background-color: #ebebeb
   padding: 50px 0 25px
+  &__heading
+    margin-bottom: 65px
+  &--text
+    background: transparent
+  &__box
+    padding: 20px 18px 25px 
+    background-color: #fff
+  &__naming
+    color: #d9d9d9
+    font: 400 14px/16px $font-leto
+    margin: 0 0 20px
+  &__title
+    color: #223a5f  
+    font: 400 16px/18px $font-leto
+    margin-bottom: 20px
+  &__info
+    color: #282828
+    font: 400 14px/16px $font-leto
+  &__slider
+    margin-bottom: 30px  
+  &__item
+    padding: 0 5px    
+  &__btn
+    display: inline-block
+    padding: 20px 0
+    border: 2px solid #d9d9d9
+    border-radius: 43px
+    box-shadow: 0 35px 29px rgba(168, 31, 44, 0.15) 
+    color: #d9d9d9 
+    font: 400 16px/17px $font-leto-bold
+    min-width: 220px
 +r(768)  
   .blog  
     padding: 70px 0 40px
+    &__naming
+      margin-bottom: 25px
+    &__slider
+      margin-bottom: 45px 
+      .slick
+        &-next
+          right: -16px
+        &-prev
+          left: -16px  
+    &__btn
+      padding: 25px 0  
 +r(992)     
   .blog
     padding: 85px 0 70px
+    &__heading
+      margin-bottom: 85px
+    &__title
+      margin-bottom: 25px  
+    &__naming  
+      margin-bottom: 20px
+      &:after
+        content: ''
+        display: block
+        height: 2px
+        width: 85%
+        background-color: #e3e3e3  
+        margin-top: 7px
+    &__slider
+      margin-bottom: 50px  
+      .slick
+        &-next
+          right: -30px
+        &-prev
+          left: -30px    
+    &__btn
+      font: 400 22px/24px $font-leto-bold          
