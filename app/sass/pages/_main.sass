@@ -14,7 +14,7 @@ html
   position: relative
   min-height: 100%
   padding-bottom: $footer-height
-  padding-top: 90px
+  padding-top: 78px
   transition: .3s transform ease-out
   &--collapsed
     overflow: hidden
@@ -28,6 +28,19 @@ html
     display: inline-block
     padding: 8px 8px 6px 15px
     background-color: rgba(226,248,62,0.25)
++cm('modal styles')
+.modal-body
+  padding: 0
+.modal-content
+  max-width: 450px
+  margin: 0 auto
+button.close
+  position: relative
+  padding: 10px
+  color: #000
+  opacity: 1
+  font-size: 35px
+  z-index: 9
 +r(768)
   .heading
     font: 400 28px/38px $font-leto-thin 
@@ -59,6 +72,9 @@ html
   text-align: center
   &__container
     position: relative
+  &__phone,
+  &__email
+    padding: 28px 0
 .navbar-toggle
   margin: 25px
   &--open
@@ -106,18 +122,49 @@ html
   box-shadow: 0 30px 29px rgba(41, 41, 41, 0.16)
 .phone,
 .email
-  padding: 28px 0
   text-align: left
   &__text
     color: #fff
     font: 400 11px/15px $font-leto 
+    &--navbar
+      font: 400 13px/15px $font-leto-bold
+.phone
   &__link
     color: #fff
-    font: 400 14px/16px $font-leto 
+    font: 400 22px/30px $font-leto-bold
+    &--navbar
+      font: 400 14px/16px $font-leto 
+    &:hover,
+    &:focus
+      text-decoration: none
+      color: #fff
+.email
+  &__link
+    color: #fff
+    font: 400 16px/30px $font-leto-bold
+    &--navbar
+      font: 400 14px/16px $font-leto 
     &:hover,
     &:focus
       text-decoration: none
       color: #fff  
+.social
+  &__item
+    display: inline-block
+    vertical-align: top
+    padding: 2px
+  &__link
+    display: block
+    width: 50px
+    height: 50px
+    background-color: #343434
+    text-align: center
+    &--footer
+      background-color: #192840
+  &__icon
+    color: #fff
+    font-size: 25px
+    line-height: 50px
 +rx(991)
   .nav
     &__link
@@ -152,36 +199,37 @@ html
       padding: 23px 15px
   .navbar-header
     position: absolute
-    left: 50%
-    transform: translateX(-50%) 
+    left: 0
+    &--center
+      left: 50%
+      transform: translateX(-50%) 
   .collapse
     display: block
   .logo
     width: 185px
+  .social
+    &__list
+      &--header
+        text-align: right
+    &__link
+      width: 40px
+      height: 40px
+    &__icon
+      font-size: 22px
+      line-height: 40px
 +r(1200)
   .nav
     &__item
       padding: 30px 15px
   .logo
-    width: auto
-.social
-  &__list
-  &__item
-    display: inline-block
-    vertical-align: top
-    padding: 2px
-  &__link
-    display: block
-    width: 50px
-    height: 50px
-    background-color: #343434
-    text-align: center
-    &--footer
-      background-color: #192840
-  &__icon
-    color: #fff
-    font-size: 25px
-    line-height: 50px
+    width: 200px
+  .social
+    &__link
+      width: 50px
+      height: 50px
+    &__icon
+      font-size: 25px
+      line-height: 50px
 +comment("section header style")   
 .slider
   &__heading 
@@ -205,12 +253,19 @@ html
       +cover
 .item
   padding: 90px 0 150px    
-+r(768)
++rx(767)
   .slider
     &__heading
       margin-bottom: 45px
   .item
-    padding: 110px 0 170px
+    padding: 130px 0 170px
++r(768)
+  .item
+    padding: 150px 0 230px
+  .carousel
+    &-indicators
+      left: 45%
+      bottom: 115px
 +r(992)
   .slider
     &__heading
@@ -218,21 +273,12 @@ html
       font: 400 44px/48px $font-leto
   .item
     padding: 200px 0 280px
+  .carousel
+    &-indicators
+      bottom: 200px  
 +cm("header box style")  
 .header
   position: relative
-  &__container
-    position: relative
-  &__col
-    position: absolute
-    bottom: -122px
-  &__box
-    position: absolute
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
-    padding-top: 35px
   &__link
     display: inline-block
     background-color: #343434
@@ -244,12 +290,34 @@ html
     .fa
       font-size: 20px
       line-height: 40px 
+.header-content
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  padding-top: 55px
+  &__container
+    position: relative
+    height: 100%
   &__form
+    position: relative
     padding: 30px 45px 45px
     background-color: #fff
     box-shadow: 0 30px 29px rgba(41, 41, 41, 0.16)
     border-top: 5px solid #ba3742
+    z-index: 1
+  &__col
+    position: absolute
+    margin-bottom: 40px
+    top: 0
+    height: 100%
+  &__btn-group
+    position: absolute
+    margin-bottom: 25px
+    bottom: 0
 .form
+  padding: 30px 17px 45px
   &__head
     padding: 0 15px
     margin-bottom: 12px
@@ -283,19 +351,28 @@ html
     box-shadow: 0 35px 29px rgba(18, 45, 79, 0.15)
     color: #fff
     padding: 12px 20px 10px 25px
-    font: 400 18px/20px $font-leto-bold  
+    font: 400 18px/20px $font-leto-bold 
+    transition: all .3s ease-out
+    &:hover,
+    &:focus
+      outline: none
+      opacity: .8 
     .ic
       margin-left: 15px  
   &__register
+    padding: 13px 40px
     background-color: #ba3742
     border-radius: 43px
     box-shadow: 0 35px 29px rgba(168, 31, 44, 0.15) 
     color: #fff   
     font: 400 16px/18px $font-leto-bold 
     &--size
+      margin: 0
       width: 100%
       padding: 18px 0 
 .scroll
+  position: absolute
+  bottom: 180px
   display: inline-block
   width: 200px
   &__text
@@ -307,33 +384,53 @@ html
     float: left
     width: 27px
     margin-right: 13px   
-+r(768)   
++rx(767)   
+  .header-content
+    &__btn-group
+      text-align: center
   .form  
     &__register  
-      font: 400 18px/20px $font-leto-bold 
+      font: 400 18px/20px $font-leto-bold
+    &__number
+      padding: 16px 18px 16px 18px
+      text-align: center
+  .btn
+    &__teacher,
+    &__register
+      margin: 7px 8px 8px 7px 
++r(768)
+  .form
+    &__number
+      font: 400 16px/20px $font-leto  
+  .header-content
+    &__btn-group
+      margin-bottom: 115px
 +r(992)
+  .header-content
+    &__btn-group
+      position: relative
+      margin: 0
+      text-align: center
+    &__col
+      height: auto
+      top: auto
+      bottom: 0 
   .form
     &__head
       padding: 0 30px
     &__subheading
       font: 400 30px/32px $font-leto-bold
+    &__number
+      font: 400 24px/26px $font-leto  
+  .btn
+    &__teacher
+      font: 400 17px/20px $font-leto-bold    
+    &__register  
+      font: 400 22px/24px $font-leto-bold 
++r(1200)      
   .btn
     &__teacher
       font: 400 22px/24px $font-leto-bold    
-    &__register  
-      font: 400 22px/24px $font-leto-bold 
-  .carousel
-    &-indicators
-      bottom: 200px           
-+cm("footer style")    
-.footer
-  position: absolute
-  padding-top: 47px
-  padding-bottom: 47px
-  bottom: 0
-  width: 100%
-  height: $footer-height
-  background-color: #223a5f
 +cm("section intro style") 
 .intro
   padding: 30px 0 40px
@@ -543,3 +640,12 @@ html
 +r(992)     
   .blog
     padding: 85px 0 70px
++cm("footer style")    
+.footer
+  position: absolute
+  padding-top: 47px
+  padding-bottom: 47px
+  bottom: 0
+  width: 100%
+  height: $footer-height
+  background-color: #223a5f

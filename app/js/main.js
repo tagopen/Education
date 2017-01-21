@@ -109,8 +109,12 @@ $(window).on('resize', function(){
       var $elemHeight = $('.format__image').height();
       $('.format__image .ic').css('line-height',  $elemHeight + 'px');
   }
-
 }).trigger('resize');
+
+// Masked phone
+$(function($){
+  $(".form__input--phone").mask("+7(999)999-99-99");
+});
 
 $('.format__slider').slick({
   dots: true,

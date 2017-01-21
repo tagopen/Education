@@ -64,20 +64,20 @@
   <body class="body">
     <nav class="navbar navbar-fixed-top">
       <div class="container navbar__container">
-        <div class="navbar-header">
+        <div class="navbar-header navbar-header--center">
           <button type="button" class="navbar-toggle">
             <span class="navbar-toggle__lines"></span>
           </button>
           <div class="visible-sm col-sm-3 col-sm-offset-4">
-            <div class="phone">
-              <div class="phone__text">Звоните</div>
-              <a href="tel:+74997558265" class="phone__link">+7 499 755 8265</a>
+            <div class="phone navbar__phone">
+              <div class="phone__text phone__text--navbar">Звоните</div>
+              <a href="tel:+74997558265" class="phone__link phone__link--navbar">+7 499 755 8265</a>
             </div>
           </div>
           <div class="visible-sm col-sm-3">
-            <div class="email">
-              <div class="email__text">Электронная почта</div>
-              <a href="mailto:mail@infocuseducation.ru" class="email__link">mail@infocuseducation.ru</a>
+            <div class="email navbar__email">
+              <div class="email__text email__text--navbar">Электронная почта</div>
+              <a href="mailto:mail@infocuseducation.ru" class="email__link email__link--navbar">mail@infocuseducation.ru</a>
             </div>
           </div>
           <div class="navbar__logo logo">
@@ -101,14 +101,13 @@
       </div>
     </nav><!-- /.navbar -->
 
-    <header class="hidden header">
-      <div id="header__slider" class="carousel slide slider" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#header__slider" data-slide-to="0" class="active"></li>
-          <li data-target="#header__slider" data-slide-to="1"></li>
-          <li data-target="#header__slider" data-slide-to="2"></li>
-        </ol>
-        <!-- Содержимое слайдов -->
+    <header class="header">
+      <section id="header-slider" class="carousel slide slider" data-ride="carousel">
+        <ol class="hidden-xs carousel-indicators">
+          <li data-target="#header-slider" data-slide-to="0" class="active"></li>
+          <li data-target="#header-slider" data-slide-to="1"></li>
+          <li data-target="#header-slider" data-slide-to="2"></li>
+        </ol><!--/.carousel-->
         <div class="carousel-inner">
           <div class="item slider__item--1 active">
             <div class="container">
@@ -141,71 +140,67 @@
             </div>
           </div><!-- /.item -->
         </div><!--/.carousel-inner -->
-      </div><!--/.slider-->
-      <!-- Содержимое header -->
-      <div class="header__box">
-        <div class="container header__container">
+      </section><!--/.slider-->
+      <section class="header-content">
+        <div class="container header-content__container">
           <div class="row">
-          <!-- Форма -->
-            <div class="col-sm-5 pull-right">
-             <form name="Регистрация" class="clearfix header__form" method="post" action="mail/mail.php">
-              <div class="form__head">
-                <div class="form__heading">Запишитесь на</div>
-                <div class="form__subheading">бесплатный первый урок</div>
-              </div>
-              <div class="form-group">
-                <div class="form__number">+7 499 123 45 67</div>
-              </div>
-              <div class="form-group">
-                <input aria-invalid="false" class="form-control form__input" placeholder="Ваше имя" required data-validation-required-message="Please enter your name." name="name" type="text">
-              </div>
-              <div class="form-group">
-                <input aria-invalid="false" class="form-control form__input" placeholder="Ваш телефон" required data-validation-required-message="Please enter your phone number." name="phone" type="tel">
-              </div>
-              <div class="text-center">
-                <button type="submit" class="btn btn__register btn__register--size" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">записаться</button>
-              </div>
-            </form>
-          </div><!--/.Форма-->
-          <!-- Нижняя часть хедера -->
-          <div class="col-xs-12 header__col">
-            <div class="col-sm-6">
-              <div class="header__call">
-                <div class="header__text">Звоните</div>
-                <a href="tel:+74997558265" class="header__number">+7 499 755 8265</a>
-              </div>
-              <div class="header__mail">
-                <div class="header__text">Электронная почта</div>
-                <a href="mailto:mail@infocuseducation.ru" class="header__email">mail@infocuseducation.ru</a>
+            <div class="hidden-xs col-sm-5 col-sm-offset-7">
+              <form name="Регистрация" class="clearfix header-content__form form" method="post" action="mail/mail.php" validate="novalidate">
+                <div class="form__head">
+                  <div class="form__heading">Запишитесь на</div>
+                  <div class="form__subheading">бесплатный <br>первый урок</div>
+                </div>
+                <div class="form-group">
+                  <div class="form__number">+7 499 123 45 67</div>
+                </div>
+                <div class="form-group">
+                  <input aria-invalid="false" class="form-control form__input" placeholder="Ваше имя" required data-validation-required-message="Please enter your name." name="name" type="text">
+                </div>
+                <div class="form-group">
+                  <input aria-invalid="false" class="form-control form__input form__input--phone" required data-validation-required-message="Please enter your phone number." name="phone" placeholder="+7(___)___-__-__" type="tel">
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn__register btn__register--size" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">записаться</button>
+                </div>
+              </form><!--/,form -->
+            </div>
+            <div class="col-xs-12 header-content__col">
+              <div class="row">
+                <div class="col-md-3 col-md-push-9 social">
+                  <ul class="list-unstyled social__list social__list--header">
+                    <li class="social__item"><a href="#" class="social__link"><i class="fa fa-vk social__icon"></i></a></li>
+                    <li class="social__item"><a href="#" class="social__link"><i class="fa fa-facebook social__icon"></i></a></li>
+                    <li class="social__item"><a href="#" class="social__link"><i class="fa fa-instagram social__icon"></i></a></li>
+                    <li class="social__item"><a href="#" class="social__link"><i class="fa fa-youtube social__icon"></i></a></li>
+                  </ul>
+                </div><!-- /.social -->
+                <div class="hidden-xs hidden-sm col-md-3 col-md-pull-3">
+                  <div class="phone">
+                    <div class="phone__text phone__text--bold">Звоните</div>
+                    <a href="tel:+74997558265" class="phone__link">+7 499 755 8265</a>
+                  </div>
+                </div>
+                <div class="hidden-xs hidden-sm col-md-3 col-md-pull-3">
+                  <div class="email">
+                    <div class="email__text">Электронная почта</div>
+                    <a href="mailto:mail@infocuseducation.ru" class="email__link">mail@infocuseducation.ru</a>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-md-3 col-md-pull-3 header-content__btn-group">
+                  <button class="hidden-sm hidden-md hidden-lg btn btn__register" data-toggle="modal" href="#modal-form">записаться на <br>бесплатный урок</button>
+                  <button class="btn btn__teacher">For teachers<i class="ic ic--uk"></i></button>
+                </div>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-3 text-xs-left text-center">
-              <button class="btn btn__teacher">For teachers<i class="ic ic--uk"></i></button>
-              <button class="hidden-md hidden-lg btn btn__register">записаться на бесплатный урок</button>
-            </div>
-            <div class="list-unstyled text-right social">
-              <ul class="social__list">
-                <li class="social__item"><a href="#" class="social__link"><i class="fa fa-vk social__icon"></i></a></li>
-                <li class="social__item"><a href="#" class="social__link"><i class="fa fa-facebook social__icon"></i></a></li>
-                <li class="social__item"><a href="#" class="social__link"><i class="fa fa-instagram social__icon"></i></a></li>
-                <li class="social__item"><a href="#" class="social__link"><i class="fa fa-youtube social__icon"></i></a></li>
-              </ul>
-            </div><!-- /.social -->
-          </div><!-- /.Нижняя часть хедера -->
           </div><!--/.row-->
 
-          
-            
-
-       <!--      <a href="#" class="clearfix scroll">
-                 <i class="ic ic--scroll"></i>
-                 <div class="scroll__text">прокрутить вниз, чтобы 
-       ознакомиться с нашими преимуществами</div>
-                 </a> -->
-                   
-
-        </div><!-- /.header container -->
-      </div><!-- /.Содержимое header -->
+        <a href="#" class="hidden-xs hidden-sm clearfix scroll">
+          <i class="ic ic--scroll"></i>
+          <span class="scroll__text">прокрутить вниз, чтобы 
+          ознакомиться с нашими преимуществами</span>
+        </a>
+        </div><!-- /.container -->
+      </section><!-- /.Содержимое header -->
     </header><!--/.header -->
     <!--intro -->
     <section class="intro">
@@ -285,7 +280,7 @@
       </div>
     </section><!--/.Format -->
     <!--Teacher -->
-    <section class="teacher">
+    <section class="hidden teacher">
       <div class="container">
         <div class="row">
            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
@@ -407,28 +402,56 @@
     </section><!--/.About -->
 
     <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-9">
-          
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9">
+            
+          </div>
+          <div class="col-md-3">
+            <div class="footer__logo logo">
+              <a href="/" class="logo__link">
+                <img class="img-responsive logo__img" src="img/logo/logo.jpg" alt="Illuminate Confirme">
+              </a>
+            </div><!-- /.logo -->
+            <div class="social">
+              <ul class="list-unstyled social__list">
+                <li class="social__item"><a href="#" class="social__link social__link--footer"><i class="fa fa-vk social__icon"></i></a></li>
+                <li class="social__item"><a href="#" class="social__link social__link--footer"><i class="fa fa-facebook social__icon"></i></a></li>
+                <li class="social__item"><a href="#" class="social__link social__link--footer"><i class="fa fa-instagram social__icon"></i></a></li>
+              </ul>
+            </div><!-- /.social -->
+          </div>
         </div>
-        <div class="col-md-3">
-          <div class="footer__logo logo">
-            <a href="/" class="logo__link">
-              <img class="img-responsive logo__img" src="img/logo/logo.jpg" alt="Illuminate Confirme">
-            </a>
-          </div><!-- /.logo -->
-          <div class="list-unstyled social">
-            <ul class="social__list">
-              <li class="social__item"><a href="#" class="social__link social__link--footer"><i class="fa fa-vk social__icon"></i></a></li>
-              <li class="social__item"><a href="#" class="social__link social__link--footer"><i class="fa fa-facebook social__icon"></i></a></li>
-              <li class="social__item"><a href="#" class="social__link social__link--footer"><i class="fa fa-instagram social__icon"></i></a></li>
-            </ul>
-          </div><!-- /.social -->
+      </div>
+    </footer><!-- /.footer -->
+
+    <div class="modal fade" id="modal-form">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <form name="Регистрация" class="clearfix header-content__form form" method="post" action="mail/mail.php" validate="novalidate">
+              <div class="form__head">
+                <div class="form__heading">Запишитесь на</div>
+                <div class="form__subheading">бесплатный первый урок</div>
+              </div>
+              <div class="form-group">
+                <div class="form__number">+7 499 123 45 67</div>
+              </div>
+              <div class="form-group">
+                <input aria-invalid="false" class="form-control form__input" placeholder="Ваше имя" required data-validation-required-message="Please enter your name." name="name" type="text">
+              </div>
+              <div class="form-group">
+                <input aria-invalid="false" class="form-control form__input form__input--phone" required data-validation-required-message="Please enter your phone number." name="phone" placeholder="+7(___)___-__-__" type="tel">
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn__register btn__register--size" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">записаться</button>
+              </div>
+            </form><!--/,form -->
+          </div>
         </div>
       </div>
     </div>
-    </footer><!-- /.footer -->
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -440,8 +463,8 @@
     <script src="js/jquery.reject.js"></script>
 
     <!-- Navbar-fixed-top JavaScript -->
-    <script src="js/classie.js"></script>
-    <script src="js/cbpAnimatedHeader.min.js"></script>
+    <!-- <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script> -->
 
     <!-- Validation Form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
@@ -449,6 +472,9 @@
 
     <!-- Slick-Slider JavaScript -->
     <script src="js/slick.js"></script>
+
+    <!-- Masked-input JavaScript -->
+    <script src="js/jquery.maskedinput.js"></script>
 
     <!-- Custom JavaScript -->
     <script src="js/main.js"></script>

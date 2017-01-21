@@ -190,7 +190,7 @@
 /* S L I C K - S L I D E R    T H E M E    S T Y L E  */
 /* -------------------------------------------------- */
 .slick-loading .slick-list {
-  background: #fff url('../img/ajax-loader.gif') center center no-repeat;
+  background: #fff url('../img/ajax-loader.gif?1481806172') center center no-repeat;
 }
 
 /* Icons */
@@ -433,7 +433,7 @@ html {
   position: relative;
   min-height: 100%;
   padding-bottom: 304px;
-  padding-top: 90px;
+  padding-top: 78px;
   -webkit-transition: 0.3s -webkit-transform ease-out;
   transition: 0.3s -webkit-transform ease-out;
   transition: 0.3s transform ease-out;
@@ -456,6 +456,25 @@ html {
   display: inline-block;
   padding: 8px 8px 6px 15px;
   background-color: rgba(226, 248, 62, 0.25);
+}
+
+/* modal styles */
+.modal-body {
+  padding: 0;
+}
+
+.modal-content {
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+button.close {
+  position: relative;
+  padding: 10px;
+  color: #000;
+  opacity: 1;
+  font-size: 35px;
+  z-index: 9;
 }
 
 @media only screen and (min-width: 768px) {
@@ -507,6 +526,9 @@ html {
 }
 .navbar__container {
   position: relative;
+}
+.navbar__phone, .navbar__email {
+  padding: 28px 0;
 }
 
 .navbar-toggle {
@@ -573,7 +595,6 @@ html {
 
 .phone,
 .email {
-  padding: 28px 0;
   text-align: left;
 }
 .phone__text,
@@ -581,16 +602,54 @@ html {
   color: #fff;
   font: 400 11px/15px "LetoSans", sans-serif;
 }
-.phone__link,
-.email__link {
+.phone__text--navbar,
+.email__text--navbar {
+  font: 400 13px/15px "LetoSansBold", sans-serif;
+}
+
+.phone__link {
   color: #fff;
+  font: 400 22px/30px "LetoSansBold", sans-serif;
+}
+.phone__link--navbar {
   font: 400 14px/16px "LetoSans", sans-serif;
 }
-.phone__link:hover, .phone__link:focus,
-.email__link:hover,
-.email__link:focus {
+.phone__link:hover, .phone__link:focus {
   text-decoration: none;
   color: #fff;
+}
+
+.email__link {
+  color: #fff;
+  font: 400 16px/30px "LetoSansBold", sans-serif;
+}
+.email__link--navbar {
+  font: 400 14px/16px "LetoSans", sans-serif;
+}
+.email__link:hover, .email__link:focus {
+  text-decoration: none;
+  color: #fff;
+}
+
+.social__item {
+  display: inline-block;
+  vertical-align: top;
+  padding: 2px;
+}
+.social__link {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #343434;
+  text-align: center;
+}
+.social__link--footer {
+  background-color: #192840;
+}
+.social__icon {
+  color: #fff;
+  font-size: 25px;
+  line-height: 50px;
 }
 
 @media only screen and (max-width: 991px) {
@@ -636,6 +695,9 @@ html {
 
   .navbar-header {
     position: absolute;
+    left: 0;
+  }
+  .navbar-header--center {
     left: 50%;
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
@@ -649,6 +711,18 @@ html {
   .logo {
     width: 185px;
   }
+
+  .social__list--header {
+    text-align: right;
+  }
+  .social__link {
+    width: 40px;
+    height: 40px;
+  }
+  .social__icon {
+    font-size: 22px;
+    line-height: 40px;
+  }
 }
 @media only screen and (min-width: 1200px) {
   .nav__item {
@@ -656,30 +730,18 @@ html {
   }
 
   .logo {
-    width: auto;
+    width: 200px;
+  }
+
+  .social__link {
+    width: 50px;
+    height: 50px;
+  }
+  .social__icon {
+    font-size: 25px;
+    line-height: 50px;
   }
 }
-.social__item {
-  display: inline-block;
-  vertical-align: top;
-  padding: 2px;
-}
-.social__link {
-  display: block;
-  width: 50px;
-  height: 50px;
-  background-color: #343434;
-  text-align: center;
-}
-.social__link--footer {
-  background-color: #192840;
-}
-.social__icon {
-  color: #fff;
-  font-size: 25px;
-  line-height: 50px;
-}
-
 /* ------------------------------------------ */
 /* S E C T I O N    H E A D E R    S T Y L E  */
 /* ------------------------------------------ */
@@ -717,13 +779,23 @@ html {
   padding: 90px 0 150px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 767px) {
   .slider__heading {
     margin-bottom: 45px;
   }
 
   .item {
-    padding: 110px 0 170px;
+    padding: 130px 0 170px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .item {
+    padding: 150px 0 230px;
+  }
+
+  .carousel-indicators {
+    left: 45%;
+    bottom: 115px;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -735,25 +807,14 @@ html {
   .item {
     padding: 200px 0 280px;
   }
+
+  .carousel-indicators {
+    bottom: 200px;
+  }
 }
 /* header box style */
 .header {
   position: relative;
-}
-.header__container {
-  position: relative;
-}
-.header__col {
-  position: absolute;
-  bottom: -122px;
-}
-.header__box {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding-top: 35px;
 }
 .header__link {
   display: inline-block;
@@ -768,14 +829,43 @@ html {
   font-size: 20px;
   line-height: 40px;
 }
-.header__form {
+
+.header-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: 55px;
+}
+.header-content__container {
+  position: relative;
+  height: 100%;
+}
+.header-content__form {
+  position: relative;
   padding: 30px 45px 45px;
   background-color: #fff;
   -webkit-box-shadow: 0 30px 29px rgba(41, 41, 41, 0.16);
           box-shadow: 0 30px 29px rgba(41, 41, 41, 0.16);
   border-top: 5px solid #ba3742;
+  z-index: 1;
+}
+.header-content__col {
+  position: absolute;
+  margin-bottom: 40px;
+  top: 0;
+  height: 100%;
+}
+.header-content__btn-group {
+  position: absolute;
+  margin-bottom: 25px;
+  bottom: 0;
 }
 
+.form {
+  padding: 30px 17px 45px;
+}
 .form__head {
   padding: 0 15px;
   margin-bottom: 12px;
@@ -819,11 +909,18 @@ html {
   color: #fff;
   padding: 12px 20px 10px 25px;
   font: 400 18px/20px "LetoSansBold", sans-serif;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.btn__teacher:hover, .btn__teacher:focus {
+  outline: none;
+  opacity: 0.8;
 }
 .btn__teacher .ic {
   margin-left: 15px;
 }
 .btn__register {
+  padding: 13px 40px;
   background-color: #ba3742;
   -webkit-border-radius: 43px;
           border-radius: 43px;
@@ -833,11 +930,14 @@ html {
   font: 400 16px/18px "LetoSansBold", sans-serif;
 }
 .btn__register--size {
+  margin: 0;
   width: 100%;
   padding: 18px 0;
 }
 
 .scroll {
+  position: absolute;
+  bottom: 180px;
   display: inline-block;
   width: 200px;
 }
@@ -853,41 +953,66 @@ html {
   margin-right: 13px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 767px) {
+  .header-content__btn-group {
+    text-align: center;
+  }
+
   .form__register {
     font: 400 18px/20px "LetoSansBold", sans-serif;
   }
+  .form__number {
+    padding: 16px 18px 16px 18px;
+    text-align: center;
+  }
+
+  .btn__teacher, .btn__register {
+    margin: 7px 8px 8px 7px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .form__number {
+    font: 400 16px/20px "LetoSans", sans-serif;
+  }
+
+  .header-content__btn-group {
+    margin-bottom: 115px;
+  }
 }
 @media only screen and (min-width: 992px) {
+  .header-content__btn-group {
+    position: relative;
+    margin: 0;
+    text-align: center;
+  }
+  .header-content__col {
+    height: auto;
+    top: auto;
+    bottom: 0;
+  }
+
   .form__head {
     padding: 0 30px;
   }
   .form__subheading {
     font: 400 30px/32px "LetoSansBold", sans-serif;
   }
+  .form__number {
+    font: 400 24px/26px "LetoSans", sans-serif;
+  }
 
   .btn__teacher {
-    font: 400 22px/24px "LetoSansBold", sans-serif;
+    font: 400 17px/20px "LetoSansBold", sans-serif;
   }
   .btn__register {
     font: 400 22px/24px "LetoSansBold", sans-serif;
   }
-
-  .carousel-indicators {
-    bottom: 200px;
+}
+@media only screen and (min-width: 1200px) {
+  .btn__teacher {
+    font: 400 22px/24px "LetoSansBold", sans-serif;
   }
 }
-/* footer style */
-.footer {
-  position: absolute;
-  padding-top: 47px;
-  padding-bottom: 47px;
-  bottom: 0;
-  width: 100%;
-  height: 304px;
-  background-color: #223a5f;
-}
-
 /* section intro style */
 .intro {
   padding: 30px 0 40px;
@@ -1176,4 +1301,14 @@ html {
   .blog {
     padding: 85px 0 70px;
   }
+}
+/* footer style */
+.footer {
+  position: absolute;
+  padding-top: 47px;
+  padding-bottom: 47px;
+  bottom: 0;
+  width: 100%;
+  height: 304px;
+  background-color: #223a5f;
 }
