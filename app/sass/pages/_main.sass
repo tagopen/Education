@@ -3,7 +3,7 @@
 +font('LetoSansThin', 'LetoSansThin')
 +font('LetoSansBold', 'LetoSansBold')
 +ic
-@each $ic in uk, scroll, format1, format2, format3, format4, format5, format6
+@each $ic in uk, scroll, format1, format2, format3, format4, format5, format6, like320, like760
   .ic--#{$ic}
     +sb(#{$ic})
 html
@@ -28,9 +28,6 @@ html
     display: inline-block
     padding: 8px 8px 6px 15px
     background-color: rgba(226,248,62,0.25)
-.video
-  &__box
-    padding-bottom: 56.3%
 +r(768)
   .heading
     font: 400 28px/38px $font-leto-thin 
@@ -291,7 +288,7 @@ html
       margin-left: 15px  
   &__register
     background-color: #ba3742
-    border-radius: 27px
+    border-radius: 43px
     box-shadow: 0 35px 29px rgba(168, 31, 44, 0.15) 
     color: #fff   
     font: 400 16px/18px $font-leto-bold 
@@ -369,6 +366,7 @@ html
 +cm("section format style")  
 .format
   padding: 30px 0    
+  background-color: #fafafa
   &__heading
     margin-bottom: 30px
   &__text
@@ -411,7 +409,9 @@ html
   &__heading
     margin-bottom: 30px  
   &__video 
-    margin-bottom: 30px
+    margin: -1px -1px 30px
+    .video__box
+      padding-bottom: 56.3%
   &__name
     margin-bottom: 15px
     color: #131313
@@ -453,24 +453,93 @@ html
 +cm("section about style")  
 .about
   padding: 45px 0  
-  text-align: center
+  background: url(../img/aboutbg.png) no-repeat
+  +cover
   &__heading
     margin-bottom: 40px
-  &__subheading
+  &__item
+    list-style-type: none
+    &:before
+      content: ''
+      display: inline-block
+      height: 10px
+      width: 10px
+      border-radius: 50%
+      background-color: #ffefef
+      margin: 10px 20px 0 0 
+      float: left
+  &__text
+    display: block
     color: #131313  
     font: 400 16px/19px $font-leto
     margin-bottom: 30px
     &--span
       font-family: $font-leto-bold
+    &--position
+      float: left  
+      width: 95%
+  &__list
+    padding-left: 0    
+  &__box
+    position: relative
+    padding: 35px 25px 0  
+    border: 3px dashed #dacccd
+    border-radius: 4px
+    margin-bottom: 65px 
+    .ic
+      position: absolute
+  &__btn
+    display: block
+    margin: 0 auto   
+    padding: 25px 30px
+  &__video
+    margin-bottom: 30px  
+    .video__box
+      padding-bottom: 78%
+.ic
+  &--like320
+    bottom: -60px
+    left: -10px      
+  &--like760
+    bottom: -120px
+    left: -60px
 +r(768)  
   .about
     padding: 45px 0 60px
     &__heading
       margin-bottom: 70px
+    &__list
+      text-align: center  
+    &__box
+      padding: 50px 30px 10px
+    &__btn
+      min-width: 550px  
+      position: relative
+      top: -80px
+    &__video
+      color: #e7e7e7
+      box-shadow: 0px 12px 0px 5px rgba(231,231,231,1) 
 +r(992)     
   .about
     padding: 100px 0 
     &__heading
       margin-bottom: 60px
-    &__subheading
+    &__text
       font: 400 24px/32px $font-leto
+    &__list
+      text-align: left
+    &__box
+      padding: 55px 60px 30px
+    &__btn
+      position: static
+      min-width: 660px  
++cm("section blog style")  
+.blog
+  background-color: #ebebeb
+  padding: 50px 0 25px
++r(768)  
+  .blog  
+    padding: 70px 0 40px
++r(992)     
+  .blog
+    padding: 85px 0 70px
