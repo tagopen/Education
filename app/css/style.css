@@ -1180,6 +1180,9 @@ button.close {
 }
 
 @media only screen and (min-width: 768px) {
+  .format {
+    padding: 50px 0;
+  }
   .format__col {
     border: 1px solid #d6d6d6;
     border-collapse: collapse;
@@ -1189,8 +1192,16 @@ button.close {
   }
 }
 @media only screen and (min-width: 960px) {
+  .format {
+    padding: 80px 0 50px;
+  }
   .format__box {
     padding: 50px 0 60px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .format {
+    padding: 80px 0 100px;
   }
 }
 /* section teachers style */
@@ -1384,9 +1395,6 @@ button.close {
   }
 }
 @media only screen and (min-width: 960px) {
-  .about {
-    padding: 100px 0;
-  }
   .about__text {
     font: 400 24px/32px "LetoSans", sans-serif;
   }
@@ -1410,6 +1418,11 @@ button.close {
   .about__btn {
     position: static;
     min-width: 660px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .about {
+    padding: 100px 0 90px;
   }
 }
 /* section blog style */
@@ -1568,6 +1581,7 @@ button.close {
   -webkit-box-shadow: 0 35px 29px rgba(168, 31, 44, 0.15);
           box-shadow: 0 35px 29px rgba(168, 31, 44, 0.15);
   background: transparent;
+  color: #fff;
 }
 
 @media only screen and (min-width: 768px) {
