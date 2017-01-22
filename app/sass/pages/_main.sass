@@ -11,14 +11,16 @@ html
   min-height: 100%
   height: 100%
 .body
-  position: relative
+  display: flex
+  flex-direction: column
   min-height: 100%
-  padding-bottom: $footer-height
   padding-top: 78px
   transition: .3s transform ease-out
   &--collapsed
     overflow: hidden
     transform: translateX(-$collapse-width)
+.wrapper
+  flex: 1
 .heading
   color: #131313
   font: 400 24px/30px $font-leto-thin
@@ -153,6 +155,9 @@ button.close
       text-decoration: none
       color: #fff  
 .social
+  &--footer
+    margin-top: 50px
+    text-align: right
   &__item
     display: inline-block
     vertical-align: top
@@ -164,6 +169,8 @@ button.close
     background-color: #343434
     text-align: center
     &--footer
+      width: 47px
+      height: 47px
       background-color: #192840
   &__icon
     color: #fff
@@ -231,6 +238,9 @@ button.close
     &__link
       width: 50px
       height: 50px
+      &--footer
+        width: 47px
+        height: 47px
     &__icon
       font-size: 25px
       line-height: 50px
@@ -384,7 +394,7 @@ button.close
     font: 400 11px/12px $font-leto 
     float: left
     width: 160px
-  .ic
+  &__icon
     float: left
     width: 27px
     margin-right: 13px   
@@ -776,11 +786,18 @@ button.close
       padding: 18px 0
 +cm("footer style")    
 .footer
-  position: absolute
   padding-top: 47px
   padding-bottom: 47px
-  bottom: 0
-  width: 100%
-  height: $footer-height
   background-color: #223a5f
-  
+  &__logo
+    width: auto
+.f-nav
+  &__heading
+    display: inline-block
+    margin: 20px 0
+    color: #fff
+    font: 400 17px/20px $font-leto  
+  &__link
+    display: inline-block
+    font: 400 13px/20px $font-leto
+    color: #d0e2ff

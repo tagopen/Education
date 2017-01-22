@@ -430,9 +430,16 @@ html {
 }
 
 .body {
-  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   min-height: 100%;
-  padding-bottom: 304px;
   padding-top: 78px;
   -webkit-transition: 0.3s -webkit-transform ease-out;
   transition: 0.3s -webkit-transform ease-out;
@@ -444,6 +451,13 @@ html {
   -webkit-transform: translateX(-200px);
       -ms-transform: translateX(-200px);
           transform: translateX(-200px);
+}
+
+.wrapper {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .heading {
@@ -636,6 +650,10 @@ button.close {
   color: #fff;
 }
 
+.social--footer {
+  margin-top: 50px;
+  text-align: right;
+}
 .social__item {
   display: inline-block;
   vertical-align: top;
@@ -649,6 +667,8 @@ button.close {
   text-align: center;
 }
 .social__link--footer {
+  width: 47px;
+  height: 47px;
   background-color: #192840;
 }
 .social__icon {
@@ -741,6 +761,10 @@ button.close {
   .social__link {
     width: 50px;
     height: 50px;
+  }
+  .social__link--footer {
+    width: 47px;
+    height: 47px;
   }
   .social__icon {
     font-size: 25px;
@@ -952,7 +976,7 @@ button.close {
   float: left;
   width: 160px;
 }
-.scroll .ic {
+.scroll__icon {
   float: left;
   width: 27px;
   margin-right: 13px;
@@ -1482,11 +1506,22 @@ button.close {
 }
 /* footer style */
 .footer {
-  position: absolute;
   padding-top: 47px;
   padding-bottom: 47px;
-  bottom: 0;
-  width: 100%;
-  height: 304px;
   background-color: #223a5f;
+}
+.footer__logo {
+  width: auto;
+}
+
+.f-nav__heading {
+  display: inline-block;
+  margin: 20px 0;
+  color: #fff;
+  font: 400 17px/20px "LetoSans", sans-serif;
+}
+.f-nav__link {
+  display: inline-block;
+  font: 400 13px/20px "LetoSans", sans-serif;
+  color: #d0e2ff;
 }
