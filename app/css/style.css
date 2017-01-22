@@ -190,7 +190,7 @@
 /* S L I C K - S L I D E R    T H E M E    S T Y L E  */
 /* -------------------------------------------------- */
 .slick-loading .slick-list {
-  background: #fff url('../img/ajax-loader.gif?1481806172') center center no-repeat;
+  background: #fff url('../img/ajax-loader.gif?1485005529') center center no-repeat;
 }
 
 /* Icons */
@@ -472,6 +472,36 @@ html {
           flex: 1;
 }
 
+.btn {
+  padding: 14px 40px;
+  background-color: #ba3742;
+  -webkit-border-radius: 43px;
+          border-radius: 43px;
+  -webkit-box-shadow: 0 35px 29px rgba(168, 31, 44, 0.15);
+          box-shadow: 0 35px 29px rgba(168, 31, 44, 0.15);
+  color: #fff;
+  font: 400 16px/18px "LetoSansBold", sans-serif;
+}
+.btn--size {
+  margin: 0;
+  width: 100%;
+}
+.btn:hover, .btn:focus {
+  outline: none;
+  background-color: #df424f;
+}
+
+@media only screen and (min-width: 768px) {
+  .btn {
+    padding: 18px 40px;
+    font: 400 18px/20px "LetoSansBold", sans-serif;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .btn {
+    font: 400 22px/24px "LetoSansBold", sans-serif;
+  }
+}
 .heading {
   color: #131313;
   font: 400 24px/30px "LetoSansThin", sans-serif;
@@ -930,6 +960,24 @@ button.close {
   font-size: 20px;
   line-height: 40px;
 }
+.header__btn {
+  background-color: #223a5f;
+  -webkit-border-radius: 21px;
+          border-radius: 21px;
+  -webkit-box-shadow: 0 35px 29px rgba(18, 45, 79, 0.15);
+          box-shadow: 0 35px 29px rgba(18, 45, 79, 0.15);
+  color: #fff;
+  padding: 12px 20px 10px 25px;
+  font: 400 18px/20px "LetoSansBold", sans-serif;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.header__btn:hover, .header__btn:focus {
+  background-color: #294672;
+}
+.header__btn .ic {
+  margin-left: 15px;
+}
 
 .header-content {
   position: absolute;
@@ -1001,41 +1049,6 @@ button.close {
   text-decoration: none;
 }
 
-.btn__teacher {
-  background-color: #223a5f;
-  -webkit-border-radius: 21px;
-          border-radius: 21px;
-  -webkit-box-shadow: 0 35px 29px rgba(18, 45, 79, 0.15);
-          box-shadow: 0 35px 29px rgba(18, 45, 79, 0.15);
-  color: #fff;
-  padding: 12px 20px 10px 25px;
-  font: 400 18px/20px "LetoSansBold", sans-serif;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-}
-.btn__teacher:hover, .btn__teacher:focus {
-  outline: none;
-  opacity: 0.8;
-}
-.btn__teacher .ic {
-  margin-left: 15px;
-}
-.btn__register {
-  padding: 13px 40px;
-  background-color: #ba3742;
-  -webkit-border-radius: 43px;
-          border-radius: 43px;
-  -webkit-box-shadow: 0 35px 29px rgba(168, 31, 44, 0.15);
-          box-shadow: 0 35px 29px rgba(168, 31, 44, 0.15);
-  color: #fff;
-  font: 400 16px/18px "LetoSansBold", sans-serif;
-}
-.btn__register--size {
-  margin: 0;
-  width: 100%;
-  padding: 18px 0;
-}
-
 .scroll {
   position: absolute;
   bottom: 180px;
@@ -1065,10 +1078,6 @@ button.close {
   .form__number {
     padding: 16px 18px 16px 18px;
     text-align: center;
-  }
-
-  .btn__teacher, .btn__register {
-    margin: 7px 8px 8px 7px;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -1101,16 +1110,9 @@ button.close {
   .form__number {
     font: 400 24px/26px "LetoSans", sans-serif;
   }
-
-  .btn__teacher {
-    font: 400 17px/20px "LetoSansBold", sans-serif;
-  }
-  .btn__register {
-    font: 400 22px/24px "LetoSansBold", sans-serif;
-  }
 }
 @media only screen and (min-width: 1200px) {
-  .btn__teacher {
+  .header__btn {
     font: 400 22px/24px "LetoSansBold", sans-serif;
   }
 }
@@ -1130,7 +1132,7 @@ button.close {
   margin-bottom: 20px;
 }
 .intro__btn {
-  min-width: 275px;
+  min-width: 280px;
   padding: 20px 0;
 }
 
@@ -1259,15 +1261,29 @@ button.close {
     padding: 40px 0 45px;
   }
   .teacher__slider .slick-prev {
-    left: -36px;
+    left: -70px;
   }
   .teacher__slider .slick-next {
-    right: -36px;
+    right: -70px;
   }
 }
 @media only screen and (min-width: 960px) {
   .teacher {
     padding: 70px 0 100px;
+  }
+  .teacher__slider .slick-prev {
+    left: -24px;
+  }
+  .teacher__slider .slick-next {
+    right: -24px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .teacher__slider .slick-prev {
+    left: -54px;
+  }
+  .teacher__slider .slick-next {
+    right: -54px;
   }
 }
 /* section about style */
@@ -1295,7 +1311,7 @@ button.close {
 }
 .about__text--position {
   float: left;
-  width: 95%;
+  width: 92%;
 }
 .about__list {
   padding-left: 0;
@@ -1314,7 +1330,7 @@ button.close {
 .about__btn {
   display: block;
   margin: 0 auto;
-  padding: 25px 30px;
+  padding: 30px;
 }
 .about__video {
   margin-bottom: 30px;
@@ -1426,17 +1442,18 @@ button.close {
   margin-bottom: 30px;
 }
 .blog__item {
-  padding: 0 5px;
+  padding: 0 10px;
 }
 .blog__btn {
   display: inline-block;
-  padding: 20px 0;
+  padding: 22px 0;
   border: 2px solid #d9d9d9;
   -webkit-border-radius: 43px;
           border-radius: 43px;
   -webkit-box-shadow: 0 35px 29px rgba(168, 31, 44, 0.15);
           box-shadow: 0 35px 29px rgba(168, 31, 44, 0.15);
   color: #d9d9d9;
+  background-color: transparent;
   font: 400 16px/17px "LetoSansBold", sans-serif;
   min-width: 220px;
 }
@@ -1500,13 +1517,21 @@ button.close {
     margin-bottom: 50px;
   }
   .blog__slider .slick-next {
-    right: -30px;
+    right: -24px;
   }
   .blog__slider .slick-prev {
-    left: -30px;
+    left: -24px;
   }
   .blog__btn {
     font: 400 22px/24px "LetoSansBold", sans-serif;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .blog__slider .slick-next {
+    right: -50px;
+  }
+  .blog__slider .slick-prev {
+    left: -50px;
   }
 }
 /* section subscribe style */
@@ -1574,7 +1599,7 @@ button.close {
     font: 400 19px/20px "LetoSans", sans-serif;
   }
   .subscribe__btn {
-    padding: 18px 0;
+    padding: 19px 0 18px;
   }
 }
 /* footer style */

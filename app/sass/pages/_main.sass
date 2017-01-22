@@ -21,6 +21,27 @@ html
     transform: translateX(-$collapse-width)
 .wrapper
   flex: 1
+.btn 
+  padding: 14px 40px
+  background-color: #ba3742
+  border-radius: 43px
+  box-shadow: 0 35px 29px rgba(168, 31, 44, 0.15) 
+  color: #fff   
+  font: 400 16px/18px $font-leto-bold 
+  &--size
+    margin: 0
+    width: 100% 
+  &:hover,
+  &:focus
+    outline: none
+    background-color: #ba3742 * 1.2 
++r(768)    
+  .btn
+    padding: 18px 40px
+    font: 400 18px/20px $font-leto-bold 
++r(960) 
+  .btn
+    font: 400 22px/24px $font-leto-bold          
 .heading
   color: #131313
   font: 400 24px/30px $font-leto-thin
@@ -33,7 +54,7 @@ html
     font-family: $font-leto
   &--span
     background-color: transparent
-    padding: 0  
+    padding: 0      
 .content
   padding: 50px 0 40px
   &__heading    
@@ -346,6 +367,19 @@ button.close
     .fa
       font-size: 20px
       line-height: 40px 
+  &__btn
+    background-color: #223a5f
+    border-radius: 21px
+    box-shadow: 0 35px 29px rgba(18, 45, 79, 0.15)
+    color: #fff
+    padding: 12px 20px 10px 25px
+    font: 400 18px/20px $font-leto-bold 
+    transition: all .3s ease-out
+    &:hover,
+    &:focus
+      background-color: #223a5f * 1.2 
+    .ic
+      margin-left: 15px      
 .header-content
   position: absolute
   top: 0
@@ -400,32 +434,6 @@ button.close
     &:hover,
     &:focus
       text-decoration: none 
-.btn
-  &__teacher
-    background-color: #223a5f
-    border-radius: 21px
-    box-shadow: 0 35px 29px rgba(18, 45, 79, 0.15)
-    color: #fff
-    padding: 12px 20px 10px 25px
-    font: 400 18px/20px $font-leto-bold 
-    transition: all .3s ease-out
-    &:hover,
-    &:focus
-      outline: none
-      opacity: .8 
-    .ic
-      margin-left: 15px  
-  &__register
-    padding: 13px 40px
-    background-color: #ba3742
-    border-radius: 43px
-    box-shadow: 0 35px 29px rgba(168, 31, 44, 0.15) 
-    color: #fff   
-    font: 400 16px/18px $font-leto-bold 
-    &--size
-      margin: 0
-      width: 100%
-      padding: 18px 0 
 .scroll
   position: absolute
   bottom: 180px
@@ -450,10 +458,6 @@ button.close
     &__number
       padding: 16px 18px 16px 18px
       text-align: center
-  .btn
-    &__teacher,
-    &__register
-      margin: 7px 8px 8px 7px 
 +r(768)
   .form
     &__number
@@ -478,14 +482,9 @@ button.close
       font: 400 30px/32px $font-leto-bold
     &__number
       font: 400 24px/26px $font-leto  
-  .btn
-    &__teacher
-      font: 400 17px/20px $font-leto-bold    
-    &__register  
-      font: 400 22px/24px $font-leto-bold 
 +r(1200)      
-  .btn
-    &__teacher
+  .header
+    &__btn
       font: 400 22px/24px $font-leto-bold    
 +cm("section intro style") 
 .intro
@@ -500,7 +499,7 @@ button.close
     font: 400 16px/20px $font-leto-bold
     margin-bottom: 20px
   &__btn
-    min-width: 275px
+    min-width: 280px
     padding: 20px 0   
 +r(768) 
   .intro
@@ -598,12 +597,26 @@ button.close
     &__slider
       .slick
         &-prev
-          left: -36px
+          left: -70px
         &-next
-          right: -36px    
+          right: -70px    
 +r(960)      
   .teacher
     padding: 70px 0 100px
+    &__slider
+      .slick
+        &-prev
+          left: -24px
+        &-next
+          right: -24px    
++r(1200)      
+  .teacher
+    &__slider
+      .slick
+        &-prev
+          left: -54px
+        &-next  
+          right: -54px 
 +cm("section about style")  
 .about
   padding: 45px 0  
@@ -622,7 +635,7 @@ button.close
       font-family: $font-leto-bold
     &--position
       float: left  
-      width: 95%
+      width: 92%
   &__list
     padding-left: 0    
   &__box
@@ -636,7 +649,7 @@ button.close
   &__btn
     display: block
     margin: 0 auto   
-    padding: 25px 30px
+    padding: 30px
   &__video
     margin-bottom: 30px  
     .video__box
@@ -718,14 +731,15 @@ button.close
   &__slider
     margin-bottom: 30px  
   &__item
-    padding: 0 5px    
+    padding: 0 10px    
   &__btn
     display: inline-block
-    padding: 20px 0
+    padding: 22px 0
     border: 2px solid #d9d9d9
     border-radius: 43px
     box-shadow: 0 35px 29px rgba(168, 31, 44, 0.15) 
     color: #d9d9d9 
+    background-color: transparent
     font: 400 16px/17px $font-leto-bold
     min-width: 220px
 +r(768)  
@@ -774,11 +788,19 @@ button.close
       margin-bottom: 50px 
       .slick
         &-next
-          right: -30px
+          right: -24px
         &-prev
-          left: -30px    
+          left: -24px    
     &__btn
-      font: 400 22px/24px $font-leto-bold          
+      font: 400 22px/24px $font-leto-bold  
++r(1200)     
+  .blog
+    &__slider
+      .slick
+        &-next
+          right: -50px
+        &-prev
+          left: -50px          
 +cm("section subscribe style")    
 .subscribe
   padding: 25px 0 35px  
@@ -826,7 +848,7 @@ button.close
     &__input
       font: 400 19px/20px $font-leto   
     &__btn
-      padding: 18px 0
+      padding: 19px 0 18px
 +cm("footer style")    
 .footer
   padding-top: 47px
