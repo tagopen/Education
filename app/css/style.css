@@ -1576,3 +1576,8 @@ button.close {
     font: 400 15px/18px "LetoSans", sans-serif;
   }
 }
+@media only screen and (min-width: 1200px) {
+  .footer__logo {
+    display: inline-block;
+  }
+}
