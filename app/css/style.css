@@ -1195,6 +1195,7 @@ button.close {
   text-align: center;
   border: 1px solid #e4e4e4;
   padding-bottom: 25px;
+  margin-bottom: 20px;
 }
 .teacher__heading {
   margin-bottom: 30px;
@@ -1621,5 +1622,117 @@ button.close {
 @media only screen and (min-width: 1200px) {
   .footer__logo {
     display: inline-block;
+  }
+}
+/* ---------------------------------------- */
+/* P A G E    T E A C H E R S    S T Y L E  */
+/* ---------------------------------------- */
+.teachers__text {
+  color: #282828;
+  font: 400 14px/16px "LetoSans", sans-serif;
+  margin-bottom: 30px;
+}
+.teachers__list {
+  padding-left: 15px;
+}
+.teachers__item {
+  padding-left: 10px;
+  color: #282828;
+  font: 400 14px/16px "LetoSans", sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+  .teachers__text {
+    font: 400 18px/20px "LetoSans", sans-serif;
+  }
+  .teachers__item {
+    font: 400 18px/20px "LetoSans", sans-serif;
+    padding-left: 30px;
+  }
+}
+/* ---------------------------------------- */
+/* P A G E    L E C T U R E R    S T Y L E  */
+/* ---------------------------------------- */
+.lecturer__point {
+  display: inline-block;
+  margin-right: 20px;
+  color: #223a5f;
+  font: 400 14px/25px "LetoSans", sans-serif;
+  border-bottom: 1px dashed #223a5f;
+}
+.lecturer__profile {
+  padding-top: 20px;
+}
+.lecturer-profile {
+  color: #282828;
+  font: 400 12px/18px "LetoSans", sans-serif;
+}
+.lecturer-profile__value {
+  font-family: "LetoSansBold", sans-serif;
+}
+.lecturer__row {
+  margin-bottom: 5px;
+}
+.lecturer__price {
+  background-color: #fefaee;
+  padding: 30px 0 20px;
+  text-align: center;
+}
+.lecturer-price__text {
+  display: inline-block;
+  font: 400 13px/16px "LetoSans", sans-serif;
+}
+.lecturer-price__value {
+  color: #282828;
+  font: 400 30px/32px "LetoSans", sans-serif;
+}
+.lecturer__btn {
+  background-color: #52ac62;
+  color: #fff;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.lecturer__btn--margin {
+  margin-bottom: 25px;
+}
+.lecturer__link {
+  display: block;
+  color: #223a5f;
+  font: 400 16px/18px "LetoSansBold", sans-serif;
+  text-decoration: underline;
+  margin-top: 15px;
+}
+.lecturer__text {
+  color: #282828;
+  font: 400 14px/18px "LetoSans", sans-serif;
+  margin-bottom: 20px;
+}
+.lecturer__video {
+  margin: 0 -15px;
+}
+.lecturer__video .video__box {
+  padding-bottom: 63%;
+}
+.lecturer__contact {
+  border: 3px dashed #dacccd;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  padding: 35px 0 20px;
+  margin-top: 35px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .lecturer__contact {
+    padding: 30px 0 25px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .lecturer-profile {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .lecturer__text {
+    font: 400 18px/20px "LetoSans", sans-serif;
   }
 }

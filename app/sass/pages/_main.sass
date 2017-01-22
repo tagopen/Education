@@ -551,6 +551,7 @@ button.close
     text-align: center
     border: 1px solid #e4e4e4
     padding-bottom: 25px
+    margin-bottom: 20px
   &__heading
     margin-bottom: 30px  
   &__video 
@@ -867,3 +868,87 @@ button.close
   .footer
     &__logo
       display: inline-block
++comment('page teachers style')      
+.teachers
+  &__text
+    color: #282828
+    font: 400 14px/16px $font-leto
+    margin-bottom: 30px
+  &__list
+    padding-left: 15px
+  &__item
+    padding-left: 10px   
+    color: #282828
+    font: 400 14px/16px $font-leto 
++r(768)   
+  .teachers
+    &__text
+      font: 400 18px/20px $font-leto
+    &__item  
+      font: 400 18px/20px $font-leto
+      padding-left: 30px  
++comment('page lecturer style')  
+.lecturer
+  &__point
+    display: inline-block
+    margin-right: 20px
+    color: #223a5f
+    font: 400 14px/25px $font-leto    
+    border-bottom: 1px dashed #223a5f
+  &__profile
+    padding-top: 20px 
+  &-profile 
+    color: #282828
+    font: 400 12px/18px $font-leto
+    &__value
+      font-family: $font-leto-bold
+  &__row
+    margin-bottom: 5px    
+  &__price
+    background-color: #fefaee
+    padding: 30px 0 20px 
+    text-align: center 
+  &-price
+    &__text
+      display: inline-block
+      font: 400 13px/16px $font-leto
+    &__value
+      color: #282828 
+      font: 400 30px/32px $font-leto   
+  &__btn
+    background-color: #52ac62
+    color: #fff
+    box-shadow: none
+    &--margin
+      margin-bottom: 25px
+  &__link
+    display: block
+    color: #223a5f
+    font: 400 16px/18px $font-leto-bold
+    text-decoration: underline  
+    margin-top: 15px
+  &__text
+    color: #282828  
+    font: 400 14px/18px $font-leto
+    margin-bottom: 20px
+  &__video
+    margin: 0 -15px
+    .video__box
+      padding-bottom: 63%  
+  &__contact    
+    border: 3px dashed #dacccd
+    border-radius: 4px
+    padding: 35px 0 20px
+    margin-top: 35px
+    text-align: center
++r(768)    
+  .lecturer
+    &__contact
+      padding: 30px 0 25px
++r(960)     
+  .lecturer
+    &-profile
+      font-size: 18px
+      line-height: 20px
+    &__text
+      font: 400 18px/20px $font-leto
