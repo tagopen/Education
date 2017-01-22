@@ -1211,8 +1211,13 @@ button.close {
     padding: 50px 0;
   }
   .format__col {
-    border: 1px solid #d6d6d6;
+    border-bottom: 1px solid #d6d6d6;
+    border-left: 1px solid #d6d6d6;
+    margin: 0 0 -1px -1px;
     border-collapse: collapse;
+  }
+  .format__slider {
+    overflow: hidden;
   }
   .format__box {
     padding: 30px 0 30px;
