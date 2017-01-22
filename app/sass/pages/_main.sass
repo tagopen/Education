@@ -78,6 +78,8 @@ html
       color: #282828  
 .ic--print
   margin-right: 20px      
+.form-group
+  margin: 22px 0
 +cm('modal styles')
 .modal-body
   padding: 0
@@ -274,10 +276,12 @@ button.close
     &__icon
       font-size: 22px
       line-height: 40px
-+rx(1199)
++rx(959)
   .social
     &__item
-      padding: 2px 8px
+      padding: 2px 6px
++rx(1199)
+  .social
     &__link
       &--footer
         background-color: transparent
@@ -331,24 +335,27 @@ button.close
     &__heading
       margin-bottom: 45px
   .item
-    padding: 130px 0 170px
+    padding: 130px 0 200px
 +r(768)
   .item
-    padding: 150px 0 230px
+    padding: 150px 0 260px
   .carousel
     &-indicators
       left: 45%
-      bottom: 115px
+      bottom: 130px
 +r(960)
   .slider
     &__heading
       margin-bottom: 40px
       font: 400 44px/48px $font-leto
   .item
-    padding: 200px 0 280px
+    padding: 200px 0 360px
   .carousel
     &-indicators
       bottom: 200px  
++r(1200)
+  .item
+    padding: 200px 0 320px
 +cm("header box style")  
 .header
   position: relative
@@ -369,39 +376,13 @@ button.close
     box-shadow: 0 35px 29px rgba(18, 45, 79, 0.15)
     color: #fff
     padding: 12px 20px 10px 25px
-    font: 400 18px/20px $font-leto-bold 
+    font: 400 17px/20px $font-leto-bold 
     transition: all .3s ease-out
     &:hover,
     &:focus
       background-color: #223a5f * 1.2 
     .ic
-      margin-left: 15px      
-.header-content
-  position: absolute
-  top: 0
-  left: 0
-  right: 0
-  bottom: 0
-  padding-top: 55px
-  &__container
-    position: relative
-    height: 100%
-  &__form
-    position: relative
-    padding: 30px 45px 45px
-    background-color: #fff
-    box-shadow: 0 30px 29px rgba(41, 41, 41, 0.16)
-    border-top: 5px solid #ba3742
-    z-index: 1
-  &__col
-    position: absolute
-    margin-bottom: 40px
-    top: 0
-    height: 100%
-  &__btn-group
-    position: absolute
-    margin-bottom: 25px
-    bottom: 0
+      margin-left: 15px  
 .form
   padding: 30px 17px 45px
   &__head
@@ -429,7 +410,33 @@ button.close
     font: 400 24px/26px $font-leto  
     &:hover,
     &:focus
-      text-decoration: none 
+      text-decoration: none     
+.header-content
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  padding-top: 55px
+  &__container
+    position: relative
+    height: 100%
+  &__form
+    position: relative
+    padding: 30px 45px 45px
+    background-color: #fff
+    box-shadow: 0 30px 29px rgba(41, 41, 41, 0.16)
+    border-top: 5px solid #ba3742
+    z-index: 1
+  &__col
+    position: absolute
+    margin-bottom: 40px
+    top: 0
+    height: 100%
+  &__btn-group
+    position: absolute
+    margin-bottom: 25px
+    bottom: 0
 .scroll
   position: absolute
   bottom: 180px
@@ -448,6 +455,13 @@ button.close
   .header-content
     &__btn-group
       text-align: center
+    &__form
+      padding:
+        left: 15px
+        right: 15px
+  .header  
+    &__btn
+      margin: 15px 10px
   .form  
     &__register  
       font: 400 18px/20px $font-leto-bold
@@ -481,7 +495,7 @@ button.close
 +r(1200)      
   .header
     &__btn
-      font: 400 22px/24px $font-leto-bold    
+      font: 400 22px/24px $font-leto-bold   
 +cm("section intro style") 
 .intro
   padding: 30px 0 40px
