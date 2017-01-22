@@ -1599,7 +1599,7 @@ pre code {
 }
 @media (min-width: 960px) {
   .container {
-    width: 960px;
+    width: 930px;
   }
 }
 @media (min-width: 1200px) {
@@ -4115,7 +4115,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   top: auto;
   left: auto;
 }
-@media (min-width: 992px) {
+@media (min-width: 960px) {
   .nav-justified > li {
     display: table-cell;
     width: 1%;
@@ -4467,7 +4467,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     margin-right: 15px;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 960px) {
   .navbar-left {
     float: left !important;
   }
