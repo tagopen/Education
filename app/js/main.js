@@ -39,13 +39,13 @@ $(document).ready(function() {
 
 
 // Fixed navbar on Scroll
-/*if(!$('.navbar-toggle').is(':visible')) {
+if(!$('.navbar-toggle').is(':visible')) {
   $('.navbar').affix({
     offset: {
-      top: $('header').innerHeight()
+      top: $('.header').innerHeight()
     }
   }); 
-}*/
+}
 
 // Highlight the top nav as scrolling occurs
 /*$('body').scrollspy({
