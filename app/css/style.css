@@ -452,7 +452,7 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100%;
-  padding-top: 78px;
+  padding-top: 74px;
   -webkit-transition: 0.3s -webkit-transform ease-out;
   transition: 0.3s -webkit-transform ease-out;
   transition: 0.3s transform ease-out;
@@ -481,6 +481,8 @@ html {
           box-shadow: 0 35px 29px rgba(168, 31, 44, 0.15);
   color: #fff;
   font: 400 16px/18px "LetoSansBold", sans-serif;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 .btn--size {
   margin: 0;
@@ -676,6 +678,9 @@ button.close {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
+.nav__link:hover {
+  background-color: #002444;
+}
 
 .logo {
   background-color: #223a5f;
@@ -799,8 +804,8 @@ button.close {
   }
 }
 @media only screen and (min-width: 960px) {
-  .nav__item {
-    padding: 23px 15px;
+  .nav__link {
+    padding: 22px 15px;
   }
 
   .navbar-header {
@@ -819,7 +824,7 @@ button.close {
   }
 
   .logo {
-    width: 185px;
+    width: 165px;
   }
 
   .social__list--header {
@@ -853,7 +858,7 @@ button.close {
   }
 }
 @media only screen and (min-width: 1200px) {
-  .nav__item {
+  .nav__link {
     padding: 30px 15px;
   }
 
