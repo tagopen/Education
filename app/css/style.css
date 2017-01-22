@@ -1012,7 +1012,7 @@ button.close {
   border: 1px solid #e4e4e4;
   -webkit-border-radius: 43px;
           border-radius: 43px;
-  padding: 16px 10px 16px 25px;
+  padding: 17px 36px;
 }
 .form__input:focus {
   border-color: inherit;
