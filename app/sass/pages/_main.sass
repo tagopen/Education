@@ -157,9 +157,18 @@ button.close
     font: 400 11px/15px $font-leto 
     &--navbar
       font: 400 13px/15px $font-leto-bold
-.phone
+    &--dark
+      color: #282828
   &__link
     color: #fff
+    &--dark
+      color: #282828
+      &:hover,
+      &:focus
+        text-decoration: none
+        color: #282828
+.phone
+  &__link
     font: 400 22px/30px $font-leto-bold
     &--navbar
       font: 400 14px/16px $font-leto 
@@ -169,7 +178,6 @@ button.close
       color: #fff
 .email
   &__link
-    color: #fff
     font: 400 16px/30px $font-leto-bold
     &--navbar
       font: 400 14px/16px $font-leto 
