@@ -149,6 +149,7 @@ $('.teacher__slider').slick({
   slidesToScroll: 4,
   arrows: true,
   mobileFirst: true,
+  swipeToSlide: '15',
   prevArrow: '<button type="button" data-role="none" class="slick-prev fa fa-angle-left" aria-label="Previous" tabindex="0" role="button"></button>',
   nextArrow: '<button type="button" data-role="none" class="slick-next fa fa-angle-right" aria-label="Next" tabindex="0" role="button"></button>',
   responsive: [
@@ -186,6 +187,7 @@ $('.blog__slider').slick({
   slidesToScroll: 4,
   arrows: true,
   mobileFirst: true,
+  swipeToSlide: '15',
   prevArrow: '<button type="button" data-role="none" class="slick-prev fa fa-angle-left" aria-label="Previous" tabindex="0" role="button"></button>',
   nextArrow: '<button type="button" data-role="none" class="slick-next fa fa-angle-right" aria-label="Next" tabindex="0" role="button"></button>',
   responsive: [
