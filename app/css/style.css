@@ -190,7 +190,7 @@
 /* S L I C K - S L I D E R    T H E M E    S T Y L E  */
 /* -------------------------------------------------- */
 .slick-loading .slick-list {
-  background: #fff url('../img/ajax-loader.gif?1485005529') center center no-repeat;
+  background: #fff url('../img/ajax-loader.gif?1481806172') center center no-repeat;
 }
 
 /* Icons */
@@ -650,10 +650,6 @@ button.close {
   color: #fff;
 }
 
-.social--footer {
-  margin-top: 50px;
-  text-align: right;
-}
 .social__item {
   display: inline-block;
   vertical-align: top;
@@ -665,6 +661,9 @@ button.close {
   height: 50px;
   background-color: #343434;
   text-align: center;
+  color: #fff;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 .social__link--footer {
   width: 47px;
@@ -672,7 +671,6 @@ button.close {
   background-color: #192840;
 }
 .social__icon {
-  color: #fff;
   font-size: 25px;
   line-height: 50px;
 }
@@ -747,6 +745,22 @@ button.close {
   .social__icon {
     font-size: 22px;
     line-height: 40px;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .social__item {
+    padding: 2px 8px;
+  }
+  .social__link--footer {
+    background-color: transparent;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    -webkit-box-shadow: 0 0 0 1px #fff;
+            box-shadow: 0 0 0 1px #fff;
+  }
+  .social__link--footer:hover, .social__link--footer:focus {
+    background-color: #fff;
+    color: #223a5f;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -1511,7 +1525,12 @@ button.close {
   background-color: #223a5f;
 }
 .footer__logo {
+  position: relative;
   width: auto;
+  float: right;
+}
+.footer__social {
+  margin-top: 75px;
 }
 
 .f-nav__heading {
@@ -1524,4 +1543,36 @@ button.close {
   display: inline-block;
   font: 400 13px/20px "LetoSans", sans-serif;
   color: #d0e2ff;
+}
+
+@media only screen and (max-width: 767px) {
+  .footer__social {
+    margin-top: 36px;
+    text-align: center;
+  }
+  .footer__logo {
+    position: relative;
+    float: none;
+  }
+
+  .f-nav {
+    text-align: center;
+  }
+  .f-nav__heading--space {
+    margin: 7px 0 8px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .footer__social {
+    margin-top: 55px;
+    text-align: right;
+  }
+  .footer__logo {
+    margin-top: 20px;
+    float: none;
+  }
+
+  .f-nav__heading {
+    font: 400 15px/18px "LetoSans", sans-serif;
+  }
 }
