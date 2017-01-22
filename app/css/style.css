@@ -560,9 +560,8 @@ html {
   padding: 0;
 }
 
-.modal-content {
+.modal-dialog {
   max-width: 450px;
-  margin: 0 auto;
 }
 
 button.close {
