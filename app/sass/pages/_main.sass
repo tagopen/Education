@@ -178,9 +178,6 @@ button.close
       text-decoration: none
       color: #fff  
 .social
-  &--footer
-    margin-top: 50px
-    text-align: right
   &__item
     display: inline-block
     vertical-align: top
@@ -191,12 +188,13 @@ button.close
     height: 50px
     background-color: #343434
     text-align: center
+    color: #fff
+    transition: all .3s ease-out
     &--footer
       width: 47px
       height: 47px
       background-color: #192840
   &__icon
-    color: #fff
     font-size: 25px
     line-height: 50px
 +rx(959)
@@ -251,6 +249,19 @@ button.close
     &__icon
       font-size: 22px
       line-height: 40px
++rx(1199)
+  .social
+    &__item
+      padding: 2px 8px
+    &__link
+      &--footer
+        background-color: transparent
+        border-radius: 50%
+        box-shadow: 0 0 0 1px #fff
+        &:hover,
+        &:focus
+          background-color: #fff
+          color: #223a5f
 +r(1200)
   .nav
     &__item
@@ -813,7 +824,11 @@ button.close
   padding-bottom: 47px
   background-color: #223a5f
   &__logo
+    position: relative
     width: auto
+    float: right
+  &__social
+    margin-top: 75px
 .f-nav
   &__heading
     display: inline-block
@@ -824,16 +839,31 @@ button.close
     display: inline-block
     font: 400 13px/20px $font-leto
     color: #d0e2ff
-+comment('teachers page styles')  
-.teachers
-  &__heading
-    color: #282828 
-    font: 400 14px/16px $font-leto 
-  &__subheading
-    font: 400 17px/20px $font-leto 
-+r(768) 
-  .teachers
++rx(767)
+  .footer
+    &__social
+      margin-top: 36px
+      text-align: center
+    &__logo
+      position: relative
+      float: none
+  .f-nav
+    text-align: center
     &__heading
-      font: 400 18px/20px $font-leto  
-    &__subheading  
-      font: 400 26px/28px $font-leto  
+      &--space
+        margin: 7px 0 8px
++r(960)
+  .footer
+    &__social
+      margin-top: 55px
+      text-align: right
+    &__logo
+      margin-top: 20px
+      float: none
+  .f-nav
+    &__heading
+      font: 400 15px/18px $font-leto
++r(1200)
+  .footer
+    &__logo
+      display: inline-block

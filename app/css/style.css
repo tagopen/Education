@@ -692,10 +692,6 @@ button.close {
   color: #fff;
 }
 
-.social--footer {
-  margin-top: 50px;
-  text-align: right;
-}
 .social__item {
   display: inline-block;
   vertical-align: top;
@@ -707,6 +703,9 @@ button.close {
   height: 50px;
   background-color: #343434;
   text-align: center;
+  color: #fff;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 .social__link--footer {
   width: 47px;
@@ -714,7 +713,6 @@ button.close {
   background-color: #192840;
 }
 .social__icon {
-  color: #fff;
   font-size: 25px;
   line-height: 50px;
 }
@@ -789,6 +787,22 @@ button.close {
   .social__icon {
     font-size: 22px;
     line-height: 40px;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .social__item {
+    padding: 2px 8px;
+  }
+  .social__link--footer {
+    background-color: transparent;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    -webkit-box-shadow: 0 0 0 1px #fff;
+            box-shadow: 0 0 0 1px #fff;
+  }
+  .social__link--footer:hover, .social__link--footer:focus {
+    background-color: #fff;
+    color: #223a5f;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -1553,7 +1567,12 @@ button.close {
   background-color: #223a5f;
 }
 .footer__logo {
+  position: relative;
   width: auto;
+  float: right;
+}
+.footer__social {
+  margin-top: 75px;
 }
 
 .f-nav__heading {
@@ -1568,22 +1587,39 @@ button.close {
   color: #d0e2ff;
 }
 
-/* ------------------------------------------ */
-/* T E A C H E R S    P A G E    S T Y L E S  */
-/* ------------------------------------------ */
-.teachers__heading {
-  color: #282828;
-  font: 400 14px/16px "LetoSans", sans-serif;
-}
-.teachers__subheading {
-  font: 400 17px/20px "LetoSans", sans-serif;
-}
-
-@media only screen and (min-width: 768px) {
-  .teachers__heading {
-    font: 400 18px/20px "LetoSans", sans-serif;
+@media only screen and (max-width: 767px) {
+  .footer__social {
+    margin-top: 36px;
+    text-align: center;
   }
-  .teachers__subheading {
-    font: 400 26px/28px "LetoSans", sans-serif;
+  .footer__logo {
+    position: relative;
+    float: none;
+  }
+
+  .f-nav {
+    text-align: center;
+  }
+  .f-nav__heading--space {
+    margin: 7px 0 8px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .footer__social {
+    margin-top: 55px;
+    text-align: right;
+  }
+  .footer__logo {
+    margin-top: 20px;
+    float: none;
+  }
+
+  .f-nav__heading {
+    font: 400 15px/18px "LetoSans", sans-serif;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .footer__logo {
+    display: inline-block;
   }
 }
