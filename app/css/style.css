@@ -1332,7 +1332,7 @@ button.close {
 /* section about style */
 .about {
   padding: 45px 0;
-  background: url(../img/aboutbg.png) no-repeat;
+  background: #ebebeb url(../img/aboutbg.png) no-repeat;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
