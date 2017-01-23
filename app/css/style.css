@@ -509,7 +509,7 @@ html {
   font: 400 24px/30px "LetoSansThin", sans-serif;
   text-align: center;
   margin: 0;
-  z-index: 11;
+  z-index: 2;
 }
 .heading--text {
   display: inline-block;
