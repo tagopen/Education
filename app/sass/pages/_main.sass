@@ -3,7 +3,7 @@
 +font('LetoSansThin', 'LetoSansThin')
 +font('LetoSansBold', 'LetoSansBold')
 +ic
-@each $ic in uk, scroll, format1, format2, format3, format4, format5, format6, like320, like760, print, connect
+@each $ic in uk, scroll, format1, format2, format3, format4, format5, format6, like320, like760, print, connect, connect_fff
   .ic--#{$ic}
     +sb(#{$ic})
 html
@@ -993,6 +993,15 @@ button.close
       font: 400 18px/20px $font-leto
       padding-left: 30px  
 +comment('page lecturer style')  
+.l-intro
+  background: url(../img/lecturerbg.jpg) no-repeat
+  +cover
+  padding: 45px 0 15px
+  &--color
+    color: #fff
+.breadcrumb 
+  &__item--color.active 
+    color: #fff  
 .lecturer
   &__point
     display: inline-block
@@ -1063,6 +1072,8 @@ button.close
     padding: 35px 30px 20px
     margin-top: 35px
     text-align: center
+.ic--connect_fff
+  margin-top: 15px    
 +r(768)    
   .lecturer
     &__contact
