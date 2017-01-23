@@ -124,21 +124,59 @@ gulp.task('dev', ['clean', 'img', 'sass', 'scripts'], function() {
   var buildFonts = gulp.src('app/font/**/*')
     .pipe(gulp.dest('dist/font'));
 
-  var buildJs = gulp.src(['app/js/!(jquery.js|main.js)'])
-    .pipe(uglify('all.min.js'))
-    //.pipe(concat('all.min.js')) // if need concat js
-    //.pipe(uglify())
-    .pipe(gulp.dest('dist/js'));  
-
-    var buildJQ = gulp.src(['app/js/jquery.js'])
+  var buildJs = gulp.src([
+      'app/js/jquery.js'
+      ])
     .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest('dist/js'));
-
-    var buildJCustom = gulp.src(['app/js/main.js'])
+    .pipe(gulp.dest('dist/js')); 
+  var buildJs1 = gulp.src([
+      'app/js/bootstrap.js'
+      ])
     .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest('dist/js'));
+    .pipe(gulp.dest('dist/js')); 
+  var buildJs2 = gulp.src([
+      'app/js/jqBootstrapValidation.js',
+      ])
+    .pipe(uglify())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('dist/js')); 
+  var buildJs3 = gulp.src([
+      'app/js/jquery.maskedinput.js',
+      ])
+    .pipe(uglify())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('dist/js')); 
+  var buildJs4 = gulp.src([
+      'app/js/jquery.reject.js',
+      ])
+    .pipe(uglify())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('dist/js')); 
+  var buildJs5 = gulp.src([
+      'app/js/contact_me.js'
+      ])
+    .pipe(uglify())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('dist/js')); 
+  var buildJs6 = gulp.src([
+      'app/js/main.js'
+      ])
+    .pipe(uglify())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('dist/js')); 
+  var buildJs7 = gulp.src([
+      'app/js/mobile.carousel.swiper.min.js',
+      ])
+    .pipe(gulp.dest('dist/js')); 
+
+  var buildJs8 = gulp.src([
+      'app/js/slick.js'
+      ])
+    .pipe(uglify())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('dist/js')); 
 
   var buildHtml = gulp.src('app/*.html')
     .pipe(gulp.dest('dist'));
