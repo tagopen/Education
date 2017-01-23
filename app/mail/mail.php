@@ -39,10 +39,6 @@
     $post['user_phone'] = filter_input(INPUT_POST,'phone', FILTER_SANITIZE_STRING);
   }
 
-  if (!empty($_POST["message"])) {
-    $post['user_message'] = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING);
-  }
-
   // Insert form data into html
   $patterns = array();
   $replacements = array();
