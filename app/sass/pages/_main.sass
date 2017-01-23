@@ -778,11 +778,13 @@ button.close
     padding: 22px 0
     border: 2px solid #d9d9d9
     border-radius: 43px
-    box-shadow: 0 35px 29px rgba(168, 31, 44, 0.15) 
+    box-shadow: none
     color: #d9d9d9 
     background-color: transparent
     font: 400 16px/17px $font-leto-bold
     min-width: 220px
+    &:focus
+      box-shadow: 0 35px 29px rgba(168, 31, 44, 0.15) 
 +r(768)  
   .blog  
     padding: 70px 0 40px

@@ -1513,12 +1513,16 @@ button.close {
   border: 2px solid #d9d9d9;
   -webkit-border-radius: 43px;
           border-radius: 43px;
-  -webkit-box-shadow: 0 35px 29px rgba(168, 31, 44, 0.15);
-          box-shadow: 0 35px 29px rgba(168, 31, 44, 0.15);
+  -webkit-box-shadow: none;
+          box-shadow: none;
   color: #d9d9d9;
   background-color: transparent;
   font: 400 16px/17px "LetoSansBold", sans-serif;
   min-width: 220px;
+}
+.blog__btn:focus {
+  -webkit-box-shadow: 0 35px 29px rgba(168, 31, 44, 0.15);
+          box-shadow: 0 35px 29px rgba(168, 31, 44, 0.15);
 }
 
 @media only screen and (min-width: 768px) {
