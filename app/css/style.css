@@ -1346,6 +1346,12 @@ button.close {
 }
 .about__heading {
   margin-bottom: 40px;
+  position: relative;
+}
+.about__bg-text {
+  position: absolute;
+  top: -10px;
+  left: -65px;
 }
 .about__item {
   list-style-type: none;
