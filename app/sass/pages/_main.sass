@@ -48,6 +48,7 @@ html
   font: 400 24px/30px $font-leto-thin
   text-align: center
   margin: 0
+  z-index: 11
   &--text
     display: inline-block
     padding: 8px 8px 6px 15px
@@ -636,9 +637,9 @@ button.close
     &__slider
       .slick
         &-prev
-          left: -24px
+          left: -22px
         &-next
-          right: -24px    
+          right: -22px    
 +r(1360)      
   .teacher
     &__slider
@@ -657,8 +658,12 @@ button.close
     position: relative
   &__bg-text
     position: absolute
-    top: -10px
-    left: -65px  
+    top: -3px
+    left: -20px  
+    font: 400 51px/51px $font-leto-bold
+    color: #f2f2f3
+    text-transform: uppercase
+    z-index: -1
   &__item
     list-style-type: none
   &__text
@@ -729,6 +734,11 @@ button.close
   .about
     &__text
       font: 400 24px/32px $font-leto
+    &__bg-text  
+      left: 50%
+      top: -30px
+      margin-left: -130px
+      font: 400 71px/71px $font-leto-bold
     &__list
       text-align: left
     &__item
@@ -755,6 +765,16 @@ button.close
   padding: 50px 0 25px
   &__heading
     margin-bottom: 65px
+    position: relative
+  &__bg-text
+    position: absolute
+    top: -35px
+    left: 50%
+    margin-left: -100px
+    text-transform: uppercase
+    color: #f2f2f3
+    font: 400 51px/51px $font-leto-bold
+    z-index: -1
   &__box
     padding: 20px 18px 25px 
     background-color: #fff
@@ -816,6 +836,9 @@ button.close
     &__heading
       &:after
         margin-top: 30px
+    &__bg-text    
+      color: #c5c5c5
+      font: 400 70px/70px $font-leto-bold
     &__title
       margin-bottom: 25px  
     &__naming  
@@ -831,9 +854,9 @@ button.close
       margin-bottom: 50px 
       .slick
         &-next
-          right: -24px
+          right: -22px
         &-prev
-          left: -24px    
+          left: -22px    
     &__btn
       font: 400 22px/24px $font-leto-bold  
 +r(1360)     

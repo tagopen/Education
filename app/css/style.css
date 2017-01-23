@@ -190,7 +190,7 @@
 /* S L I C K - S L I D E R    T H E M E    S T Y L E  */
 /* -------------------------------------------------- */
 .slick-loading .slick-list {
-  background: #fff url('../img/ajax-loader.gif?1481806172') center center no-repeat;
+  background: #fff url('../img/ajax-loader.gif?1485005529') center center no-repeat;
 }
 
 /* Icons */
@@ -509,6 +509,7 @@ html {
   font: 400 24px/30px "LetoSansThin", sans-serif;
   text-align: center;
   margin: 0;
+  z-index: 11;
 }
 .heading--text {
   display: inline-block;
@@ -1322,10 +1323,10 @@ button.close {
     padding: 70px 0 100px;
   }
   .teacher__slider .slick-prev {
-    left: -24px;
+    left: -22px;
   }
   .teacher__slider .slick-next {
-    right: -24px;
+    right: -22px;
   }
 }
 @media only screen and (min-width: 1360px) {
@@ -1350,8 +1351,12 @@ button.close {
 }
 .about__bg-text {
   position: absolute;
-  top: -10px;
-  left: -65px;
+  top: -3px;
+  left: -20px;
+  font: 400 51px/51px "LetoSansBold", sans-serif;
+  color: #f2f2f3;
+  text-transform: uppercase;
+  z-index: -1;
 }
 .about__item {
   list-style-type: none;
@@ -1448,6 +1453,12 @@ button.close {
   .about__text {
     font: 400 24px/32px "LetoSans", sans-serif;
   }
+  .about__bg-text {
+    left: 50%;
+    top: -30px;
+    margin-left: -130px;
+    font: 400 71px/71px "LetoSansBold", sans-serif;
+  }
   .about__list {
     text-align: left;
   }
@@ -1482,6 +1493,17 @@ button.close {
 }
 .blog__heading {
   margin-bottom: 65px;
+  position: relative;
+}
+.blog__bg-text {
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  margin-left: -100px;
+  text-transform: uppercase;
+  color: #f2f2f3;
+  font: 400 51px/51px "LetoSansBold", sans-serif;
+  z-index: -1;
 }
 .blog__box {
   padding: 20px 18px 25px;
@@ -1566,6 +1588,10 @@ button.close {
   .blog__heading:after {
     margin-top: 30px;
   }
+  .blog__bg-text {
+    color: #c5c5c5;
+    font: 400 70px/70px "LetoSansBold", sans-serif;
+  }
   .blog__title {
     margin-bottom: 25px;
   }
@@ -1584,10 +1610,10 @@ button.close {
     margin-bottom: 50px;
   }
   .blog__slider .slick-next {
-    right: -24px;
+    right: -22px;
   }
   .blog__slider .slick-prev {
-    left: -24px;
+    left: -22px;
   }
   .blog__btn {
     font: 400 22px/24px "LetoSansBold", sans-serif;
