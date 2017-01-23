@@ -112,6 +112,13 @@ $('.dropdown, .dropup').each(function() {
   }
 });*/
 
+// Lecturer page close fixed price box
+$(document).ready(function() {
+  $('.lecturer__close').click(function() {
+    $('.lecturer__price').addClass('lecturer__price--closed');
+  });
+});
+
 // Equial Height
 $(window).on('resize', function(){
   // Only 768px +

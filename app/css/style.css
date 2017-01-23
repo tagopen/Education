@@ -190,7 +190,7 @@
 /* S L I C K - S L I D E R    T H E M E    S T Y L E  */
 /* -------------------------------------------------- */
 .slick-loading .slick-list {
-  background: #fff url('../img/ajax-loader.gif?1481806172') center center no-repeat;
+  background: #fff url('../img/ajax-loader.gif?1485005529') center center no-repeat;
 }
 
 /* Icons */
@@ -1773,6 +1773,24 @@ button.close {
   background-color: #fefaee;
   padding: 30px 0 20px;
   text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-left: -15px;
+  z-index: 25;
+}
+.lecturer__price--closed {
+  display: none;
+}
+.lecturer__close {
+  position: absolute;
+  display: inline-block;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+}
+.lecturer__close:hover {
+  color: #ba3742;
 }
 .lecturer-price__text {
   display: inline-block;
@@ -1811,7 +1829,7 @@ button.close {
   border: 3px dashed #dacccd;
   -webkit-border-radius: 4px;
           border-radius: 4px;
-  padding: 35px 0 20px;
+  padding: 35px 30px 20px;
   margin-top: 35px;
   text-align: center;
 }
@@ -1819,6 +1837,11 @@ button.close {
 @media only screen and (min-width: 768px) {
   .lecturer__contact {
     padding: 30px 0 25px;
+  }
+  .lecturer__price {
+    position: static;
+    margin: 0;
+    width: auto;
   }
 }
 @media only screen and (min-width: 960px) {
