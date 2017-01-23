@@ -14,6 +14,7 @@ $(function() {
             var email = $form.find("input[name=email]").val();
             var phone = $form.find("input[name=phone]").val();
 
+            $.ajax({
                 url: "././mail/contact_me.php",
                 type: "POST",
                 data: {
