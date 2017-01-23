@@ -10,6 +10,7 @@ var gulp          = require('gulp'),
     imagemin      = require('gulp-imagemin'),
     pngquant      = require('imagemin-pngquant'),
     cache         = require('gulp-cache'),
+    jsmin         = require('gulp-jsmin'),
     autoprefixer  = require('gulp-autoprefixer')
     /*gulpSelectors = require('gulp-selectors')*/;
 
@@ -124,19 +125,10 @@ gulp.task('dev', ['clean', 'img', 'sass', 'scripts'], function() {
   var buildFonts = gulp.src('app/font/**/*')
     .pipe(gulp.dest('dist/font'));
 
-  var buildJs = gulp.src(['app/js/!(jquery.js|main.js)'])
-    .pipe(uglify('all.min.js'))
-    //.pipe(concat('all.min.js')) // if need concat js
-    //.pipe(uglify())
-    .pipe(gulp.dest('dist/js'));  
-
-    var buildJQ = gulp.src(['app/js/jquery.js'])
-    .pipe(uglify())
-    .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest('dist/js'));
-
-    var buildJCustom = gulp.src(['app/js/main.js'])
-    .pipe(uglify())
+  
+  var buildJs = gulp.src('app/js/**/*.js')
+    .pipe(gulp.dest('dist/js'))
+    .pipe(jsmin())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('dist/js'));
 
