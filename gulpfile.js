@@ -124,14 +124,22 @@ gulp.task('dev', ['clean', 'img', 'sass', 'scripts'], function() {
   var buildFonts = gulp.src('app/font/**/*')
     .pipe(gulp.dest('dist/font'));
 
-  var buildJs = gulp.src(['app/js/*.js'])
-    .pipe(uglify())
-    .pipe(rename({suffix: '.min'}))
+  var buildJs = gulp.src(['app/js/!(jquery.js|main.js)'])
+    .pipe(uglify('all.min.js'))
     //.pipe(concat('all.min.js')) // if need concat js
     //.pipe(uglify())
+    .pipe(gulp.dest('dist/js'));  
+
+    var buildJQ = gulp.src(['app/js/jquery.js'])
+    .pipe(uglify())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('dist/js'));
+
+    var buildJCustom = gulp.src(['app/js/main.js'])
+    .pipe(uglify())
+    .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('dist/js'));
 
   var buildHtml = gulp.src('app/*.html')
     .pipe(gulp.dest('dist'));
 });
-
