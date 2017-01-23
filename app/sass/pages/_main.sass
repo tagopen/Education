@@ -180,24 +180,33 @@ button.close
 .phone,
 .email
   &__text
-    color: #fff
+    color: #282828
     font: 400 11px/15px $font-leto 
-    &--navbar
-      font: 400 13px/15px $font-leto-bold
-    &--dark
-      color: #282828
-  &__link
-    color: #fff
     &:hover,
     &:focus
       text-decoration: none
-      color: #fff
-    &--dark
       color: #282828
+    &--navbar
+      color: #fff
+      font: 400 13px/15px $font-leto-bold
+    &--light
+      color: #fff
       &:hover,
       &:focus
-        text-decoration: none
-        color: #282828
+        color: #fff
+  &__link
+    color: #282828
+    &:hover,
+    &:focus
+      text-decoration: none
+      color: #282828
+    &--navbar
+      color: #fff
+    &--light
+      color: #fff
+      &:hover,
+      &:focus
+        color: #fff
 .phone
   &__link
     font: 400 22px/30px $font-leto-bold

@@ -190,7 +190,7 @@
 /* S L I C K - S L I D E R    T H E M E    S T Y L E  */
 /* -------------------------------------------------- */
 .slick-loading .slick-list {
-  background: #fff url('../img/ajax-loader.gif?1485005529') center center no-repeat;
+  background: #fff url('../img/ajax-loader.gif?1481806172') center center no-repeat;
 }
 
 /* Icons */
@@ -701,36 +701,51 @@ button.close {
 
 .phone__text,
 .email__text {
-  color: #fff;
+  color: #282828;
   font: 400 11px/15px "LetoSans", sans-serif;
+}
+.phone__text:hover, .phone__text:focus,
+.email__text:hover,
+.email__text:focus {
+  text-decoration: none;
+  color: #282828;
 }
 .phone__text--navbar,
 .email__text--navbar {
+  color: #fff;
   font: 400 13px/15px "LetoSansBold", sans-serif;
 }
-.phone__text--dark,
-.email__text--dark {
-  color: #282828;
+.phone__text--light,
+.email__text--light {
+  color: #fff;
+}
+.phone__text--light:hover, .phone__text--light:focus,
+.email__text--light:hover,
+.email__text--light:focus {
+  color: #fff;
 }
 .phone__link,
 .email__link {
-  color: #fff;
+  color: #282828;
 }
 .phone__link:hover, .phone__link:focus,
 .email__link:hover,
 .email__link:focus {
   text-decoration: none;
+  color: #282828;
+}
+.phone__link--navbar,
+.email__link--navbar {
   color: #fff;
 }
-.phone__link--dark,
-.email__link--dark {
-  color: #282828;
+.phone__link--light,
+.email__link--light {
+  color: #fff;
 }
-.phone__link--dark:hover, .phone__link--dark:focus,
-.email__link--dark:hover,
-.email__link--dark:focus {
-  text-decoration: none;
-  color: #282828;
+.phone__link--light:hover, .phone__link--light:focus,
+.email__link--light:hover,
+.email__link--light:focus {
+  color: #fff;
 }
 
 .phone__link {
