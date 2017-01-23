@@ -190,7 +190,7 @@
 /* S L I C K - S L I D E R    T H E M E    S T Y L E  */
 /* -------------------------------------------------- */
 .slick-loading .slick-list {
-  background: #fff url('../img/ajax-loader.gif?1481806172') center center no-repeat;
+  background: #fff url('../img/ajax-loader.gif?1485005529') center center no-repeat;
 }
 
 /* Icons */
@@ -1324,7 +1324,7 @@ button.close {
     right: -24px;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1360px) {
   .teacher__slider .slick-prev {
     left: -54px;
   }
@@ -1579,7 +1579,7 @@ button.close {
     font: 400 22px/24px "LetoSansBold", sans-serif;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1360px) {
   .blog__slider .slick-next {
     right: -50px;
   }
@@ -1622,6 +1622,7 @@ button.close {
           box-shadow: 0 35px 29px rgba(168, 31, 44, 0.15);
   background: transparent;
   color: #fff;
+  margin-bottom: 20px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1631,10 +1632,10 @@ button.close {
   .subscribe:after {
     margin-top: 30px;
   }
-  .subscribe__form {
+  .subscribe__group {
     position: relative;
   }
-  .subscribe__btn {
+  .subscribe--btn-position {
     position: absolute;
     top: 0;
     right: -6px;

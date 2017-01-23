@@ -465,12 +465,12 @@
               <h2 class="heading subscribe__heading">Хочешь быть <span class="heading--text heading--span">в курсе событий?</span></h2>
             </div>
             <div class="col-xs-12">
-             <form name="Регистрация" class="clearfix subscribe__form" method="post" action="mail/mail.php">
-              <div class="form-group">
+             <form name="Регистрация" class="clearfix" method="post" action="mail/mail.php">
+              <div class="subscribe__group">
                 <input aria-invalid="false" class="form-control form__input subscribe__input" placeholder="Ваш email" required data-validation-required-message="Please enter your email." name="email" type="email">
-              </div>
-              <div class="text-center">
-                <button type="submit" class="btn subscribe__btn" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">подписаться</button>
+                <div class="clearfix text-center subscribe--btn-position">
+                  <button type="submit" class="btn subscribe__btn" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">подписаться</button>
+                </div>
               </div>
             </form>
             </div>
