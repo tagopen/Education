@@ -757,6 +757,9 @@ button.close {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
+.social__link:hover, .social__link:focus {
+  background-color: #ba3742;
+}
 .social__link--footer {
   width: 47px;
   height: 47px;
