@@ -1270,7 +1270,7 @@ button.close {
   padding: 30px 0 45px;
 }
 .teacher__slider .slick-slide {
-  margin: 0 5px;
+  padding: 0 10px;
 }
 .teacher__slider .slick-list {
   margin: 0 -5px;
@@ -1344,10 +1344,10 @@ button.close {
     padding: 70px 0 100px;
   }
   .teacher__slider .slick-prev {
-    left: -22px;
+    left: -21px;
   }
   .teacher__slider .slick-next {
-    right: -22px;
+    right: -21px;
   }
 }
 @media only screen and (min-width: 1360px) {
