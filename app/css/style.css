@@ -367,79 +367,169 @@
 .ic--uk:before {
   width: 25px;
   height: 15px;
-  background: url('../img/icons-s0ef61fc7f6.png') 0 0 no-repeat;
+  background: url('../img/icons-s188305672c.png') 0 -87px no-repeat;
 }
 
 .ic--scroll:before {
   width: 27px;
   height: 52px;
-  background: url('../img/icons-s0ef61fc7f6.png') -66px 0 no-repeat;
+  background: url('../img/icons-s188305672c.png') -101px -87px no-repeat;
 }
 
 .ic--format1:before {
   width: 93px;
   height: 109px;
-  background: url('../img/icons-s0ef61fc7f6.png') -98px -94px no-repeat;
+  background: url('../img/icons-s188305672c.png') -250px -181px no-repeat;
 }
 
 .ic--format2:before {
   width: 98px;
   height: 101px;
-  background: url('../img/icons-s0ef61fc7f6.png') 0 -94px no-repeat;
+  background: url('../img/icons-s188305672c.png') 0 -297px no-repeat;
 }
 
 .ic--format3:before {
   width: 86px;
   height: 94px;
-  background: url('../img/icons-s0ef61fc7f6.png') -339px 0 no-repeat;
+  background: url('../img/icons-s188305672c.png') -367px -87px no-repeat;
 }
 
 .ic--format4:before {
   width: 78px;
   height: 85px;
-  background: url('../img/icons-s0ef61fc7f6.png') -261px 0 no-repeat;
+  background: url('../img/icons-s188305672c.png') -159px 0 no-repeat;
 }
 
 .ic--format5:before {
   width: 89px;
   height: 78px;
-  background: url('../img/icons-s0ef61fc7f6.png') -93px 0 no-repeat;
+  background: url('../img/icons-s188305672c.png') -278px -87px no-repeat;
 }
 
 .ic--format6:before {
   width: 79px;
   height: 80px;
-  background: url('../img/icons-s0ef61fc7f6.png') -182px 0 no-repeat;
+  background: url('../img/icons-s188305672c.png') 0 0 no-repeat;
 }
 
 .ic--like320:before {
   width: 95px;
   height: 122px;
-  background: url('../img/icons-s0ef61fc7f6.png') -191px -94px no-repeat;
+  background: url('../img/icons-s188305672c.png') 0 -417px no-repeat;
 }
 
 .ic--like760:before {
   width: 163px;
   height: 214px;
-  background: url('../img/icons-s0ef61fc7f6.png') -286px -94px no-repeat;
+  background: url('../img/icons-s188305672c.png') -214px -417px no-repeat;
 }
 
 .ic--print:before {
   width: 17px;
   height: 18px;
-  background: url('../img/icons-s0ef61fc7f6.png') -25px 0 no-repeat;
+  background: url('../img/icons-s188305672c.png') -25px -87px no-repeat;
 }
 
 .ic--connect:before {
   width: 12px;
   height: 18px;
-  background: url('../img/icons-s0ef61fc7f6.png') -54px 0 no-repeat;
+  background: url('../img/icons-s188305672c.png') -42px -87px no-repeat;
 }
 
 .ic--connect_fff:before {
   width: 12px;
   height: 18px;
-  background: url('../img/icons-s0ef61fc7f6.png') -42px 0 no-repeat;
+  background: url('../img/icons-s188305672c.png') 0 -181px no-repeat;
+}
+
+.ic--prog1-320:before {
+  width: 49px;
+  height: 50px;
+  background: url('../img/icons-s188305672c.png') -12px -181px no-repeat;
+}
+
+.ic--prog2-320:before {
+  width: 46px;
+  height: 49px;
+  background: url('../img/icons-s188305672c.png') -128px -87px no-repeat;
+}
+
+.ic--prog3-320:before {
+  width: 47px;
+  height: 50px;
+  background: url('../img/icons-s188305672c.png') -174px -87px no-repeat;
+}
+
+.ic--prog4-320:before {
+  width: 57px;
+  height: 54px;
+  background: url('../img/icons-s188305672c.png') -221px -87px no-repeat;
+}
+
+.ic--prog5-320:before {
+  width: 47px;
+  height: 49px;
+  background: url('../img/icons-s188305672c.png') -54px -87px no-repeat;
+}
+
+.ic--prog1-760:before {
+  width: 100px;
+  height: 102px;
+  background: url('../img/icons-s188305672c.png') -98px -297px no-repeat;
+}
+
+.ic--prog2-760:before {
+  width: 95px;
+  height: 102px;
+  background: url('../img/icons-s188305672c.png') -61px -181px no-repeat;
+}
+
+.ic--prog3-760:before {
+  width: 94px;
+  height: 103px;
+  background: url('../img/icons-s188305672c.png') -156px -181px no-repeat;
+}
+
+.ic--prog4-760:before {
+  width: 119px;
+  height: 112px;
+  background: url('../img/icons-s188305672c.png') -95px -417px no-repeat;
+}
+
+.ic--prog5-760:before {
+  width: 96px;
+  height: 102px;
+  background: url('../img/icons-s188305672c.png') -198px -297px no-repeat;
+}
+
+.ic--prog1-960:before {
+  width: 118px;
+  height: 120px;
+  background: url('../img/icons-s188305672c.png') -294px -297px no-repeat;
+}
+
+.ic--prog2-960:before {
+  width: 109px;
+  height: 116px;
+  background: url('../img/icons-s188305672c.png') -343px -181px no-repeat;
+}
+
+.ic--prog3-960:before {
+  width: 79px;
+  height: 87px;
+  background: url('../img/icons-s188305672c.png') -329px 0 no-repeat;
+}
+
+.ic--prog4-960:before {
+  width: 92px;
+  height: 87px;
+  background: url('../img/icons-s188305672c.png') -237px 0 no-repeat;
+}
+
+.ic--prog5-960:before {
+  width: 80px;
+  height: 85px;
+  background: url('../img/icons-s188305672c.png') -79px 0 no-repeat;
 }
 
 html {
@@ -2020,88 +2110,149 @@ button.close {
   font-size: 18px;
   line-height: 20px;
 }
-.programs__box {
+
+.lesson__row {
+  position: relative;
+}
+.lesson__box {
+  position: relative;
   color: #fff;
   padding: 10px 10px 25px;
 }
-.programs__box--1 {
+.lesson__box:hover .lesson__btn {
+  display: block;
+  opacity: 1;
+}
+.lesson__box:hover .lesson__naming, .lesson__box:hover .lesson__subscribe {
+  -webkit-transform: translateY(-30px);
+      -ms-transform: translateY(-30px);
+          transform: translateY(-30px);
+}
+.lesson__box:hover .lesson__icon i[class*="960"] {
+  visibility: hidden;
+  display: none;
+}
+.lesson__box:hover .lesson__icon i[class*="320"] {
+  visibility: visible !important;
+  display: inline-block !important;
+}
+.lesson__bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.lesson__bg--1 {
   background: url(../img/programsbg1.jpg) no-repeat;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
 }
-.programs__box--2 {
+.lesson__bg--2 {
   background: url(../img/programsbg2.jpg) no-repeat;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
 }
-.programs__box--3 {
+.lesson__bg--3 {
   background: url(../img/programsbg3.jpg) no-repeat;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
 }
-.programs__box--4 {
+.lesson__bg--4 {
   background: url(../img/programsbg4.jpg) no-repeat;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
 }
-.programs__box--5 {
+.lesson__bg--5 {
   background: url(../img/programsbg5.jpg) no-repeat;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
 }
-.programs__naming {
+.lesson__naming {
   font: 400 16px/18px "LetoSansBold", sans-serif;
   margin-bottom: 10px;
 }
-.programs__subscribe {
+.lesson__subscribe {
   font: 400 11px/16px "LetoSans", sans-serif;
+}
+.lesson__list {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  max-width: 190px;
+  background-color: #05739c;
+  font: 400 16px/18px "LetoSansBold", sans-serif;
+  color: #fff;
+}
+.lesson__icon {
+  margin-bottom: 15px;
+}
+.lesson__btn {
+  position: absolute;
+  bottom: -50px;
+  background-color: #05739c;
+  margin-top: 15px;
+  display: none;
+  z-index: 15;
+}
+.lesson__btn:hover, .lesson__btn:focus {
+  background-color: #068abb;
 }
 
 @media only screen and (min-width: 768px) {
-  .programs__box {
+  .lesson__box {
     margin-bottom: 20px;
     padding: 30px;
   }
-  .programs__text--large {
+  .lesson__text--large {
     font-size: 26px;
     line-height: 30px;
   }
-  .programs__naming {
+  .lesson__naming {
     font: 400 21px/28px "LetoSansBold", sans-serif;
     margin-bottom: 25px;
   }
-  .programs__subscribe {
+  .lesson__subscribe {
     font: 400 16px/18px "LetoSans", sans-serif;
+  }
+  .lesson__icon {
+    margin-bottom: 25px;
   }
 }
 @media only screen and (min-width: 960px) {
-  .programs__box {
+  .lesson__box {
     -webkit-transition: 0.2s -webkit-transform ease-out;
     transition: 0.2s -webkit-transform ease-out;
     transition: 0.2s transform ease-out;
     transition: 0.2s transform ease-out, 0.2s -webkit-transform ease-out;
   }
-  .programs__box--large {
+  .lesson__box--large {
     padding: 40px 30px 45px;
   }
-  .programs__box:hover {
+  .lesson__box:hover {
     -webkit-transform: translateY(-20px);
         -ms-transform: translateY(-20px);
             transform: translateY(-20px);
+    -webkit-filter: blur(8px);
+            filter: blur(8px);
   }
-  .programs__naming {
+  .lesson__naming {
     font: 400 25px/33px "LetoSansBold", sans-serif;
     margin-bottom: 15px;
   }
-  .programs__naming--small {
+  .lesson__naming--small {
     font: 400 17px/20px "LetoSansBold", sans-serif;
   }
-  .programs__subscribe--small {
+  .lesson__subscribe--small {
     font: 400 12px/14px "LetoSans", sans-serif;
+  }
+  .lesson__icon {
+    margin-bottom: 30px;
   }
 }

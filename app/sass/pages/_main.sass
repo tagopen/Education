@@ -3,7 +3,7 @@
 +font('LetoSansThin', 'LetoSansThin')
 +font('LetoSansBold', 'LetoSansBold')
 +ic
-@each $ic in uk, scroll, format1, format2, format3, format4, format5, format6, like320, like760, print, connect, connect_fff
+@each $ic in uk, scroll, format1, format2, format3, format4, format5, format6, like320, like760, print, connect, connect_fff, prog1-320, prog2-320, prog3-320, prog4-320, prog5-320, prog1-760, prog2-760, prog3-760, prog4-760, prog5-760, prog1-960, prog2-960, prog3-960, prog4-960, prog5-960
   .ic--#{$ic}
     +sb(#{$ic})
 html
@@ -1148,10 +1148,35 @@ button.close
     margin-bottom: 25px
     &--large
       font-size: 18px
-      line-height: 20px  
+      line-height: 20px 
+.lesson       
+  &__row
+    position: relative    
   &__box
+    position: relative
     color: #fff
     padding: 10px 10px 25px
+    &:hover  
+      .lesson
+        &__btn
+          display: block
+          opacity: 1 
+        &__naming,  
+        &__subscribe
+          transform: translateY(-30px)
+        &__icon
+          i[class*="960"]  
+            visibility: hidden
+            display: none
+          i[class*="320"]   
+            visibility: visible !important 
+            display: inline-block !important 
+  &__bg
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%  
     &--1
       background: url(../img/programsbg1.jpg) no-repeat
       +cover
@@ -1166,14 +1191,35 @@ button.close
       +cover
     &--5
       background: url(../img/programsbg5.jpg) no-repeat
-      +cover
+      +cover          
   &__naming
     font: 400 16px/18px $font-leto-bold     
     margin-bottom: 10px 
   &__subscribe  
-    font: 400 11px/16px $font-leto    
+    font: 400 11px/16px $font-leto   
+  &__list
+    position: absolute
+    top: 0
+    right: 0
+    padding: 20px
+    max-width: 190px
+    background-color: #05739c   
+    font: 400 16px/18px $font-leto-bold  
+    color: #fff
+  &__icon
+    margin-bottom: 15px  
+  &__btn
+    position: absolute
+    bottom: -50px
+    background-color: #05739c 
+    margin-top: 15px
+    display: none
+    z-index: 15
+    &:hover,
+    &:focus  
+      background-color: #05739c * 1.2
 +r(768) 
-  .programs
+  .lesson
     &__box
       margin-bottom: 20px
       padding: 30px
@@ -1185,15 +1231,18 @@ button.close
       font: 400 21px/28px $font-leto-bold  
       margin-bottom: 25px 
     &__subscribe  
-      font: 400 16px/18px $font-leto     
+      font: 400 16px/18px $font-leto  
+    &__icon
+      margin-bottom: 25px     
 +r(960)                   
-  .programs
+  .lesson
     &__box
       transition: .2s transform ease-out
       &--large
         padding: 40px 30px 45px
       &:hover
         transform: translateY(-20px)
+        filter: blur(8px)
     &__naming
       font: 400 25px/33px $font-leto-bold 
       margin-bottom: 15px
@@ -1202,3 +1251,5 @@ button.close
     &__subscribe
       &--small
         font: 400 12px/14px $font-leto 
+    &__icon
+      margin-bottom: 30px    
