@@ -114,8 +114,16 @@ $('.dropdown, .dropup').each(function() {
 
 // Lecturer page close fixed price box
 $(document).ready(function() {
-  $('.lecturer__close').click(function() {
-    $('.lecturer__price').addClass('lecturer__price--closed');
+  $('.l-price__close').click(function() {
+    $('.l-price').addClass('l-price--closed');
+  });
+});
+
+// Lecturer page bookmark
+$(document).ready(function() {
+  $('.bookmark').click(function(e) {
+    e.preventDefault();
+    $(this).find('.bookmark__icon').toggleClass('bookmark__icon--active');
   });
 });
 

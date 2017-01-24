@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* fonts */
 /* navbar */
 /* ------------------------------------------------------------------ */
@@ -550,8 +551,11 @@ html {
 .breadcrumb__link:hover, .breadcrumb__link:focus {
   text-decoration: none;
 }
-.breadcrumb__item.active {
+.breadcrumb__item--active {
   color: #282828;
+}
+.breadcrumb__item--color {
+  color: #fff;
 }
 
 .ic--print {
@@ -1819,60 +1823,17 @@ button.close {
   color: #fff;
 }
 
-.breadcrumb__item--color.active {
-  color: #fff;
-}
-
-.lecturer__point {
-  display: inline-block;
-  margin-right: 20px;
-  color: #223a5f;
-  font: 400 14px/25px "LetoSans", sans-serif;
-  border-bottom: 1px dashed #223a5f;
-}
 .lecturer__profile {
   padding-top: 20px;
 }
-.lecturer-profile {
-  color: #282828;
-  font: 400 12px/18px "LetoSans", sans-serif;
-}
-.lecturer-profile__value {
-  font-family: "LetoSansBold", sans-serif;
-}
-.lecturer__row {
-  margin-bottom: 5px;
-}
 .lecturer__price {
   background-color: #fefaee;
-  padding: 30px 0 20px;
   text-align: center;
   position: fixed;
   bottom: 0;
   width: 100%;
   margin-left: -15px;
   z-index: 25;
-}
-.lecturer__price--closed {
-  display: none;
-}
-.lecturer__close {
-  position: absolute;
-  display: inline-block;
-  top: 10px;
-  right: 15px;
-  cursor: pointer;
-}
-.lecturer__close:hover {
-  color: #ba3742;
-}
-.lecturer-price__text {
-  display: inline-block;
-  font: 400 9px/9px "LetoSans", sans-serif;
-}
-.lecturer-price__value {
-  color: #282828;
-  font: 400 18px/18px "LetoSans", sans-serif;
 }
 .lecturer__btn {
   background-color: #52ac62;
@@ -1886,13 +1847,6 @@ button.close {
   margin-bottom: 25px;
   min-width: 220px;
   font: 400 14px/16px "LetoSansBold", sans-serif;
-}
-.lecturer__link {
-  display: block;
-  color: #223a5f;
-  font: 400 10px/12px "LetoSansBold", sans-serif;
-  text-decoration: underline;
-  margin-top: 15px;
 }
 .lecturer__text {
   margin-bottom: 20px;
@@ -1912,8 +1866,101 @@ button.close {
   text-align: center;
 }
 
-.ic--connect_fff {
+.l-point__item {
+  display: inline-block;
+  margin-right: 20px;
+}
+.l-point__link {
+  position: relative;
+  padding-bottom: 3px;
+  border-bottom: 1px dashed #223a5f;
+  color: #223a5f;
+  font: 400 14px/25px "LetoSans", sans-serif;
+}
+.l-point__link:before {
+  content: "";
+  position: absolute;
+  display: block;
+  margin-bottom: -1px;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 0;
+  background-color: #223a5f;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.l-point__link:hover, .l-point__link:focus {
+  text-decoration: none;
+}
+.l-point__link:hover:before, .l-point__link:focus:before {
+  width: 100%;
+}
+
+.l-profile {
+  color: #282828;
+  font: 400 12px/18px "LetoSans", sans-serif;
+}
+.l-profile__row {
+  margin-bottom: 5px;
+}
+.l-profile__value {
+  font-family: "LetoSansBold", sans-serif;
+}
+
+.l-price {
   margin-top: 15px;
+  padding: 30px 15px 20px;
+}
+.l-price--closed {
+  display: none;
+}
+.l-price__link {
+  display: block;
+  color: #223a5f;
+  font: 400 10px/12px "LetoSansBold", sans-serif;
+  text-decoration: underline;
+  margin-top: 15px;
+}
+.l-price__text {
+  display: inline-block;
+  font: 400 9px/9px "LetoSans", sans-serif;
+}
+.l-price__value {
+  color: #282828;
+  font: 400 18px/18px "LetoSans", sans-serif;
+}
+.l-price__close {
+  position: absolute;
+  display: inline-block;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  color: #000;
+}
+.l-price__close:hover {
+  color: #ba3742;
+}
+
+.bookmark__icon {
+  color: #ebe7db;
+  font-size: 48px;
+  line-height: 48px;
+}
+.bookmark__icon:before {
+  content: "";
+}
+.bookmark__icon--active {
+  color: #ffbf00;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.bookmark__icon--active:before {
+  content: "";
+}
+.bookmark__icon.bookmark__icon--active {
+  opacity: 1;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1928,15 +1975,6 @@ button.close {
     margin: 0;
     width: auto;
   }
-  .lecturer-price__text {
-    font: 400 13px/16px "LetoSans", sans-serif;
-  }
-  .lecturer-price__value {
-    font: 400 30px/30px "LetoSans", sans-serif;
-  }
-  .lecturer__link {
-    font: 400 14px/16px "LetoSans", sans-serif;
-  }
   .lecturer__btn {
     font: 400 14px/18px "LetoSansBold", sans-serif;
     padding: 15px 30px;
@@ -1944,19 +1982,31 @@ button.close {
   .lecturer__btn--size {
     min-width: 320px;
   }
+
+  .l-price__text {
+    font: 400 13px/16px "LetoSans", sans-serif;
+  }
+  .l-price__value {
+    font: 400 30px/30px "LetoSans", sans-serif;
+  }
+  .l-price__link {
+    font: 400 14px/16px "LetoSans", sans-serif;
+  }
 }
 @media only screen and (min-width: 960px) {
-  .lecturer-profile {
-    font-size: 18px;
-    line-height: 20px;
-  }
-  .lecturer__link {
-    font: 400 16px/18px "LetoSans", sans-serif;
-  }
   .lecturer__btn {
     font: 400 16px/18px "LetoSansBold", sans-serif;
   }
   .lecturer__col {
     float: right;
+  }
+
+  .l-price__link {
+    font: 400 16px/18px "LetoSans", sans-serif;
+  }
+
+  .l-profile {
+    font-size: 18px;
+    line-height: 20px;
   }
 }

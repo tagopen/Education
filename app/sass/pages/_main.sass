@@ -76,8 +76,10 @@ html
     &:focus
       text-decoration: none
   &__item
-    &.active 
-      color: #282828  
+    &--active
+      color: #282828 
+    &--color
+      color: #fff   
 .ic--print
   margin-right: 20px      
 .form-group
@@ -999,51 +1001,17 @@ button.close
   padding: 45px 0 15px
   &--color
     color: #fff
-.breadcrumb 
-  &__item--color.active 
-    color: #fff  
 .lecturer
-  &__point
-    display: inline-block
-    margin-right: 20px
-    color: #223a5f
-    font: 400 14px/25px $font-leto    
-    border-bottom: 1px dashed #223a5f
   &__profile
-    padding-top: 20px 
-  &-profile 
-    color: #282828
-    font: 400 12px/18px $font-leto
-    &__value
-      font-family: $font-leto-bold
-  &__row
-    margin-bottom: 5px    
+    padding-top: 20px   
   &__price
     background-color: #fefaee
-    padding: 30px 0 20px 
     text-align: center 
     position: fixed
     bottom: 0
     width: 100%
     margin-left: -15px
     z-index: 25
-    &--closed
-      display: none
-  &__close
-    position: absolute
-    display: inline-block
-    top: 10px
-    right: 15px  
-    cursor: pointer
-    &:hover
-      color: #ba3742
-  &-price
-    &__text
-      display: inline-block
-      font: 400 9px/9px $font-leto
-    &__value
-      color: #282828 
-      font: 400 18px/18px $font-leto   
   &__btn
     background-color: #52ac62
     color: #fff
@@ -1054,12 +1022,6 @@ button.close
       margin-bottom: 25px
       min-width: 220px
       font: 400 14px/16px $font-leto-bold
-  &__link
-    display: block
-    color: #223a5f
-    font: 400 10px/12px $font-leto-bold
-    text-decoration: underline  
-    margin-top: 15px
   &__text
     margin-bottom: 20px
   &__video
@@ -1072,8 +1034,80 @@ button.close
     padding: 35px 30px 20px
     margin-top: 35px
     text-align: center
-.ic--connect_fff
-  margin-top: 15px    
+.l-point
+  &__item
+    display: inline-block
+    margin-right: 20px
+  &__link
+    position: relative
+    padding-bottom: 3px
+    border-bottom: 1px dashed #223a5f
+    color: #223a5f
+    font: 400 14px/25px $font-leto  
+    &:before
+      content: ''
+      position: absolute
+      display: block
+      margin-bottom: -1px
+      left: 0
+      bottom: 0
+      height: 1px
+      width: 0
+      background-color: #223a5f 
+      transition: all .3s ease-out
+    &:hover,
+    &:focus
+      text-decoration: none
+      &:before
+        width: 100%
+.l-profile 
+  color: #282828
+  font: 400 12px/18px $font-leto
+  &__row
+    margin-bottom: 5px  
+  &__value
+    font-family: $font-leto-bold
+.l-price
+  margin-top: 15px
+  padding: 30px 15px 20px 
+  &--closed
+    display: none
+  &__link
+    display: block
+    color: #223a5f
+    font: 400 10px/12px $font-leto-bold
+    text-decoration: underline  
+    margin-top: 15px
+  &__text
+    display: inline-block
+    font: 400 9px/9px $font-leto
+  &__value
+    color: #282828 
+    font: 400 18px/18px $font-leto 
+  &__close
+    position: absolute
+    display: inline-block
+    top: 10px
+    right: 15px  
+    cursor: pointer
+    color: #000
+    &:hover
+      color: #ba3742  
+.bookmark
+  &__icon
+    color: #ebe7db
+    font-size: 48px
+    line-height: 48px
+    &:before
+      content: "\f006"
+    &--active
+      color: #ffbf00
+      opacity: 0
+      transition: all .3s ease-out 
+      &:before
+        content: "\f005" 
+    &.bookmark__icon--active
+      opacity: 1   
 +r(768)    
   .lecturer
     &__contact
@@ -1084,26 +1118,27 @@ button.close
       position: static
       margin: 0
       width: auto  
-    &-price
-      &__text  
-        font: 400 13px/16px $font-leto
-      &__value  
-        font: 400 30px/30px $font-leto 
-    &__link
-      font: 400 14px/16px $font-leto  
     &__btn 
       font: 400 14px/18px $font-leto-bold
       padding: 15px 30px
       &--size
         min-width: 320px
-+r(960)     
-  .lecturer
-    &-profile
-      font-size: 18px
-      line-height: 20px
+  .l-price
+    &__text  
+      font: 400 13px/16px $font-leto
+    &__value  
+      font: 400 30px/30px $font-leto 
     &__link
-      font: 400 16px/18px $font-leto    
+      font: 400 14px/16px $font-leto  
++r(960)     
+  .lecturer 
     &__btn  
       font: 400 16px/18px $font-leto-bold
     &__col   
       float: right 
+  .l-price
+    &__link
+      font: 400 16px/18px $font-leto   
+  .l-profile
+    font-size: 18px
+    line-height: 20px
