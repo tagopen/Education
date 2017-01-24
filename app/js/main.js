@@ -151,6 +151,13 @@ $(window).on('resize', function(){
   }
 }).trigger('resize');
 
+$(window).on('resize', function(){
+  // Only 761-959
+  if( $( window ).width() >= 760 && ($( window ).width() < 960) ) {
+    setEqualHeight($('.t-service--height')); 
+  }
+}).trigger('resize');
+
 
 // Masked phone
 $(function($){
@@ -248,3 +255,64 @@ $('.blog__slider').slick({
     }
   ]
 });
+
+$('.work__slider').slick({
+  slidesToShow: 5,
+  slidesToScroll: 5,
+  arrows: false,
+  dots: true,
+  mobileFirst: true,
+  swipeToSlide: '15',
+  responsive: [
+    {
+      breakpoint: 959,
+      settings: {
+        arrows: false,
+        dots: true,
+        slidesToShow: 5,
+        slidesToScroll: 5
+      }
+    },
+      {
+      breakpoint: 767,
+      settings: {
+        arrows: false,
+        dots: true,
+        slidesToShow: 4,
+        slidesToScroll: 4
+      }
+    },
+    {
+      breakpoint: 0,
+      settings: {
+        dots: true,
+        arrows: false,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+
+$('.comment__slider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  dots: true,
+  mobileFirst: true,
+  swipeToSlide: '15',
+  responsive: [
+    {
+      breakpoint: 0,
+      settings: {
+        dots: true,
+        arrows: false,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+

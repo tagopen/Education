@@ -3,7 +3,7 @@
 +font('LetoSansThin', 'LetoSansThin')
 +font('LetoSansBold', 'LetoSansBold')
 +ic
-@each $ic in uk, scroll, format1, format2, format3, format4, format5, format6, like320, like760, print, connect, connect_fff, prog1-320, prog2-320, prog3-320, prog4-320, prog5-320, prog1-760, prog2-760, prog3-760, prog4-760, prog5-760, prog1-960, prog2-960, prog3-960, prog4-960, prog5-960
+@each $ic in uk, scroll, format1, format2, format3, format4, format5, format6, like320, like760, print, connect, connect_fff, prog1-320, prog2-320, prog3-320, prog4-320, prog5-320, prog1-760, prog2-760, prog3-760, prog4-760, prog5-760, prog1-960, prog2-960, prog3-960, prog4-960, prog5-960, add
   .ic--#{$ic}
     +sb(#{$ic})
 html
@@ -89,9 +89,85 @@ html
 .content
   color: #282828
   font: 400 14px/16px $font-leto
+  &--padding-bottom
+    padding-bottom: 0
+.x-title
+  font: 400 16px/18px $font-leto 
+  color: #282828     
+  margin: 0
 +r(768)  
   .content
-    font: 400 18px/20px $font-leto  
+    font: 400 18px/20px $font-leto 
+  .x-title
+    font: 400 19px/20px $font-leto
++r(960)
+  .x-title
+    font: 400 26px/30px $font-leto   
+.info
+  margin-bottom: 15px
+  &__heading
+    margin-bottom: 25px 
+  &__list
+    padding-left: 15px  
+  &__item
+    padding-left: 10px
+    margin-bottom: 10px  
+.text--margin
+  margin-bottom: 25px  
++r(760)
+  .text--margin  
+    &-large
+      margin-bottom: 90px
++cm('contact styles') 
+.contact 
+  padding: 25px 15px
+  background-color: #fefaee  
+  margin: 0 -15px
++r(760)
+  .contact
+    margin: 0 -24px
+    padding: 35px 30px
++r(960)    
+  .contact
+    padding: 40px 35px
+    margin: 0
++cm('pricestyles') 
+.price
+  color: #282828
+  padding: 25px 15px
+  background-color: #fefaee
+  margin: 0 -15px
+  &__text 
+    font: 400 14px/16px $font-leto
+    margin-bottom: 10px
+  &__span     
+    font: 400 30px/30px $font-leto-bold
+    margin-bottom: 10px
++r(768)
+  .price
+    margin: 0 -24px
+    padding: 35px 30px    
++r(960)   
+  .price
+    padding: 40px 35px
+    margin: 0 0 15px
++r(760)
+  .info
+    margin-bottom: 20px
+    &__heading
+      margin-bottom: 25px 
+    &__list
+      padding-left: 40px    
++r(960)  
+  .info
+    padding: 30px 20px 20px
+    border: 3px dashed #dacccd
+    &__heading
+      margin-bottom: 10px  
+    &__item
+      margin-bottom: 15px   
+  .text--margin
+    margin-bottom: 80px        
 +cm('modal styles')
 .modal-body
   padding: 0
@@ -123,7 +199,7 @@ button.close
   .navbar-nav
     float: none!important
   .navbar-nav>li
-    float: none
+    float: none    
 +comment("home page style")
 +comment("navbar style")
 .navbar
@@ -1349,3 +1425,116 @@ button.close
       &--4
         height: 117px
         width: 105px
++comment('t-service page style')   
+.t-service
+  &__box
+    margin-bottom: 15px
+  &__icon
+    &--1
+      display: inline-block
+      float: left
+      margin: 0 10px 10px 0
+      height: 102px
+      width: 84px
+      background: url(../img/icons/service1.png) no-repeat 
+      +contain  
++r(768)         
+  .t-service
+    &__box
+      margin-bottom: 25px
++r(960)        
+  .t-service
+    &__box
+      margin-bottom: 45px
++comment('comment page style')  
+.comment
+  &__slider
+    &.slick-dotted
+      margin-bottom: 100px
+    .slick-dots
+      bottom: -40px  
+  &__item
+    text-align: center
+    padding: 30px 15px 20px
+    background-color: #f6f7fa
+    &--add
+      background-color: #e7ffeb
+  &__text 
+    font: 400 11px/13px $font-leto
+    margin-bottom: 25px
+    &:before
+      display: inline-block
+      position: relative
+      top: -10px
+      left: -5px
+      content: '\f10d'
+      font-family: $font-awesome
+      color: #ccced1
+      font-size: 12px
+    &:after
+      display: inline-block
+      position: relative
+      bottom: -10px
+      right: -5px
+      content: '\f10e'
+      font-family: $font-awesome
+      color: #ccced1 
+      font-size: 12px
+    &--add  
+      font: 400 11px/13px $font-leto
+      color: #b6cdba
+      text-transform: uppercase
+  &__icon
+    height: 140px
+    width: 140px
+    margin-bottom: 30px 
+  &__author  
+    font: 400 11px/13px $font-leto
+    margin-bottom: 10px
+  &__post 
+    color: #aaadb0
+    font: 400 10px/12px $font-leto
+.work
+  &__title 
+    margin-bottom: 20px 
+  &__text
+    margin-bottom: 30px  
+  &__img
+    text-align: center
+    img
+      display: inline-block  
+  &__slider
+    &.slick-dotted
+      margin-bottom: 95px 
+    .slick-dots    
+      bottom: -45px 
++r(768)
+  .comment
+    &__slider
+      &.slick-dotted
+        margin-bottom: 80px
+    &__item
+      padding: 40px 15px 20px
+    &__text
+      font: 400 13px/15px $font-leto
+      margin-bottom: 45px
+    &__author  
+      font: 400 13px/15px $font-leto
+  .work
+    &__slider
+      &.slick-dotted
+        margin-bottom: 125px
+    &__title
+      margin-bottom: 35px 
+    &__text
+      margin-bottom: 45px  
++r(960)     
+  .comment
+    padding: 45px 25px 25px
+    &__text
+      font: 400 17px/21px $font-leto  
+      margin-bottom: 35px 
+  .work
+    &__slider
+      &.slick-dotted
+        margin-bottom: 100px
