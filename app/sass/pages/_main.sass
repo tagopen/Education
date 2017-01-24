@@ -1160,33 +1160,19 @@ button.close
       font-size: 18px
       line-height: 20px 
 .lesson       
+  margin: 0 -15px
   &__row
     position: relative    
   &__box
     position: relative
     color: #fff
-    padding: 10px 10px 25px
-    &:hover  
+    padding: 10px 10px 60px
+    &:hover,
+    &:focus 
       .lesson
         &__btn
           display: block
-          opacity: 1 
-        &__naming,  
-        &__subscribe
-          transform: translateY(-30px)
-        &__icon
-          i[class*="960"]  
-            visibility: hidden
-            display: none
-          i[class*="320"]   
-            visibility: visible !important 
-            display: inline-block !important 
-  &__bg
-    position: absolute
-    left: 0
-    top: 0
-    width: 100%
-    height: 100%  
+          opacity: 1      
     &--1
       background: url(../img/programsbg1.jpg) no-repeat
       +cover
@@ -1201,8 +1187,11 @@ button.close
       +cover
     &--5
       background: url(../img/programsbg5.jpg) no-repeat
-      +cover          
-  &__naming
+      +cover                
+  &__content
+    position: relative
+    z-index: 10          
+  &__title
     font: 400 16px/18px $font-leto-bold     
     margin-bottom: 10px 
   &__subscribe  
@@ -1216,6 +1205,7 @@ button.close
     background-color: #05739c   
     font: 400 16px/18px $font-leto-bold  
     color: #fff
+    z-index: 15
   &__icon
     margin-bottom: 15px  
   &__btn
@@ -1224,20 +1214,32 @@ button.close
     background-color: #05739c 
     margin-top: 15px
     display: none
-    z-index: 15
     &:hover,
     &:focus  
       background-color: #05739c * 1.2
 +r(768) 
   .lesson
+    margin: 0
     &__box
       margin-bottom: 20px
       padding: 30px
+      &:hover
+        .lesson
+          &__title,  
+          &__subscribe
+            transform: translateY(-25px)          
+          &__icon
+            i[class*="960"]  
+              visibility: hidden
+              display: none
+            i[class*="320"]   
+              visibility: visible !important 
+              display: inline-block !important           
     &__text
       &--large
         font-size: 26px
         line-height: 30px   
-    &__naming 
+    &__title 
       font: 400 21px/28px $font-leto-bold  
       margin-bottom: 25px 
     &__subscribe  
@@ -1252,8 +1254,7 @@ button.close
         padding: 40px 30px 45px
       &:hover
         transform: translateY(-20px)
-        filter: blur(8px)
-    &__naming
+    &__title
       font: 400 25px/33px $font-leto-bold 
       margin-bottom: 15px
       &--small

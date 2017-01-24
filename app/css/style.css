@@ -191,7 +191,7 @@
 /* S L I C K - S L I D E R    T H E M E    S T Y L E  */
 /* -------------------------------------------------- */
 .slick-loading .slick-list {
-  background: #fff url('../img/ajax-loader.gif?1481806172') center center no-repeat;
+  background: #fff url('../img/ajax-loader.gif?1485005529') center center no-repeat;
 }
 
 /* Icons */
@@ -2123,69 +2123,56 @@ button.close {
   line-height: 20px;
 }
 
+.lesson {
+  margin: 0 -15px;
+}
 .lesson__row {
   position: relative;
 }
 .lesson__box {
   position: relative;
   color: #fff;
-  padding: 10px 10px 25px;
+  padding: 10px 10px 60px;
 }
-.lesson__box:hover .lesson__btn {
+.lesson__box:hover .lesson__btn, .lesson__box:focus .lesson__btn {
   display: block;
   opacity: 1;
 }
-.lesson__box:hover .lesson__naming, .lesson__box:hover .lesson__subscribe {
-  -webkit-transform: translateY(-30px);
-      -ms-transform: translateY(-30px);
-          transform: translateY(-30px);
-}
-.lesson__box:hover .lesson__icon i[class*="960"] {
-  visibility: hidden;
-  display: none;
-}
-.lesson__box:hover .lesson__icon i[class*="320"] {
-  visibility: visible !important;
-  display: inline-block !important;
-}
-.lesson__bg {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-.lesson__bg--1 {
+.lesson__box--1 {
   background: url(../img/programsbg1.jpg) no-repeat;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
 }
-.lesson__bg--2 {
+.lesson__box--2 {
   background: url(../img/programsbg2.jpg) no-repeat;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
 }
-.lesson__bg--3 {
+.lesson__box--3 {
   background: url(../img/programsbg3.jpg) no-repeat;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
 }
-.lesson__bg--4 {
+.lesson__box--4 {
   background: url(../img/programsbg4.jpg) no-repeat;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
 }
-.lesson__bg--5 {
+.lesson__box--5 {
   background: url(../img/programsbg5.jpg) no-repeat;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
 }
-.lesson__naming {
+.lesson__content {
+  position: relative;
+  z-index: 10;
+}
+.lesson__title {
   font: 400 16px/18px "LetoSansBold", sans-serif;
   margin-bottom: 10px;
 }
@@ -2201,6 +2188,7 @@ button.close {
   background-color: #05739c;
   font: 400 16px/18px "LetoSansBold", sans-serif;
   color: #fff;
+  z-index: 15;
 }
 .lesson__icon {
   margin-bottom: 15px;
@@ -2211,22 +2199,37 @@ button.close {
   background-color: #05739c;
   margin-top: 15px;
   display: none;
-  z-index: 15;
 }
 .lesson__btn:hover, .lesson__btn:focus {
   background-color: #068abb;
 }
 
 @media only screen and (min-width: 768px) {
+  .lesson {
+    margin: 0;
+  }
   .lesson__box {
     margin-bottom: 20px;
     padding: 30px;
+  }
+  .lesson__box:hover .lesson__title, .lesson__box:hover .lesson__subscribe {
+    -webkit-transform: translateY(-25px);
+        -ms-transform: translateY(-25px);
+            transform: translateY(-25px);
+  }
+  .lesson__box:hover .lesson__icon i[class*="960"] {
+    visibility: hidden;
+    display: none;
+  }
+  .lesson__box:hover .lesson__icon i[class*="320"] {
+    visibility: visible !important;
+    display: inline-block !important;
   }
   .lesson__text--large {
     font-size: 26px;
     line-height: 30px;
   }
-  .lesson__naming {
+  .lesson__title {
     font: 400 21px/28px "LetoSansBold", sans-serif;
     margin-bottom: 25px;
   }
@@ -2251,14 +2254,12 @@ button.close {
     -webkit-transform: translateY(-20px);
         -ms-transform: translateY(-20px);
             transform: translateY(-20px);
-    -webkit-filter: blur(8px);
-            filter: blur(8px);
   }
-  .lesson__naming {
+  .lesson__title {
     font: 400 25px/33px "LetoSansBold", sans-serif;
     margin-bottom: 15px;
   }
-  .lesson__naming--small {
+  .lesson__title--small {
     font: 400 17px/20px "LetoSansBold", sans-serif;
   }
   .lesson__subscribe--small {
