@@ -141,8 +141,8 @@ $(window).on('resize', function(){
 $(window).on('resize', function(){
   // Only 960px +
   if( $( window ).width() >= 960 ) {
-    setEqualHeight($('.programs__box--large')); 
-    setEqualHeight($('.programs__box--small')); 
+    setEqualHeight($('.lesson__box--large')); 
+    setEqualHeight($('.lesson__box--small')); 
   }
 }).trigger('resize');
 
