@@ -191,7 +191,7 @@
 /* S L I C K - S L I D E R    T H E M E    S T Y L E  */
 /* -------------------------------------------------- */
 .slick-loading .slick-list {
-  background: #fff url('../img/ajax-loader.gif?1481806172') center center no-repeat;
+  background: #fff url('../img/ajax-loader.gif?1485005529') center center no-repeat;
 }
 
 /* Icons */
@@ -2008,5 +2008,100 @@ button.close {
   .l-profile {
     font-size: 18px;
     line-height: 20px;
+  }
+}
+/* ---------------------------------------- */
+/* P A G E    P R O G R A M S    S T Y L E  */
+/* ---------------------------------------- */
+.programs__text {
+  margin-bottom: 25px;
+}
+.programs__text--large {
+  font-size: 18px;
+  line-height: 20px;
+}
+.programs__box {
+  color: #fff;
+  padding: 10px 10px 25px;
+}
+.programs__box--1 {
+  background: url(../img/programsbg1.jpg) no-repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.programs__box--2 {
+  background: url(../img/programsbg2.jpg) no-repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.programs__box--3 {
+  background: url(../img/programsbg3.jpg) no-repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.programs__box--4 {
+  background: url(../img/programsbg4.jpg) no-repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.programs__box--5 {
+  background: url(../img/programsbg5.jpg) no-repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.programs__naming {
+  font: 400 16px/18px "LetoSansBold", sans-serif;
+  margin-bottom: 10px;
+}
+.programs__subscribe {
+  font: 400 11px/16px "LetoSans", sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+  .programs__box {
+    margin-bottom: 20px;
+    padding: 30px;
+  }
+  .programs__text--large {
+    font-size: 26px;
+    line-height: 30px;
+  }
+  .programs__naming {
+    font: 400 21px/28px "LetoSansBold", sans-serif;
+    margin-bottom: 25px;
+  }
+  .programs__subscribe {
+    font: 400 16px/18px "LetoSans", sans-serif;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .programs__box {
+    -webkit-transition: 0.2s -webkit-transform ease-out;
+    transition: 0.2s -webkit-transform ease-out;
+    transition: 0.2s transform ease-out;
+    transition: 0.2s transform ease-out, 0.2s -webkit-transform ease-out;
+  }
+  .programs__box--large {
+    padding: 40px 30px 45px;
+  }
+  .programs__box:hover {
+    -webkit-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  .programs__naming {
+    font: 400 25px/33px "LetoSansBold", sans-serif;
+    margin-bottom: 15px;
+  }
+  .programs__naming--small {
+    font: 400 17px/20px "LetoSansBold", sans-serif;
+  }
+  .programs__subscribe--small {
+    font: 400 12px/14px "LetoSans", sans-serif;
   }
 }

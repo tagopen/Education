@@ -10,7 +10,6 @@ var gulp          = require('gulp'),
     imagemin      = require('gulp-imagemin'),
     pngquant      = require('imagemin-pngquant'),
     cache         = require('gulp-cache'),
-    jsmin         = require('gulp-jsmin'),
     autoprefixer  = require('gulp-autoprefixer')
     /*gulpSelectors = require('gulp-selectors')*/;
 
