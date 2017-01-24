@@ -126,9 +126,18 @@ $(window).on('resize', function(){
     setEqualHeight($('.format__image'));
     setEqualHeight($('.format__box'));
       var $elemHeight = $('.format__image').height();
-      $('.format__image .ic').css('line-height',  $elemHeight + 'px');
+      $('.format__image .ic').css('line-height',  $elemHeight + 'px'); 
   }
 }).trigger('resize');
+
+$(window).on('resize', function(){
+  // Only 960px +
+  if( $( window ).width() >= 960 ) {
+    setEqualHeight($('.programs__box--large')); 
+    setEqualHeight($('.programs__box--small')); 
+  }
+}).trigger('resize');
+
 
 // Masked phone
 $(function($){

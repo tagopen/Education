@@ -1107,3 +1107,63 @@ button.close
       font: 400 16px/18px $font-leto-bold
     &__col   
       float: right 
++comment('page programs style')
+.programs
+  &__text
+    margin-bottom: 25px
+    &--large
+      font-size: 18px
+      line-height: 20px  
+  &__box
+    color: #fff
+    padding: 10px 10px 25px
+    &--1
+      background: url(../img/programsbg1.jpg) no-repeat
+      +cover
+    &--2
+      background: url(../img/programsbg2.jpg) no-repeat
+      +cover
+    &--3
+      background: url(../img/programsbg3.jpg) no-repeat
+      +cover
+    &--4
+      background: url(../img/programsbg4.jpg) no-repeat
+      +cover
+    &--5
+      background: url(../img/programsbg5.jpg) no-repeat
+      +cover
+  &__naming
+    font: 400 16px/18px $font-leto-bold     
+    margin-bottom: 10px 
+  &__subscribe  
+    font: 400 11px/16px $font-leto    
++r(768) 
+  .programs
+    &__box
+      margin-bottom: 20px
+      padding: 30px
+    &__text
+      &--large
+        font-size: 26px
+        line-height: 30px   
+    &__naming 
+      font: 400 21px/28px $font-leto-bold  
+      margin-bottom: 25px 
+    &__subscribe  
+      font: 400 16px/18px $font-leto     
++r(960)                   
+  .programs
+    &__box
+      transition: .2s transform ease-out
+      &--large
+        padding: 40px 30px 45px
+      &:hover
+        transform: translateY(-20px)
+    &__naming
+      font: 400 25px/33px $font-leto-bold 
+      margin-bottom: 15px
+      &--small
+        font: 400 17px/20px $font-leto-bold
+    &__subscribe
+      &--small
+        font: 400 12px/14px $font-leto 
