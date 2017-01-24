@@ -131,10 +131,15 @@ $(document).ready(function() {
 $(window).on('resize', function(){
   // Only 768px +
   if( $( window ).width() >= 768 ) {
+    // Section format
     setEqualHeight($('.format__image'));
     setEqualHeight($('.format__box'));
-      var $elemHeight = $('.format__image').height();
+    var $elemHeight = $('.format__image').height();
       $('.format__image .ic').css('line-height',  $elemHeight + 'px'); 
+    // Section service  
+    setEqualHeight($('.service__box'));
+    setEqualHeight($('.service__title'));
+    setEqualHeight($('.service__icon'));
   }
 }).trigger('resize');
 

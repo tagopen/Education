@@ -1262,3 +1262,90 @@ button.close
         font: 400 12px/14px $font-leto 
     &__icon
       margin-bottom: 30px    
++comment('service page style')  
+.service    
+  &__box
+    padding: 40px 25px 30px
+    text-align: center
+    border: 1px solid #e1e1e1
+    margin-bottom: 15px
+  &__title
+    display: block
+    color: #223a5f  
+    font: 400 10px/12px $font-leto-bold 
+    margin-bottom: 15px
+  &__text  
+    color: #282828
+    font: 400 8px/10px $font-leto
+  &__icon
+    display: inline-block
+    margin-bottom: 15px  
+  &__icon
+    i
+      display: inline-block
+    &--1
+      height: 61px
+      width: 50px
+      background: url(../img/icons/service1.png) no-repeat
+      +contain
+    &--2
+      height: 64px
+      width: 42px
+      background: url(../img/icons/service2.png) no-repeat 
+      +contain
+    &--3
+      height: 71px
+      width: 70px
+      background: url(../img/icons/service3.png) no-repeat
+      +contain
+    &--4
+      height: 67px
+      width: 60px
+      background: url(../img/icons/service4.png) no-repeat
+      +contain     
++r(768)  
+  .service
+    &__box
+      padding: 45px 30px 30px
+      margin-bottom: 30px
+    &__title
+      font: 400 11px/15px $font-leto-bold 
+    &__text
+      font: 400 10px/12px $font-leto
+    &__icon
+      margin-bottom: 20px  
+      &--1
+        height: 72px
+        width: 58px
+      &--2
+        height: 75px
+        width: 51px
+      &--3
+        height: 82px
+        width: 78px
+      &--4
+        height: 87px
+        width: 68px
++r(960)      
+  .service
+    &__box
+      padding: 65px 30px 55px
+    &__title
+      font: 400 17px/22px $font-leto-bold 
+      margin-bottom: 25px
+    &__text 
+      font: 400 15px/18px $font-leto
+    &__icon
+      margin-bottom: 25px  
+      &--1
+        height: 105px
+        width: 84px
+      &--2
+        width: 80px
+        height: 108px
+      &--3
+        height: 125px
+        width: 118px
+      &--4
+        height: 117px
+        width: 105px
