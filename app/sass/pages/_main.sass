@@ -62,7 +62,11 @@ html
   &__heading    
     color: #223a5f
     font: 400 28px/30px $font-leto  
-    margin: 0 0 30px   
+    margin: 0 0 30px 
++rx(767)
+  .content
+    &--lecturer
+      padding-top: 0   
 +r(768)      
   .content
     &__heading
@@ -80,8 +84,6 @@ html
       color: #282828 
     &--color
       color: #fff   
-.ic--print
-  margin-right: 20px      
 .form-group
   margin: 22px 0
 .content
@@ -1034,6 +1036,14 @@ button.close
     padding: 35px 30px 20px
     margin-top: 35px
     text-align: center
+.share
+  text-align: right 
+  &__link
+    &--print
+      margin-right: 20px    
+    &--intro
+      display: inline-block  
+      margin: 15px
 .l-point
   &__item
     display: inline-block

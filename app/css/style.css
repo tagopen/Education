@@ -538,6 +538,11 @@ html {
   margin: 0 0 30px;
 }
 
+@media only screen and (max-width: 767px) {
+  .content--lecturer {
+    padding-top: 0;
+  }
+}
 @media only screen and (min-width: 768px) {
   .content__heading {
     font: 400 37px/45px "LetoSans", sans-serif;
@@ -556,10 +561,6 @@ html {
 }
 .breadcrumb__item--color {
   color: #fff;
-}
-
-.ic--print {
-  margin-right: 20px;
 }
 
 .form-group {
@@ -1864,6 +1865,17 @@ button.close {
   padding: 35px 30px 20px;
   margin-top: 35px;
   text-align: center;
+}
+
+.share {
+  text-align: right;
+}
+.share__link--print {
+  margin-right: 20px;
+}
+.share__link--intro {
+  display: inline-block;
+  margin: 15px;
 }
 
 .l-point__item {
