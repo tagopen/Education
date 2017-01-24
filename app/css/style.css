@@ -2123,9 +2123,6 @@ button.close {
   line-height: 20px;
 }
 
-.lesson {
-  margin: 0 -15px;
-}
 .lesson__row {
   position: relative;
 }
@@ -2205,9 +2202,6 @@ button.close {
 }
 
 @media only screen and (min-width: 768px) {
-  .lesson {
-    margin: 0;
-  }
   .lesson__box {
     margin-bottom: 20px;
     padding: 30px;
