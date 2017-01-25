@@ -141,17 +141,12 @@ $(window).on('resize', function(){
     setEqualHeight($('.service__title'));
     setEqualHeight($('.service__icon'));
   }
-}).trigger('resize');
-
-$(window).on('resize', function(){
   // Only 960px +
   if( $( window ).width() >= 960 ) {
-    setEqualHeight($('.lesson__box--large')); 
-    setEqualHeight($('.lesson__box--small')); 
+    setEqualHeight($('.lesson__item--large')); 
+    setEqualHeight($('.lesson__item--small')); 
   }
-}).trigger('resize');
 
-$(window).on('resize', function(){
   // Only 761-959
   if( $( window ).width() >= 760 && ($( window ).width() < 960) ) {
     setEqualHeight($('.t-service--height')); 
