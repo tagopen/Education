@@ -311,3 +311,11 @@ $('.comment__slider').slick({
   ]
 });
 
+$(document).ready(function() {
+  $('.calculator__btn').click(function() {
+    var amountValue = $('.calculator__amount .radio-btn__control:checked').data('amount'),
+        durationValue = $('.calculator__duration .radio-btn__control:checked').data('duration'),
+        gr = amountValue * durationValue;
+      $('.calculator__input').val('Итого: '+ gr + ' руб.');
+  });
+});

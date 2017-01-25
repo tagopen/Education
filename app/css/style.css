@@ -619,7 +619,7 @@ html {
   margin-bottom: 25px;
 }
 
-@media only screen and (min-width: 760px) {
+@media only screen and (min-width: 768px) {
   .text--margin-large {
     margin-bottom: 90px;
   }
@@ -628,18 +628,25 @@ html {
 .contact {
   padding: 25px 15px;
   background-color: #fefaee;
+}
+.contact--margin {
   margin: 0 -15px;
 }
 
-@media only screen and (min-width: 760px) {
+@media only screen and (min-width: 768px) {
   .contact {
-    margin: 0 -24px;
     padding: 35px 30px;
+  }
+  .contact--margin {
+    margin: 0 -24px;
+    padding-top: 66px;
   }
 }
 @media only screen and (min-width: 960px) {
   .contact {
     padding: 40px 35px;
+  }
+  .contact--margin {
     margin: 0;
   }
 }
@@ -648,6 +655,8 @@ html {
   color: #282828;
   padding: 25px 15px;
   background-color: #fefaee;
+}
+.price--margin {
   margin: 0 -15px;
 }
 .price__text {
@@ -658,16 +667,30 @@ html {
   font: 400 30px/30px "LetoSansBold", sans-serif;
   margin-bottom: 10px;
 }
+.price__btn {
+  background-color: #52ac62;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin-top: 20px;
+  width: 100%;
+}
+.price__btn:hover, .price__btn:focus {
+  background-color: #62ce76;
+}
 
 @media only screen and (min-width: 768px) {
   .price {
-    margin: 0 -24px;
     padding: 35px 30px;
+  }
+  .price--margin {
+    margin: 0 -24px;
   }
 }
 @media only screen and (min-width: 960px) {
   .price {
     padding: 40px 35px;
+  }
+  .price--margin {
     margin: 0 0 15px;
   }
 }
@@ -834,7 +857,7 @@ button.close {
 .phone__text,
 .email__text {
   color: #282828;
-  font: 400 11px/15px "LetoSans", sans-serif;
+  font: 400 13px/15px "LetoSansBold", sans-serif;
 }
 .phone__text:hover, .phone__text:focus,
 .email__text:hover,
@@ -2540,9 +2563,6 @@ button.close {
   padding: 30px 15px 20px;
   background-color: #f6f7fa;
 }
-.comment__item--add {
-  background-color: #e7ffeb;
-}
 .comment__text {
   font: 400 11px/13px "LetoSans", sans-serif;
   margin-bottom: 25px;
@@ -2566,11 +2586,6 @@ button.close {
   font-family: "FontAwesome";
   color: #ccced1;
   font-size: 12px;
-}
-.comment__text--add {
-  font: 400 11px/13px "LetoSans", sans-serif;
-  color: #b6cdba;
-  text-transform: uppercase;
 }
 .comment__icon {
   height: 140px;
@@ -2641,5 +2656,119 @@ button.close {
 
   .work__slider.slick-dotted {
     margin-bottom: 100px;
+  }
+}
+/* ------------------------------------------ */
+/* T - C O N T A C T    P A G E    S T Y L E  */
+/* ------------------------------------------ */
+.t-contact__title {
+  margin-bottom: 30px;
+}
+.t-contact__contact {
+  background: transparent;
+  padding: 0;
+  margin-bottom: 35px;
+}
+
+@media only screen and (min-width: 768px) {
+  .t-contact__title {
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .t-contact__contact {
+    margin-bottom: 50px;
+  }
+}
+/* ---------------------------------------- */
+/* C O S T    P A G E    S T Y L E          */
+/* ---------------------------------------- */
+.cost__text {
+  margin-bottom: 25px;
+}
+.cost__title {
+  margin-bottom: 25px;
+}
+
+.radio-btn__control {
+  display: none;
+}
+.radio-btn__control:checked + .radio-btn__box .radio-btn__icon:before {
+  content: "";
+  -webkit-border-radius: inherit;
+          border-radius: inherit;
+  background-color: #88be69;
+  height: 22px;
+  width: 22px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.radio-btn__control:checked + .radio-btn__box .radio-btn__icon:after {
+  position: absolute;
+  content: "";
+  font-family: "FontAwesome";
+  font-size: 16px;
+  color: #fff;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+}
+.radio-btn__icon {
+  position: relative;
+  display: inline-block;
+  height: 22px;
+  width: 22px;
+  margin-bottom: -4px;
+  margin-right: 10px;
+  background-color: #e6e6e6;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+
+.calculator__btn {
+  background-color: #52ac62;
+  color: #fff;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.calculator__btn:hover, .calculator__btn:focus {
+  background-color: #62ce76;
+}
+.calculator__input {
+  background-color: #fffdda;
+  -webkit-border-radius: 43px;
+          border-radius: 43px;
+  font: 400 16px/18px "LetoSans", sans-serif;
+  padding: 12px 10px 12px 25px;
+  border: 0;
+  color: #282828;
+}
+.calculator__select {
+  width: 290px;
+  background-color: #e6e6e6;
+  padding: 15px 15px 14px 40px;
+  border: 0;
+}
+.calculator__box--select {
+  width: 264px;
+  -webkit-border-radius: 43px;
+          border-radius: 43px;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 768px) {
+  .cost__title {
+    font: 400 20px/24px "LetoSans", sans-serif;
+    margin-bottom: 40px;
+  }
+  .cost-table__cell {
+    padding: 35px 15px 20px !important;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .cost__title {
+    font: 400 26px/30px "LetoSans", sans-serif;
   }
 }
