@@ -114,7 +114,7 @@ html
     margin-bottom: 10px  
 .text--margin
   margin-bottom: 25px  
-+r(760)
++r(768)
   .text--margin  
     &-large
       margin-bottom: 90px
@@ -122,35 +122,50 @@ html
 .contact 
   padding: 25px 15px
   background-color: #fefaee  
-  margin: 0 -15px
-+r(760)
+  &--margin
+    margin: 0 -15px
++r(768)
   .contact
-    margin: 0 -24px
     padding: 35px 30px
+    &--margin
+      margin: 0 -24px
+      padding-top: 66px
 +r(960)    
   .contact
     padding: 40px 35px
-    margin: 0
+    &--margin
+      margin: 0
 +cm('pricestyles') 
 .price
   color: #282828
   padding: 25px 15px
   background-color: #fefaee
-  margin: 0 -15px
+  &--margin
+    margin: 0 -15px
   &__text 
     font: 400 14px/16px $font-leto
     margin-bottom: 10px
   &__span     
     font: 400 30px/30px $font-leto-bold
     margin-bottom: 10px
+  &__btn
+    background-color: #52ac62
+    box-shadow: none
+    margin-top: 20px
+    width: 100%
+    &:hover,
+    &:focus
+      background-color: #52ac62 * 1.2
 +r(768)
   .price
-    margin: 0 -24px
-    padding: 35px 30px    
+    padding: 35px 30px 
+    &--margin
+      margin: 0 -24px    
 +r(960)   
   .price
     padding: 40px 35px
-    margin: 0 0 15px
+    &--margin
+      margin: 0 0 15px
 +r(760)
   .info
     margin-bottom: 20px
@@ -261,7 +276,7 @@ button.close
 .email
   &__text
     color: #282828
-    font: 400 11px/15px $font-leto 
+    font: 400 13px/15px $font-leto-bold
     &:hover,
     &:focus
       text-decoration: none
@@ -1457,8 +1472,6 @@ button.close
     text-align: center
     padding: 30px 15px 20px
     background-color: #f6f7fa
-    &--add
-      background-color: #e7ffeb
   &__text 
     font: 400 11px/13px $font-leto
     margin-bottom: 25px
@@ -1480,10 +1493,6 @@ button.close
       font-family: $font-awesome
       color: #ccced1 
       font-size: 12px
-    &--add  
-      font: 400 11px/13px $font-leto
-      color: #b6cdba
-      text-transform: uppercase
   &__icon
     height: 140px
     width: 140px
@@ -1538,3 +1547,98 @@ button.close
     &__slider
       &.slick-dotted
         margin-bottom: 100px
++comment('t-contact page style')  
+.t-contact
+  &__title
+    margin-bottom: 30px
+  &__contact
+    background: transparent
+    padding: 0
+    margin-bottom: 35px
++r(768)   
+  .t-contact
+    &__title
+      margin-bottom: 50px
++r(960)      
+  .t-contact
+    &__contact
+      margin-bottom: 50px  
++comment('cost page style') 
+.cost  
+  &__text
+    margin-bottom: 25px     
+  &__title
+    margin-bottom: 25px
+.radio
+  &-btn
+    &__control
+      display: none
+      &:checked
+        & + .radio-btn__box
+          .radio-btn__icon
+            &:before 
+              content: ''
+              border-radius: inherit
+              background-color: #88be69
+              height: 22px
+              width: 22px
+              position: absolute
+              left: 0
+              top: 0    
+            &:after
+              position: absolute
+              content: '\f00c'
+              font-family: $font-awesome  
+              font-size: 16px
+              color: #fff
+              width: 22px
+              height: 22px
+              line-height: 22px
+              text-align: center                    
+    &__icon  
+      position: relative
+      display: inline-block
+      height: 22px
+      width: 22px
+      margin-bottom: -4px
+      margin-right: 10px
+      background-color: #e6e6e6
+      border-radius: 50%
+.calculator        
+  &__btn  
+    background-color: #52ac62   
+    color: #fff
+    box-shadow: none 
+    &:hover,
+    &:focus
+      background-color: #52ac62 * 1.2
+  &__input    
+    background-color: #fffdda
+    border-radius: 43px
+    font: 400 16px/18px $font-leto    
+    padding: 12px 10px 12px 25px 
+    border: 0
+    color: #282828
+  &__select
+    width: 290px
+    background-color: #e6e6e6
+    padding: 15px 15px 14px 40px 
+    border: 0
+  &__box
+    &--select
+      width: 264px
+      border-radius: 43px
+      overflow: hidden
++r(768)  
+  .cost
+    &__title
+      font: 400 20px/24px $font-leto  
+      margin-bottom: 40px 
+    &-table
+      &__cell
+        padding: 35px 15px 20px !important    
++r(960)
+  .cost
+    &__title
+      font: 400 26px/30px $font-leto     
+  
