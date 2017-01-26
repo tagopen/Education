@@ -1630,6 +1630,29 @@ button.close
     margin-bottom: 25px     
   &__title
     margin-bottom: 25px
+  &-table
+    text-align: center
+    &__row
+      padding: 30px 15px 10px
+      border: 1px solid #e6e6e6
+      margin: 0 15px 15px
+    &__cell
+      margin-bottom: 25px  
+      &--accented
+        display: inline-block
+        position: relative
+        font-family: $font-leto-bold 
+    &--ic
+      position: absolute
+      right: -25px
+      top: -25px
+      height: 25px
+      width: 25px
+      background: url(../img/icons/star.png) no-repeat
+      +contain
+    &--span  
+      color: #8b8b8b
+      font: 400 12px/14px $font-leto 
 .radio
   &-btn
     &__control
@@ -1727,8 +1750,26 @@ button.close
       font: 400 20px/24px $font-leto  
       margin-bottom: 40px 
     &-table
+      margin-bottom: 30px
+      &--760row
+        border-right: 1px solid #e6e6e6
+        display: table
+      &__row
+        margin-bottom: 0
+        padding: 0
+        &--bg
+          background-color: #f9f9f9
       &__cell
-        padding: 35px 15px 20px !important 
+        margin-bottom: 0   
+        padding: 30px 0 25px
+        display: table-cell
+        vertical-align: middle
+        &--left
+          text-align: left    
+          padding-left: 35px
+          padding-right: 35px
+      &--span  
+        font: 400 16px/18px $font-leto 
   .calculator
     &__title
       text-align: left  
@@ -1741,6 +1782,7 @@ button.close
     &__group  
       border: 0   
       margin-bottom: 0
+      padding-left: 10px
     &--border  
       border-left: 2px solid #dacccd 
     &--padding
@@ -1750,5 +1792,11 @@ button.close
 +r(960)
   .cost
     &__title
-      font: 400 26px/30px $font-leto     
-  
+      font: 400 26px/30px $font-leto   
+    &-table
+      margin-bottom: 40px 
+      &--text   
+        display: inline-block
+      &--span
+        display: block
+        margin-top: 5px   
