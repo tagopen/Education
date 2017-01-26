@@ -312,10 +312,16 @@ $('.comment__slider').slick({
 });
 
 $(document).ready(function() {
+  $('.distance__select .cs-options ul li:first-child').addClass('cs-selected');
+/*  var distanceFirst = $('.distance__select .cs-options ul li:fist-child span').text;
+  $('.distance__select .cs-placeholder').text(distanceFirst);*/
+
   $('.calculator__btn').click(function() {
     var amountValue = $('.calculator__amount .radio-btn__control:checked').data('amount'),
         durationValue = $('.calculator__duration .radio-btn__control:checked').data('duration'),
-        gr = amountValue * durationValue;
+        distanceValue = $('.distance__select .cs-options ul li.cs-selected').data('value');
+
+        gr = amountValue * durationValue * distanceValue ;
       $('.calculator__input').val('Итого: '+ gr + ' руб.');
   });
 });

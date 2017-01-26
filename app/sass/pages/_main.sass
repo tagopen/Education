@@ -166,6 +166,9 @@ html
     padding: 40px 35px
     &--margin
       margin: 0 0 15px
+.info--border320      
+  border: 3px dashed #dacccd
+  padding: 30px 20px 20px      
 +r(760)
   .info
     margin-bottom: 20px
@@ -1652,7 +1655,9 @@ button.close
               width: 22px
               height: 22px
               line-height: 22px
-              text-align: center                    
+              text-align: center 
+              left: 0
+              top: 0                   
     &__icon  
       position: relative
       display: inline-block
@@ -1662,11 +1667,32 @@ button.close
       margin-right: 10px
       background-color: #e6e6e6
       border-radius: 50%
-.calculator        
+.calculator       
+  &__title
+    font: 400 26px/30px $font-leto 
+    margin-bottom: 30px
+    text-align: center
+  &__amount
+    text-align: center  
+    margin-bottom: 20px
+  &__radio
+    display: inline-block
+  &__duration
+    text-align: center
+    margin-bottom: 20px 
+  &__heading
+    text-align: center    
+  &__group
+    border-bottom: 2px solid #dacccd 
+    margin-bottom: 20px
+  &__select-box
+    margin-bottom: 25px     
   &__btn  
     background-color: #52ac62   
     color: #fff
     box-shadow: none 
+    width: 100%
+    margin-bottom: 18px
     &:hover,
     &:focus
       background-color: #52ac62 * 1.2
@@ -1677,16 +1703,24 @@ button.close
     padding: 12px 10px 12px 25px 
     border: 0
     color: #282828
+    width: 100%
+    &--margin
+      margin-bottom: 18px
+.metro
   &__select
-    width: 290px
-    background-color: #e6e6e6
-    padding: 15px 15px 14px 40px 
-    border: 0
-  &__box
-    &--select
-      width: 264px
-      border-radius: 43px
-      overflow: hidden
+    position: relative
+    z-index: 102
+.distance
+  &__select
+    position: relative
+    z-index: 101   
+.cs
+  &-placeholder
+    font: 400 14px/16px $font-leto  
+    color: #282828  
+  &-select
+    span  
+      font: 400 14px/16px $font-leto      
 +r(768)  
   .cost
     &__title
@@ -1694,7 +1728,25 @@ button.close
       margin-bottom: 40px 
     &-table
       &__cell
-        padding: 35px 15px 20px !important    
+        padding: 35px 15px 20px !important 
+  .calculator
+    &__title
+      text-align: left  
+      margin-bottom: 60px  
+    &__heading
+      text-align: left 
+      margin-bottom: 15px
+    &__amount
+      text-align: left   
+    &__group  
+      border: 0   
+      margin-bottom: 0
+    &--border  
+      border-left: 2px solid #dacccd 
+    &--padding
+      padding-top: 50px  
+  .distance__select
+    margin-bottom: 0    
 +r(960)
   .cost
     &__title

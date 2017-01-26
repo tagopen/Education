@@ -2640,11 +2640,11 @@ input[type="search"] {
   display: block;
   margin-top: 10px;
   margin-bottom: 10px;
+  text-align: center;
 }
 .radio label,
 .checkbox label {
   min-height: 20px;
-  padding-left: 20px;
   margin-bottom: 0;
   font-weight: normal;
   cursor: pointer;
