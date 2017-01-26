@@ -52,6 +52,11 @@
     <!-- Font-Awesome CSS -->
     <link rel="stylesheet" href="css/font-awesome.css">
 
+    <!-- Select CSS -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/cs-select.css" />
+    <link rel="stylesheet" href="css/cs-skin-elastic.css" />
+
     <!-- Custom CSS  -->
     <link rel="stylesheet" href="css/style.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -155,60 +160,116 @@
                 </table>
               </div>
               <div class="col-xs-12">
-                <div class="info">
+                <div class="info info--border320">
                   <!-- Calculator-->
                   <div class="calculator">
                     <div class="row">
-                      <div class="col-xs-12 col-sm-6 col-md-5">
+                      <div class="col-xs-12">
+                        <div class="row">
+                          <div class="col-sm-7 col-mg-6 col-lg-5">
+                            <div class="calculator__title">Расчитать стоимость</div>
+                          </div>
+                          <div class="visible-md visible-lg col-md-6 col-lg-7">
+                            <input type="input" class="calculator__input" placeholder="Итого: ">
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="col-xs-12 col-sm-7 col-md-5">
                         <!-- Calculator buttons-->
                         <div class="calculator__buttons">
-                          <div class="x-title">Расчитать стоимость</div>
                           <div class="calculator__amount">
-                            <p>Количество учеников</p>
-                            <div class="radio">
-                              <input class="radio-btn__control" name="amount" id="rbtn1" checked="" type="radio" data-amount="1000">
-                              <label class="radio-btn__box" for="rbtn1"><span class="radio-btn__icon"></span>1-2</label>
-                            </div>
-                            <div class="radio">
-                              <input class="radio-btn__control" name="amount" id="rbtn2" checked="" type="radio" data-amount="2000">
-                              <label class="radio-btn__box" for="rbtn2"><span class="radio-btn__icon"></span>3-8</label>
-                            </div>
+                            <p class="calculator__heading">Количество учеников</p>
+                            <div class="row">
+                              <div class="col-xs-4 col-xs-offset-2 col-sm-4 col-sm-offset-0">
+                                <div class="radio">
+                                  <input class="radio-btn__control" name="amount" id="rbtn1" checked="" type="radio" data-amount="1000">
+                                  <label class="radio-btn__box" for="rbtn1"><span class="radio-btn__icon"></span>1-2</label>
+                                </div>
+                              </div>
+                              <div class="col-xs-4">
+                                <div class="radio">
+                                  <input class="radio-btn__control" name="amount" id="rbtn2" checked="" type="radio" data-amount="2000">
+                                  <label class="radio-btn__box" for="rbtn2"><span class="radio-btn__icon"></span>3-8</label>
+                                </div>
+                              </div>
+                            </div>                    
                           </div>
                           <div class="calculator__duration">
-                            <p>Желаемая продолжительность курса</p>
-                            <div class="radio">
-                              <input class="radio-btn__control" name="duration" id="rbtn21" checked="" type="radio" data-duration="20">
-                              <label class="radio-btn__box" for="rbtn21"><span class="radio-btn__icon"></span>20</label>
-                            </div>
-                            <div class="radio">
-                              <input class="radio-btn__control" name="duration" id="rbtn22" checked="" type="radio" data-duration="40">
-                              <label class="radio-btn__box" for="rbtn22"><span class="radio-btn__icon"></span>40</label>
-                            </div>
-                            <div class="radio">
-                              <input class="radio-btn__control" name="duration" id="rbtn23" checked="" type="radio"  data-duration="60">
-                              <label class="radio-btn__box" for="rbtn23"><span class="radio-btn__icon"></span>60</label>
-                            </div>
-                            <div class="radio">
-                              <input class="radio-btn__control" name="duration" id="rbtn24" checked="" type="radio" data-duration="80">
-                              <label class="radio-btn__box" for="rbtn24"><span class="radio-btn__icon"></span>80</label>
-                            </div>
+                            <p class="calculator__heading">Желаемая продолжительность курса</p>
+                            <div class="row">
+                              <div class="col-xs-12 col-sm-6">
+                                <div class="radio">
+                                  <input class="radio-btn__control" name="duration" id="rbtn21" checked="" type="radio" data-duration="20">
+                                  <label class="radio-btn__box" for="rbtn21"><span class="radio-btn__icon"></span>20 занятий</label>
+                                </div>
+                              </div>
+                              <div class="col-xs-12 col-sm-6">
+
+                                <div class="radio">
+                                  <input class="radio-btn__control" name="duration" id="rbtn22" checked="" type="radio" data-duration="40">
+                                  <label class="radio-btn__box" for="rbtn22"><span class="radio-btn__icon"></span>40 занятий</label>
+                                </div>
+                              </div>
+                              <div class="col-xs-12 col-sm-6">
+                                <div class="radio">
+                                  <input class="radio-btn__control" name="duration" id="rbtn23" checked="" type="radio"  data-duration="60">
+                                  <label class="radio-btn__box" for="rbtn23"><span class="radio-btn__icon"></span>60 занятий</label>
+                                </div>
+                              </div>
+                              <div class="col-xs-12 col-sm-6">
+                                <div class="radio">
+                                  <input class="radio-btn__control" name="duration" id="rbtn24" checked="" type="radio" data-duration="80">
+                                  <label class="radio-btn__box" for="rbtn24"><span class="radio-btn__icon"></span>80 занятий</label>
+                                </div>
+                              </div>
+                            </div>     
                           </div>
-                          <button class="btn calculator__btn">расчитать</button>
                         </div><!-- Calculator button-->
                       </div>
-                      <div class="col-xs-12 col-sm-6 col-md-7">
-                        <input type="input" class="calculator__input" placeholder="Итого: ">
-                        <p>Станция метро, ближайшая к месту занятия(Ваш дом или офис)</p>
-                        <div class="form-group calculator__box--select">
-                          <select class="form-control calculator__select">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                          </select>
+                      <div class="col-xs-12 col-sm-5 col-md-6 col-lg-5 calculator--border">
+                        <div class="calculator__group">
+                          <p class="calculator__heading">Станция метро, ближайшая к месту занятия (Ваш дом или офис)</p>
+                          <div class="calculator__select-box metro__select">
+                            <div class="cs-select cs-skin-elastic" tabindex="0">
+                              <select class="cs-select cs-skin-elastic">
+                                <option value="" disabled="" selected="">Выберите метро</option>
+                                <option>Станция метро #1</option>
+                                <option>Станция метро #2</option>
+                                <option>Станция метро #3</option>
+                              </select>
+                            </div>
+                          </div>
+                          <p class="calculator__heading">Удаленность от станции метро</p>
+                          <div class="calculator__select-box distance__select">
+                            <div class="cs-skin-elastic" tabindex="0">
+                              <select class="cs-select cs-skin-elastic">
+                                <option value="" disabled="" selected="">Выберите удаленность</option>
+                                <option value="1">До 10 минут пешком</option>
+                                <option value="2">До 20 минут пешком</option>
+                                <option value="3">До 30 минут пешком</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xs-12 calculator--padding">
+                        <div class="row">      
+                        <div class="col-xs-12 col-sm-6 col-md-4 pull-right">
+                            <input aria-invalid="false" class="form-control form__input calculator__input--margin" placeholder="Ваше email" required="" name="name" type="text">
+                          </div> 
+                          <div class="col-xs-12 col-sm-6 col-md-3 pull-right">
+                            <input aria-invalid="false" class="form-control form__input calculator__input--margin" placeholder="Ваше имя" required="" name="name" type="text">
+                          </div>
+                          <div class="col-xs-12 col-sm-4 col-sm-offset-4 col-md-offset-0">
+                            <button class="btn calculator__btn">расcчитать</button>
+          
+                            
+                          </div>
                         </div>
                       </div>
                     </div>
+                    
                   </div><!-- Calculator-->
                 </div>
               </div>
@@ -303,6 +364,17 @@
     <!-- Masked-input JavaScript -->
     <script src="js/jquery.maskedinput.js"></script>
 
+    <!-- Select JavaScript -->
+    <script src="js/classie.js"></script>
+    <script src="js/selectFx.js"></script>
+    <script>
+      (function() {
+        [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {  
+          new SelectFx(el);
+        } );
+      })();
+    </script>
+    
     <!-- Custom JavaScript -->
     <script src="js/main.js"></script>
   </body>
