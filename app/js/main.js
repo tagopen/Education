@@ -140,6 +140,11 @@ $(window).on('resize', function(){
     setEqualHeight($('.service__box'));
     setEqualHeight($('.service__title'));
     setEqualHeight($('.service__icon'));
+
+    // Cost page cost-table 
+    setEqualHeight($('.cost-table__cell--1'));
+    setEqualHeight($('.cost-table__cell--2'));
+    setEqualHeight($('.cost-table__cell--3'));
   }
   // Only 960px +
   if( $( window ).width() >= 960 ) {
@@ -313,8 +318,8 @@ $('.comment__slider').slick({
 
 $(document).ready(function() {
   $('.distance__select .cs-options ul li:first-child').addClass('cs-selected');
-/*  var distanceFirst = $('.distance__select .cs-options ul li:fist-child span').text;
-  $('.distance__select .cs-placeholder').text(distanceFirst);*/
+ var distanceFirst = $('.distance__select .cs-options ul li:first-child span').text();
+  $('.distance__select .cs-placeholder').text(distanceFirst);
 
   $('.calculator__btn').click(function() {
     var amountValue = $('.calculator__amount .radio-btn__control:checked').data('amount'),
