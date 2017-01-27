@@ -3,7 +3,7 @@
 +font('LetoSansThin', 'LetoSansThin')
 +font('LetoSansBold', 'LetoSansBold')
 +ic
-@each $ic in uk, scroll, format1, format2, format3, format4, format5, format6, like320, like760, print, connect, connect_fff, add
+@each $ic in uk, scroll, format1, format2, format3, format4, format5, format6, like320, like760, print, print_ff, connect, connect_fff, add
   .ic--#{$ic}
     +sb(#{$ic})
 html
@@ -63,6 +63,8 @@ html
     color: #223a5f
     font: 400 28px/30px $font-leto  
     margin: 0 0 30px 
+  &--nopadding
+    padding: 0  
 +rx(767)
   .content
     &--lecturer
@@ -1414,6 +1416,14 @@ button.close
       font: 400 18px/18px $font-leto-bold 
     &__descr
       font: 400 13px/15px $font-leto-bold  
++comment('page program style')     
+.program
+  &-intro
+    padding-top: 55px
+    background: url(../img/programbg.jpg) no-repeat
+    +cover
+    &__heading
+      color: #fff
 +comment('service page style')  
 .service    
   &__box
