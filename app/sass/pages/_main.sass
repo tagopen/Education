@@ -128,7 +128,7 @@ html
   .contact
     padding: 35px 30px
     &--margin
-      margin: 0 -24px
+      margin: 0 -15px
       padding-top: 66px
 +r(960)    
   .contact
@@ -160,7 +160,7 @@ html
   .price
     padding: 35px 30px 
     &--margin
-      margin: 0 -24px    
+      margin: 0 -15px    
 +r(960)   
   .price
     padding: 40px 35px
@@ -1608,7 +1608,7 @@ button.close
     &__slider
       &.slick-dotted
         margin-bottom: 100px
-+comment('t-contact page style')  
++comment('contact page style')  
 .t-contact
   &__title
     margin-bottom: 30px
@@ -1800,3 +1800,72 @@ button.close
       &--span
         display: block
         margin-top: 5px   
++comment('for-teacher page style') 
+.f
+  &-heading
+    color: #ba3742
+    font: 400 22px/25px $font-leto      
+    margin: 0 0 25px
+  &-subheading  
+    color: #282828
+    font: 400 18px/20px $font-leto-thin
+    margin-bottom: 15px
+  &-text
+    color: #282828
+    font: 400 14px/18px $font-leto 
+    margin-bottom: 15px
+  &-list
+    padding-left: 15px  
+  &-item
+    padding-left: 25px
+    color: #282828
+    font: 400 14px/18px $font-leto   
+  &-teacher__video
+    float: right
+    width: 100%
+    height: auto
+    margin-bottom: 20px
+    .video__box
+      padding-bottom: 50%
+  &-contact
+    padding: 50px 0
+    background-color: #122d4f  
+    &__heading
+      color: #fff   
+      font: 400 28px/30px $font-leto-thin 
+      margin-bottom: 30px
+      text-align: center
+    &__title
+      color: #3b5677
+      font: 400 14px/18px $font-leto
+      margin-bottom: 15px
+    &__union
+      color: #3b5677
+      font: 400 27px/30px $font-leto-thin  
+      text-align: center
+      margin: 25px 0
+    &__email,
+    &__phone
+      text-align: center  
+    &__link
+      font: 400 14px/18px $font-leto
+      color: #fff 
+      &:hover,
+      &:focus
+        color: #ba3742
+        text-decoration: none
++r(768)
+  .f
+    &-contact
+      &__heading  
+        font: 400 37px/40px $font-leto-thin  
+        margin-bottom: 50px      
+    &-teacher__video
+      max-width: 370px
+      margin: 20px 0 20px 20px
++r(960)  
+  .f-teacher__video
+    max-width: 450px 
++r(1200)
+  .f-teacher__video
+    max-width: 550px       
