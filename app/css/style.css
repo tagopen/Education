@@ -191,7 +191,7 @@
 /* S L I C K - S L I D E R    T H E M E    S T Y L E  */
 /* -------------------------------------------------- */
 .slick-loading .slick-list {
-  background: #fff url('../img/ajax-loader.gif?1481806172') center center no-repeat;
+  background: #fff url('../img/ajax-loader.gif?1485005529') center center no-repeat;
 }
 
 /* Icons */
@@ -2426,6 +2426,32 @@ button.close {
   color: #fff;
 }
 
+.project {
+  padding: 80px 0 20px;
+}
+.project__title {
+  margin-bottom: 20px;
+}
+.project__text {
+  margin-bottom: 20px;
+}
+.project__list {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+.project__item {
+  padding-left: 10px;
+  margin-bottom: 8px;
+}
+
+@media only screen and (min-width: 768px) {
+  .project {
+    padding: 30px 0;
+  }
+  .project__list {
+    padding-left: 40px;
+  }
+}
 /* ---------------------------------------- */
 /* S E R V I C E    P A G E    S T Y L E    */
 /* ---------------------------------------- */

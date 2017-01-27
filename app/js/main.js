@@ -155,6 +155,7 @@ $(window).on('resize', function(){
   // Only 761-959
   if( $( window ).width() >= 760 && ($( window ).width() < 960) ) {
     setEqualHeight($('.t-service--height')); 
+    setEqualHeight($('.project--height')); 
   }
 }).trigger('resize');
 
