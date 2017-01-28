@@ -959,6 +959,10 @@ button.close {
   line-height: 50px;
 }
 
+.collapse {
+  display: block;
+}
+
 @media only screen and (max-width: 959px) {
   .nav__link {
     display: block;
@@ -2694,6 +2698,11 @@ button.close {
   background: transparent;
   padding: 0;
   margin-bottom: 35px;
+}
+
+.map {
+  -webkit-box-shadow: -15px 15px #e7e7e7, 15px 15px #e7e7e7;
+          box-shadow: -15px 15px #e7e7e7, 15px 15px #e7e7e7;
 }
 
 @media only screen and (min-width: 768px) {
