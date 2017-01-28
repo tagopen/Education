@@ -1421,8 +1421,10 @@ button.close
     padding-top: 55px
     background: url(../img/programbg.jpg) no-repeat
     +cover
+    padding-bottom: 110px
     &__heading
       color: #fff
+      margin-bottom: 10px
 .project
   padding: 80px 0 20px   
   &__title
@@ -1437,10 +1439,24 @@ button.close
     margin-bottom: 8px 
   &--height
     margin: 0 -15px  
+.form
+  &--size
+    padding: 20px 35px 
+    position: absolute
+    top: 70px   
+    left: 50%
+    width: 290px
+    margin-left: -145px
 +r(768)
+  .program
+    &-intro
+      padding-bottom: 0
   .form
-    &--margin
-      margin-bottom: 50px   
+    &--size 
+      position: static
+      width: auto
+      margin: 0 0 50px 
+      padding: 30px 45px 45px
   .project
     padding: 30px 0    
     &__list
