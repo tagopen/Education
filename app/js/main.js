@@ -43,17 +43,6 @@ $(document).ready(function() {
   });
 });
 
-// jQuery for page scrolling feature - requires jQuery Easing plugin
-/*$(function() {
-    $('a.page-scroll').bind('click', function(event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500, 'easeInOutExpo');
-        event.preventDefault();
-    });
-});*/
-
 // Fixed navbar on Scroll
 if(!$('.navbar-toggle').is(':visible')) {
   $('.navbar').affix({
@@ -73,44 +62,6 @@ $(document).ready(function() {
     $(this).carousel('next');
   });
 });
-
-// Highlight the top nav as scrolling occurs
-/*$('body').scrollspy({
-    target: '.navbar-fixed-top'
-})*/
-
-// Navbar class active
-/*$(document).ready( function () {
-  $(".nav li").click( function () {
-    $(".nav li").removeClass("active");
-    $(this).addClass("active");
-  });
-});*/
-
-// Dropdowns on hover on desktop
-/*var navbarToggle = '.navbar-toggle'; // name of navbar toggle, BS3 = '.navbar-toggle', BS4 = '.navbar-toggler'  
-$('.dropdown, .dropup').each(function() {
-  var dropdown = $(this),
-    dropdownToggle = $('[data-toggle="dropdown"]', dropdown),
-    dropdownHoverAll = dropdownToggle.data('dropdown-hover-all') || false;
-  
-  // Mouseover
-  dropdown.hover(function(){
-    var notMobileMenu = $(navbarToggle).size() > 0 && $(navbarToggle).css('display') === 'none' && $(document).width() >= 992 ;
-    if ((dropdownHoverAll === true || (dropdownHoverAll === false && notMobileMenu))) { 
-      dropdownToggle.trigger('click');
-    }
-  });
-});*/
-
-
-// Close dropdowns on "esc"
-/*$('.dropdown-menu').bind('keydown',function(event) {
-  // ESC = Keycode 27
-  if (event.keyCode == 27) {
-    $(this).parrent().find('.dropdown-toggle').dropdown('toggle');
-  }
-});*/
 
 // Lecturer page close fixed price box
 $(document).ready(function() {
@@ -319,8 +270,6 @@ $('.comment__slider').slick({
 
 $(document).ready(function() {
   $('.distance__select .cs-options ul li:first-child').addClass('cs-selected');
-  /*var distanceFirst = $('.distance__select .cs-options ul li:first-child span').text();
-  $('.distance__select .cs-placeholder').text(distanceFirst);*/
 });
   
 $('.calculator__radio').bind('change', calculate);
