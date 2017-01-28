@@ -283,3 +283,4 @@ function calculate() {
   gr = amountValue * durationValue * distanceValue ;
   $('.calculator__input').val('Итого: '+ gr + ' руб.');
 };
+

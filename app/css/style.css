@@ -191,7 +191,7 @@
 /* S L I C K - S L I D E R    T H E M E    S T Y L E  */
 /* -------------------------------------------------- */
 .slick-loading .slick-list {
-  background: #fff url('../img/ajax-loader.gif?1485005529') center center no-repeat;
+  background: #fff url('../img/ajax-loader.gif?1481806172') center center no-repeat;
 }
 
 /* Icons */
@@ -2722,7 +2722,7 @@ button.close {
     margin-bottom: 35px;
   }
 
-  .work__slider.slick-dotted {
+  .work {
     margin-bottom: 100px;
   }
 }
@@ -2744,11 +2744,44 @@ button.close {
 }
 
 @media only screen and (min-width: 768px) {
+  .t-contact {
+    width: 80%;
+  }
   .t-contact__title {
     margin-bottom: 50px;
   }
 }
+@media only screen and (max-width: 959px) {
+  .content--contact {
+    position: relative;
+    padding: 50px 0 100px;
+  }
+
+  .t-contact {
+    position: relative;
+    margin: 0;
+    padding: 25px 0;
+    background-color: #fff;
+    z-index: 3;
+  }
+
+  .social--contact {
+    position: absolute;
+    margin-top: 45px;
+  }
+
+  .map__frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
 @media only screen and (min-width: 960px) {
+  .t-contact {
+    width: auto;
+  }
   .t-contact__contact {
     margin-bottom: 50px;
   }

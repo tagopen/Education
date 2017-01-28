@@ -102,31 +102,29 @@
         </div>
       </nav><!-- /.navbar -->
       <!-- Content -->
-      <main class="content">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-10 col-sm-10 col-lg-11">
-              <h1 class="content__heading">Свяжитесь с нами</h1>
-            </div>
-            <div class="col-xs-1 col-sm-2 col-lg-1">
-              <div class="share">
-                <a class="share__link share__link--print" href="#"><i class="hidden-xs ic ic--print share__icon"></i></a>
-                <a class="share__link" href="#"><i class="ic ic--connect share__icon"></i></a>
-              </div><!-- /.share -->
-            </div> 
-            <div class="col-xs-12">
-              <ul class="breadcrumb">
-                <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Главная</a></li>
-                <li class="breadcrumb__item breadcrumb__item--active">Свяжитесь с нами</li>
-              </ul><!-- /.breadcrumb -->
-            </div>
-          </div><!-- /.row -->
-        </div><!-- /.container -->
+      <main class="content content--contact">
         <!-- t-contact -->
         <div class="t-contact"> 
           <div class="container">
             <div class="row">
-              <div class="col-xs-12 col-md-6">
+              <div class="col-xs-10 col-sm-10 col-lg-11">
+                <h1 class="content__heading">Свяжитесь с нами</h1>
+              </div>
+              <div class="col-xs-1 col-sm-2 col-lg-1">
+                <div class="share">
+                  <a class="share__link share__link--print" href="#"><i class="hidden-xs ic ic--print share__icon"></i></a>
+                  <a class="share__link" href="#"><i class="ic ic--connect share__icon"></i></a>
+                </div><!-- /.share -->
+              </div> 
+              <div class="col-xs-12">
+                <ul class="breadcrumb">
+                  <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">Главная</a></li>
+                  <li class="breadcrumb__item breadcrumb__item--active">Свяжитесь с нами</li>
+                </ul><!-- /.breadcrumb -->
+              </div>
+            </div><!-- /.row -->
+            <div class="row">
+              <div class="col-xs-12 col-sm-6">
                 <p class="x-title t-contact__title">
                   Курсы английского с носителями языка в Москве!
                 </p>
@@ -140,7 +138,7 @@
                     <a href="mailto:mail@infocuseducation.ru" class="email__link">mail@infocuseducation.ru</a>
                   </div>
                 </div>
-                <div class="social">
+                <div class="social social--contact">
                   <ul class="list-unstyled social__list">
                     <li class="social__item"><a href="#" class="social__link"><i class="fa fa-vk social__icon"></i></a></li>
                     <li class="social__item"><a href="#" class="social__link"><i class="fa fa-facebook social__icon"></i></a></li>
@@ -148,23 +146,20 @@
                   </ul>
                 </div><!-- /.social -->
               </div>
-            </div>
-          </div><!-- /.container -->
-          <div class="t-contact__map">
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-md-6 pull-right">
-                  <div class="map">
-                    <div class="embed-responsive embed-responsive-16by9">
-                      <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50814.7501770087!2d37.582500789127096!3d55.74606503996141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54afc73d4b0c9%3A0x3d44d6cc5757cf4c!2z0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8!5e0!3m2!1sru!2sua!4v1485343870323" allowfullscreen>
-                      </iframe>
-                    </div>
+              <div class="hidden-xs hidden-sm col-sm-6">
+                <div class="map">
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50814.7501770087!2d37.582500789127096!3d55.74606503996141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54afc73d4b0c9%3A0x3d44d6cc5757cf4c!2z0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8!5e0!3m2!1sru!2sua!4v1485343870323" allowfullscreen>
+                    </iframe>
                   </div>
                 </div>
               </div>
             </div>
-          </div><!-- /.t-contact__map -->
+          </div><!-- /.container -->
         </div><!--/.t-contact -->
+        <div class="map">
+          <iframe class="visible-xs visible-sm map__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50814.7501770087!2d37.582500789127096!3d55.74606503996141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54afc73d4b0c9%3A0x3d44d6cc5757cf4c!2z0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8!5e0!3m2!1sru!2sua!4v1485343870323" allowfullscreen></iframe>
+        </div><!-- /.map -->
       </main><!--/.content -->
 
     </div><!--/.wrapper -->
@@ -253,6 +248,9 @@
 
     <!-- Masked-input JavaScript -->
     <script src="js/jquery.maskedinput.js"></script>
+    
+    <!-- Google maps JavaSctipt -->
+    <script src="//maps.googleapis.com/maps/api/js?key=&extension=.js"></script> 
 
     <!-- Custom JavaScript -->
     <script src="js/main.js"></script>
