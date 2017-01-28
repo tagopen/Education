@@ -2425,9 +2425,11 @@ button.close {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
+  padding-bottom: 110px;
 }
 .program-intro__heading {
   color: #fff;
+  margin-bottom: 10px;
 }
 
 .project {
@@ -2451,9 +2453,25 @@ button.close {
   margin: 0 -15px;
 }
 
+.form--size {
+  padding: 20px 35px;
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  width: 290px;
+  margin-left: -145px;
+}
+
 @media only screen and (min-width: 768px) {
-  .form--margin {
-    margin-bottom: 50px;
+  .program-intro {
+    padding-bottom: 0;
+  }
+
+  .form--size {
+    position: static;
+    width: auto;
+    margin: 0 0 50px;
+    padding: 30px 45px 45px;
   }
 
   .project {
