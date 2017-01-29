@@ -6,9 +6,6 @@
 @each $ic in uk, scroll, format1, format2, format3, format4, format5, format6, like320, like760, print, print_ff, connect, connect_fff, add
   .ic--#{$ic}
     +sb(#{$ic})
-html,
-body
-  height: 100%
 html
   position: relative
   min-height: 100%
@@ -204,6 +201,7 @@ html
   padding: 0
 .modal-dialog
   max-width: 450px
+  margin: 0 auto
 button.close
   position: relative
   padding: 10px
@@ -366,9 +364,9 @@ button.close
   .collapse
     position: fixed
     top: 0
+    bottom: 0
     left: 100%
     width: $collapse-width
-    height: 100vh
     overflow-y: auto
     padding:
       top: 25px

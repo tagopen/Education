@@ -454,11 +454,6 @@
   background: url('../img/icons-sd513d6a6ed.png') 0 -1356px no-repeat;
 }
 
-html,
-body {
-  height: 100%;
-}
-
 html {
   position: relative;
   min-height: 100%;
@@ -759,6 +754,7 @@ html {
 
 .modal-dialog {
   max-width: 450px;
+  margin: 0 auto;
 }
 
 button.close {
@@ -997,9 +993,9 @@ button.close {
   .collapse {
     position: fixed;
     top: 0;
+    bottom: 0;
     left: 100%;
     width: 200px;
-    height: 100vh;
     overflow-y: auto;
     padding-top: 25px;
     padding-bottom: 25px;

@@ -39,6 +39,7 @@ $(document).ready(function() {
   $('.navbar-toggle').click(function() {
     $(this).toggleClass('navbar-toggle--open');
     $('.body').toggleClass('body--collapsed');
+    $('html').toggleClass('html--collapsed');
     $('.collapse').toggleClass('collapse--open');
   });
 });
