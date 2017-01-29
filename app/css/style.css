@@ -454,6 +454,11 @@
   background: url('../img/icons-sd513d6a6ed.png') 0 -1356px no-repeat;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 html {
   position: relative;
   min-height: 100%;
@@ -489,6 +494,18 @@ html {
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+.no-flexbox body {
+  display: table;
+  width: 100%;
+}
+.no-flexbox .wrapper {
+  display: table-row;
+  height: 100%;
 }
 
 .btn {
@@ -2994,9 +3011,6 @@ button.close {
   .calculator__heading {
     text-align: left;
     margin-bottom: 15px;
-  }
-  .calculator__amount {
-    text-align: left;
   }
   .calculator__group {
     border: 0;

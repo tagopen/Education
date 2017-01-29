@@ -6,6 +6,9 @@
 @each $ic in uk, scroll, format1, format2, format3, format4, format5, format6, like320, like760, print, print_ff, connect, connect_fff, add
   .ic--#{$ic}
     +sb(#{$ic})
+html,
+body
+  height: 100%
 html
   position: relative
   min-height: 100%
@@ -21,6 +24,14 @@ html
     transform: translateX(-$collapse-width)
 .wrapper
   flex: 1
+  flex: 1 0 auto
+.no-flexbox 
+  body
+    display: table
+    width: 100%
+  .wrapper
+    display: table-row
+    height: 100%
 .btn 
   padding: 14px 40px
   background-color: #ba3742
@@ -1856,8 +1867,6 @@ button.close
     &__heading
       text-align: left 
       margin-bottom: 15px
-    &__amount
-      text-align: left   
     &__group  
       border: 0   
       margin-bottom: 0
