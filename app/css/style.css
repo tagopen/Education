@@ -524,6 +524,11 @@ html {
   background-color: #df424f;
 }
 
+.form-control:focus {
+  outline: none;
+  border-color: inherit;
+}
+
 @media only screen and (min-width: 768px) {
   .btn {
     padding: 18px 40px;
@@ -1470,9 +1475,6 @@ button.close {
 .teacher__video {
   margin: -1px -1px 30px;
 }
-.teacher__video .video__box {
-  padding-bottom: 56.3%;
-}
 .teacher__name {
   margin-bottom: 15px;
   color: #131313;
@@ -1503,6 +1505,10 @@ button.close {
 }
 .teacher__link:hover, .teacher__link:focus {
   text-decoration: none;
+}
+
+.video__box--slider {
+  padding-bottom: 56.3%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1594,7 +1600,8 @@ button.close {
 .about__video {
   margin-bottom: 30px;
 }
-.about__video .video__box {
+
+.video__box--about {
   padding-bottom: 78%;
 }
 
@@ -1849,8 +1856,8 @@ button.close {
   margin-top: 20px;
 }
 .subscribe__btn {
+  padding: 19px 40px 18px;
   width: 100%;
-  padding: 20px 0;
 }
 .subscribe__input {
   font: 400 16px/18px "LetoSans", sans-serif;
@@ -1874,13 +1881,17 @@ button.close {
   }
   .subscribe__group {
     position: relative;
+    height: 60px;
   }
-  .subscribe--btn-position {
+  .subscribe__input {
+    height: 100%;
+  }
+  .subscribe__btn {
     position: absolute;
-    top: 0;
-    right: -6px;
-    min-width: 210px;
     width: auto;
+    top: 0;
+    right: 0;
+    height: 100%;
   }
 }
 @media only screen and (min-width: 960px) {
@@ -1892,9 +1903,6 @@ button.close {
   }
   .subscribe__input {
     font: 400 19px/20px "LetoSans", sans-serif;
-  }
-  .subscribe__btn {
-    padding: 19px 0 18px;
   }
 }
 /* footer style */
@@ -2027,9 +2035,6 @@ button.close {
 .lecturer__video {
   margin: 0 -15px;
 }
-.lecturer__video .video__box {
-  padding-bottom: 63%;
-}
 .lecturer__contact {
   border: 3px dashed #dacccd;
   -webkit-border-radius: 4px;
@@ -2037,6 +2042,10 @@ button.close {
   padding: 35px 30px 20px;
   margin-top: 35px;
   text-align: center;
+}
+
+.video__box--lecturer {
+  padding-bottom: 63%;
 }
 
 .share {
@@ -3071,9 +3080,6 @@ button.close {
   height: auto;
   margin-bottom: 20px;
 }
-.f-teacher__video .video__box {
-  padding-bottom: 50%;
-}
 .f-contact {
   padding: 50px 0;
   background-color: #122d4f;
@@ -3105,6 +3111,10 @@ button.close {
 .f-contact__link:hover, .f-contact__link:focus {
   color: #ba3742;
   text-decoration: none;
+}
+
+.video__box--teacher {
+  padding-bottom: 50%;
 }
 
 @media only screen and (min-width: 768px) {

@@ -44,6 +44,10 @@ html
   &:hover,
   &:focus
     background-color: #ba3742 * 1.2 
+.form-control
+  &:focus
+    outline: none
+    border-color: inherit
 +r(768)    
   .btn
     padding: 18px 40px
@@ -712,8 +716,6 @@ button.close
     margin-bottom: 30px  
   &__video 
     margin: -1px -1px 30px
-    .video__box
-      padding-bottom: 56.3%
   &__name
     margin-bottom: 15px
     color: #131313
@@ -740,6 +742,10 @@ button.close
     &:hover,
     &:focus
       text-decoration: none
+.video
+  &__box
+    &--slider
+      padding-bottom: 56.3%
 +r(768)    
   .teacher
     padding: 40px 0 45px  
@@ -810,7 +816,9 @@ button.close
     padding: 30px
   &__video
     margin-bottom: 30px  
-    .video__box
+.video
+  &__box
+    &--about
       padding-bottom: 78%
 .ic
   &--like320
@@ -1003,8 +1011,8 @@ button.close
       background-color: #aa2337
       margin-top: 20px    
   &__btn
+    padding: 19px 40px 18px
     width: 100%
-    padding: 20px 0 
   &__input
     font: 400 16px/18px $font-leto    
     padding: 18px 10px 18px 45px 
@@ -1020,22 +1028,23 @@ button.close
     &:after
       margin-top: 30px
     &__group
-      position: relative  
-    &--btn-position
+      position: relative
+      height: 60px
+    &__input
+      height: 100%
+    &__btn
       position: absolute
+      width: auto
       top: 0
-      right: -6px
-      min-width: 210px
-      width: auto    
+      right: 0
+      height: 100%
 +r(960)   
   .subscribe
     padding: 45px 0 55px
     &__heading
       margin-bottom: 40px
     &__input
-      font: 400 19px/20px $font-leto   
-    &__btn
-      padding: 19px 0 18px
+      font: 400 19px/20px $font-leto 
 +cm("footer style")    
 .footer
   padding-top: 47px
@@ -1133,14 +1142,16 @@ button.close
     margin-bottom: 20px
   &__video
     margin: 0 -15px
-    .video__box
-      padding-bottom: 63%  
   &__contact    
     border: 3px dashed #dacccd
     border-radius: 4px
     padding: 35px 30px 20px
     margin-top: 35px
     text-align: center
+.video
+  &__box
+    &--lecturer
+      padding-bottom: 63%  
 .share
   text-align: right 
   &__link
@@ -1911,8 +1922,6 @@ button.close
     width: 100%
     height: auto
     margin-bottom: 20px
-    .video__box
-      padding-bottom: 50%
   &-contact
     padding: 50px 0
     background-color: #122d4f  
@@ -1940,6 +1949,10 @@ button.close
       &:focus
         color: #ba3742
         text-decoration: none
+.video
+  &__box
+    &--teacher
+      padding-bottom: 50%
 +r(768)
   .f
     &-contact
