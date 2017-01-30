@@ -461,6 +461,7 @@ html {
 }
 
 .body {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -478,7 +479,10 @@ html {
   transition: 0.3s transform ease-out, 0.3s -webkit-transform ease-out;
 }
 .body--collapsed {
+  height: 100%;
   overflow: hidden;
+  width: 100%;
+  position: fixed;
   -webkit-transform: translateX(-200px);
       -ms-transform: translateX(-200px);
           transform: translateX(-200px);
