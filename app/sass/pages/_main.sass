@@ -19,8 +19,8 @@ html
   transition: .3s transform ease-out
   &--collapsed
     height: 100%
-    overflow: hidden
     width: 100%
+    overflow: hidden
     position: fixed
     transform: translateX(-$collapse-width)
 .wrapper
@@ -1157,6 +1157,7 @@ button.close
     &--lecturer
       padding-bottom: 63%  
 .share
+  position: relative
   text-align: right 
   &__link
     &--print
@@ -1164,6 +1165,53 @@ button.close
     &--intro
       display: inline-block  
       margin: 15px
+  &__box
+    position: absolute
+    max-width: 400px
+    padding: 25px
+    top: 0
+    right: 0
+    background: #fff
+    visibility: hidden
+    border-radius: 6px
+    box-shadow: 0 0 10px rgba(232, 74, 100, 0.4)
+    overflow: hidden
+    transform: scale(0)
+    transform-origin: 100% 0
+    transition: transform 0.3s, visibility 0s 0.3s
+    z-index: 1
+    &--active
+      visibility: visible
+      transform: scale(1)
+      transition: transform 0.3s, visibility 0s 0s
+  &__btn-close
+    position: absolute
+    display: block
+    margin: 10px 10px 0 0
+    padding: 0
+    width: 15px
+    height: 15px
+    top: 0
+    right: 0
+    background-color: transparent
+    border: 0 none
+    z-index: 2
+    &:focus
+      outline: none
+    &:before,
+    &:after
+      content: ''
+      position: absolute
+      display: block
+      left: 0
+      width: 100%
+      height: 2px
+      background-color: #000
+      transform-origin: 50% 50%
+    &:before
+      transform: rotate3d(0, 0, 1, 45deg)
+    &:after
+      transform: rotate3d(0, 0, 1, -45deg)
 .l-point
   &__item
     display: inline-block
@@ -1855,8 +1903,11 @@ button.close
     &-table
       margin-bottom: 30px
       &--760row
+        margin: -1px
         border-right: 1px solid #e6e6e6
         display: table
+        &:last-child
+          border-right: 0 none
       &__row
         margin-bottom: 0
         padding: 0

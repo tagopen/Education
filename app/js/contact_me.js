@@ -13,15 +13,23 @@ $(function() {
             var name = $form.find("input[name=name]").val();
             var email = $form.find("input[name=email]").val();
             var phone = $form.find("input[name=phone]").val();
+            var learner = $form.find(".calculator__radio--learner input:checked").siblings().find('.radio-btn__text').text();
+            var classes = $form.find(".calculator__radio--classes input:checked").siblings().find('.radio-btn__text').text();
+            var subway = $form.find(".metro__select .cs-placeholder").text();
+            var distance = $form.find(".distance__select .cs-placeholder").text();
 
             $.ajax({
                 url: "././mail/mail.php",
                 type: "POST",
                 data: {
-                    form: form,
-                    name: name,
-                    phone: phone,
-                    email: email
+                    form:       form,
+                    name:       name,
+                    phone:      phone,
+                    email:      email,
+                    learner:    learner,
+                    classes:    classes,
+                    subway:     subway,
+                    distance:   distance
                 },
                 cache: false,
                 success: function() {

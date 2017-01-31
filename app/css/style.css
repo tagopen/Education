@@ -480,8 +480,8 @@ html {
 }
 .body--collapsed {
   height: 100%;
-  overflow: hidden;
   width: 100%;
+  overflow: hidden;
   position: fixed;
   -webkit-transform: translateX(-200px);
       -ms-transform: translateX(-200px);
@@ -2053,6 +2053,7 @@ button.close {
 }
 
 .share {
+  position: relative;
   text-align: right;
 }
 .share__link--print {
@@ -2061,6 +2062,74 @@ button.close {
 .share__link--intro {
   display: inline-block;
   margin: 15px;
+}
+.share__box {
+  position: absolute;
+  max-width: 400px;
+  padding: 25px;
+  top: 0;
+  right: 0;
+  background: #fff;
+  visibility: hidden;
+  -webkit-border-radius: 6px;
+          border-radius: 6px;
+  -webkit-box-shadow: 0 0 10px rgba(232, 74, 100, 0.4);
+          box-shadow: 0 0 10px rgba(232, 74, 100, 0.4);
+  overflow: hidden;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: 100% 0;
+      -ms-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+  -webkit-transition: visibility 0s 0.3s, -webkit-transform 0.3s;
+  transition: visibility 0s 0.3s, -webkit-transform 0.3s;
+  transition: transform 0.3s, visibility 0s 0.3s;
+  transition: transform 0.3s, visibility 0s 0.3s, -webkit-transform 0.3s;
+  z-index: 1;
+}
+.share__box--active {
+  visibility: visible;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: visibility 0s 0s, -webkit-transform 0.3s;
+  transition: visibility 0s 0s, -webkit-transform 0.3s;
+  transition: transform 0.3s, visibility 0s 0s;
+  transition: transform 0.3s, visibility 0s 0s, -webkit-transform 0.3s;
+}
+.share__btn-close {
+  position: absolute;
+  display: block;
+  margin: 10px 10px 0 0;
+  padding: 0;
+  width: 15px;
+  height: 15px;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border: 0 none;
+  z-index: 2;
+}
+.share__btn-close:before, .share__btn-close:after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+.share__btn-close:before {
+  -webkit-transform: rotate3d(0, 0, 1, 45deg);
+          transform: rotate3d(0, 0, 1, 45deg);
+}
+.share__btn-close:after {
+  -webkit-transform: rotate3d(0, 0, 1, -45deg);
+          transform: rotate3d(0, 0, 1, -45deg);
 }
 
 .l-point__item {
@@ -2988,8 +3057,12 @@ button.close {
     margin-bottom: 30px;
   }
   .cost-table--760row {
+    margin: -1px;
     border-right: 1px solid #e6e6e6;
     display: table;
+  }
+  .cost-table--760row:last-child {
+    border-right: 0 none;
   }
   .cost-table__row {
     margin-bottom: 0;

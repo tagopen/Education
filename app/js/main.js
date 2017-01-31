@@ -61,20 +61,25 @@ $(document).ready(function() {
   $("#header-slider").swipeleft(function() {
     $(this).carousel('next');
   });
-});
 
-// Lecturer page close fixed price box
-$(document).ready(function() {
+  // Lecturer page close fixed price box
   $('.l-price__close').click(function() {
     $('.l-price').addClass('l-price--closed');
   });
-});
 
-// Lecturer page bookmark
-$(document).ready(function() {
+  // Lecturer page bookmark
   $('.bookmark').click(function(e) {
     e.preventDefault();
     $(this).find('.bookmark__icon').toggleClass('bookmark__icon--active');
+  });
+  //share box
+  $('.share__link--share').click(function(e) {
+    e.preventDefault();
+    $($(this).data('target')).toggleClass('share__box--active');
+  });
+  $('.share__btn-close').click(function(e) {
+    e.preventDefault();
+    $(this).parent('.share__box').toggleClass('share__box--active');
   });
 });
 

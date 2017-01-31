@@ -8,6 +8,7 @@
   }
 
   $http_host = $_SERVER['HTTP_HOST'];
+  $body = '';
 
   if ( substr($http_host, 0, 4)=='www.') {
     $host_name = substr($http_host, 4);
@@ -25,57 +26,47 @@
 
   if (!empty($_POST["user_form"])) {
     $post['user_form'] = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+    $body .= 'Заявка с формы: ' . $post['user_form'] . chr(10) . chr(13);
   }
 
   if (!empty($_POST["email"])) {
     $post['user_email'] = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+    $body .= 'Почта: ' . $post['user_email'] . chr(10) . chr(13);
   }
 
   if (!empty($_POST["name"])) {
     $post['user_name'] = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+    $body .= 'Имя: ' . $post['user_name'] . chr(10) . chr(13);
   }
 
   if (!empty($_POST["phone"])) {
     $post['user_phone'] = filter_input(INPUT_POST,'phone', FILTER_SANITIZE_STRING);
+    $body .= 'Телефон: ' . $post['user_phone'] . chr(10) . chr(13);
   }
 
-  // Insert form data into html
-  $patterns = array();
-  $replacements = array();
-  foreach ($post as $key => $value) {
-    $patterns[] = '/\{%' . $key .  '\%}/i'; // varible => {$varible}
-    $replacements[] = $value;
+  if (!empty($_POST["learner"])) {
+    $post['user_learner'] = filter_input(INPUT_POST,'learner', FILTER_SANITIZE_STRING);
+    $body .= 'Кол-во учеников: ' . $post['user_learner'] . chr(10) . chr(13);
   }
 
-  // html template
-  $body = '';
-  if (is_file('html_template.html')) {
-    $html_template = file_get_contents('html_template.html');
-    $body = preg_replace($patterns, $replacements, $html_template);  
-    $body = preg_replace('/\{%(.+)%\}/', '', $body); // remove all beetween "{% %}"
+  if (!empty($_POST["classes"])) {
+    $post['user_classes'] = filter_input(INPUT_POST,'classes', FILTER_SANITIZE_STRING);
+    $body .= 'Продолжительность курса: ' . $post['user_classes'] . chr(10) . chr(13);
   }
 
-  // If mailer not supported html
-  $altBody = '';
-  if (is_file('no_html.html')) {
-    $no_html_template = file_get_contents('no_html.html');
-    $altBody = preg_replace($patterns, $replacements, $no_html_template);
-    $altBody = preg_replace('/\{%(.+)%\}/', '', $altBody); // remove all beetween "{% %}"
+  if (!empty($_POST["subway"])) {
+    $post['user_subway'] = filter_input(INPUT_POST,'subway', FILTER_SANITIZE_STRING);
+    $body .= 'Ближайшая станция к метро: ' . $post['user_subway'] . chr(10) . chr(13);
   }
+
+  if (!empty($_POST["distance"])) {
+    $post['user_distance'] = filter_input(INPUT_POST,'distance', FILTER_SANITIZE_STRING);
+    $body .= 'Удаленность от станции метро: ' . $post['user_distance'];
+  }
+
   $mail = new PHPMailer();
 
   $mail->CharSet      = 'UTF-8';
-
-  //if mail is SMTP
-  /*
-  $mail->isSMTP();
-  $mail->Host         = 'smtp.server.com';
-  $mail->SMTPAuth     = true;
-  $mail->SMTPSecure   = 'ssl';
-  $mail->Port         = 465;
-  $mail->Username     = 'name@mail.com';
-  $mail->Password     = 'password';
-  */
 
   $mail->IsSendmail();
 
@@ -88,7 +79,6 @@
 
   $mail->Subject      = "Новая заявка с сайта";
   $mail->Body         = $body;
-  $mail->AltBody      = $altBody;
 
   if(!$mail->send()) {
     echo 'Что-то пошло не так. ' . $mail->ErrorInfo;
