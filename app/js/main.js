@@ -91,7 +91,7 @@ $(window).on('resize', function(){
     setEqualHeight($('.format__image'));
     setEqualHeight($('.format__box'));
     var $elemHeight = $('.format__image').height();
-      $('.format__image .ic').css('line-height',  $elemHeight + 'px'); 
+      $('.format__image .ic').css('line-height',  $elemHeight + 'px');
     // Section service  
     setEqualHeight($('.service__box'));
     setEqualHeight($('.service__title'));
@@ -101,6 +101,9 @@ $(window).on('resize', function(){
     setEqualHeight($('.cost-table__cell--1'));
     setEqualHeight($('.cost-table__cell--2'));
     setEqualHeight($('.cost-table__cell--3'));
+
+    // Program page  program-intro
+    setEqualHeight($('.program-intro--col'));
   }
   // Only 960px +
   if( $( window ).width() >= 960 ) {
