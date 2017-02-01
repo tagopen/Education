@@ -1501,10 +1501,17 @@ button.close
 +comment('page program style')     
 .program
   &-intro
+    position: relative
     padding-top: 55px
     background: url(../img/programbg.jpg) no-repeat
     +cover
     padding-bottom: 110px
+    &--dark
+      &:before
+        content: ''
+        +coverdiv
+        background: #000
+        opacity: .3
     &__heading
       color: #fff
       margin-bottom: 10px
