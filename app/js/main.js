@@ -275,37 +275,64 @@ $('.comment__slider').slick({
     }
   ]
 });
-
-// Калькулятор расчета стоимости
-
-$(document).ready(function() {
-  $('.distance__select .cs-options ul li:first-child').addClass('cs-selected');
-}); // Делаем первый селект выбранным 
   
 $('.calculator__radio').bind('change', calculate);
-$('.distance__select .cs-options li').bind('click', calculate); // Навешиваем вывод цены при клике на радиокнопку/выбор другого элемента во втором селекте
 
-
-/*
-Функция подсчета стоимости
-Логика функции:
-Берем дата атрибут(там прописана цифра-коэффициент) выбранных радиокнопок 1ой и 2ой радиогруппы, а так же берем value со стоимостью в селекте с удаленностью от метро.
-Потом эти коэффициенты перемножаются и выводятся в инпут.
-
-Если необходимо изменить цены, то необходимо произвести следующее:
-Для первой радиогруппы найти блок с классом "calculator__amount" и найти дата атрибут у input со следующим названием data-amount="" и вписать в скобочки число(только цифры), сейчас там установлено 1000 и 2000 
-Для второйрадиогруппы найти блок с классом "calculator__duration" и проделать аналогичные действия.
-Для изменения коэффициентов у селекта необходимо найти блок "distance__select" и прописать/изменить значения для атрибута value, на данный момент установлены коэффициенты 1,2,3
-
-ВАЖНО!
-Если логика калькулятора будет меняться с умножения на плюсование необходимо переменной gr присвоить 0 (var gar = 0;) до всех действий.
- */
+$('.distance__select, .metro__select')
+  .find('.cs-options li')
+  .bind('click', calculate); // Навешиваем вывод цены при клике на радиокнопку/выбор другого элемента во втором селекте
 
 function calculate() {
-  var amountValue = $('.calculator__amount .radio-btn__control:checked').data('amount'),
-      durationValue = $('.calculator__duration .radio-btn__control:checked').data('duration'),
-      distanceValue = $('.distance__select .cs-options ul li.cs-selected').data('value');
+  var amount         = Number($('[data-amount]:checked').data('amount')),
+      duration       = Number($('[data-duration]:checked').data('duration')),
+      $select        = $('.distance__select, .metro__select').find('.cs-options ul li.cs-selected'),
+      $total         = $('.calculator__result--total'),
+      $sale          = $('.calculator__result--sale'),
+      $discount      = $('.calculator__result--discount'),
+      total          = 0,
+      discount       = 0,
+      totalRound     = 0,
+      BreakException = {};
 
-  gr = amountValue * durationValue * distanceValue ;
-  $('.calculator__input').val('Итого: '+ gr + ' руб.');
+  if (!isNaN(duration)) {
+    discount = duration;
+  }
+
+  if (discount != 0) {
+    $sale.removeClass('calculator__result--hidden');
+  } else {
+    $sale.addClass('calculator__result--hidden');
+  }
+
+  try {
+    $select.each(function(el) {
+      selectValue = Number($(this).data('value'));
+      if ((selectValue == 200) && (!isNaN(selectValue))) {
+        total += selectValue;
+        throw BreakException;
+      }
+    });
+  } catch (e) {
+    if (e !== BreakException) throw e;
+  }
+  
+  if (!isNaN(duration) && !isNaN(amount)) {
+    total += amount - amount * duration / 100;
+  }
+
+  total = total.toFixed(0); // Округляем до целого числа
+  totalRound = total%10;
+
+  if (totalRound <= 7) {
+    if (totalRound >= 3) {
+      total = total - totalRound + 5;
+    } else {
+      total = total - totalRound;
+    }
+  } else {
+    total = total - totalRound + 10;
+  }
+
+  $total.text(total);
+  $discount.text(discount);
 };

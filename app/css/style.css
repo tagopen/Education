@@ -3054,7 +3054,7 @@ button.close {
 .calculator__btn:hover, .calculator__btn:focus {
   background-color: #62ce76;
 }
-.calculator__input {
+.calculator__result {
   background-color: #fffdda;
   -webkit-border-radius: 43px;
           border-radius: 43px;
@@ -3063,6 +3063,12 @@ button.close {
   border: 0;
   color: #282828;
   width: 100%;
+}
+.calculator__result--sale {
+  color: #ff0000;
+}
+.calculator__result--hidden {
+  display: none;
 }
 .calculator__input--margin {
   margin-bottom: 18px;
