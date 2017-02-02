@@ -74,6 +74,8 @@ div.cs-select:focus {
 
 .cs-select.cs-active .cs-options {
 	visibility: visible;
+	overflow-x: hidden;
+	max-height: 300px;
 }
 
 .cs-select ul {
