@@ -183,19 +183,19 @@
 					ev.preventDefault();
 					self._navigateOpts('prev');
 					break;
-				// down key
+				// down keyw
 				case 40:
 					ev.preventDefault();
 					self._navigateOpts('next');
 					break;
 				// space key
-				case 32:
+				/*case 32:
 					ev.preventDefault();
 					if( self._isOpen() && typeof self.preSelCurrent != 'undefined' && self.preSelCurrent !== -1 ) {
 						self._changeOption();
 					}
 					self._toggleSelect();
-					break;
+					break;*/
 				// enter key
 				case 13:
 					ev.preventDefault();

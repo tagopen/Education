@@ -282,6 +282,12 @@ $('.distance__select, .metro__select')
   .find('.cs-options li')
   .bind('click', calculate); // Навешиваем вывод цены при клике на радиокнопку/выбор другого элемента во втором селекте
 
+$(document).ready(function() {
+  $('.metro__select')
+    .find('.cs-options ul')
+    .prepend('<li><input class="filter" type="text" /></li>');
+});
+
 function calculate() {
   var amount         = Number($('[data-amount]:checked').data('amount')),
       duration       = Number($('[data-duration]:checked').data('duration')),
@@ -336,3 +342,34 @@ function calculate() {
   $total.text(total);
   $discount.text(discount);
 };
+
+// search filter
+$(document).ready(function(){
+  $(".filter").keyup(function(){
+
+    // Retrieve the input field text and reset the count to zero
+    var $filter            = $(this),
+        filter             = $filter.val(),
+        $selectList        = $filter.parents('ul'),
+        $selectListItem    = $filter.parent().siblings("li"),
+        countVisibleList   = 0;
+
+    // Loop through the list
+    $selectListItem.each(function(){
+      // If the list item does not contain the text phrase fade it out
+      if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+          $(this).fadeOut();
+          countVisibleList ++;
+          if ($selectListItem.length == countVisibleList) {
+            $selectList.append("<li class='list-notify'><span>Ничего не найденно</span></li>");
+          } else {
+            $selectList.find('.list-notify').detach();
+          }
+          
+      // Show the list item if the phrase matches and increase the count by 1
+      } else {
+          $(this).show();
+      }
+    });
+  });
+});
