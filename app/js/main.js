@@ -304,8 +304,7 @@ $('.info').on('change, click', '[type=radio], .cs-select .cs-options li', functi
   }
 });
 
-$('.info').on('click', '.calculator__btn', function(e) {
-  e.preventDefault();
+$('.info').on('click', '.calculator__btn', function() {
   var $info          = $('.info'),
       $amount        = $info.find('[data-amount]:checked'),
       $duration      = $info.find('[data-duration]:checked'),

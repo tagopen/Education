@@ -17,6 +17,10 @@ $(function() {
             var classes = $form.find(".calculator__radio--classes input:checked").siblings().find('.radio-btn__text').text();
             var subway = $form.find(".metro__select .cs-placeholder").text();
             var distance = $form.find(".distance__select .cs-placeholder").text();
+            if ($('.info').find('input[name=email]').val() == '') {
+                $("[type=submit]").prop("disabled", false); 
+                return; 
+            }
 
             $.ajax({
                 url: "././mail/mail.php",
