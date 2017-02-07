@@ -277,31 +277,34 @@ $('.comment__slider').slick({
 });
 
 $(document).ready(function() {
+  $(".calculator__btn").prop("disabled", true); //prevent submit behaviour
   $('.metro__select')
     .find('.cs-options ul')
     .prepend('<li><input class="filter" type="text" /></li>');
 });
 
-$('.info').on('change', '[type=radio], select', function() {
+$('.info').on('change, click', '[type=radio], .cs-select .cs-options li', function() {
   var $info          = $('.info'),
-      $amount        = $info.find('.calculator__amount:checked'),
-      $duration      = $info.find('.calculator__duration:checked'),
-      $metro         = $info.find('.distance__select'),
-      $distance      = $info.find('.metro__select');
+      $amount        = $info.find('.calculator__amount input[type=radio]'),
+      $duration      = $info.find('.calculator__duration input[type=radio]'),
+      $metro         = $info.find('.distance__select .cs-options ul li'),
+      $distance      = $info.find('.metro__select .cs-options ul li');
   if (
-    
-    $amount != 'undefined' &&
-    $duration != 'undefined' &&
-    $metro.prop('selected') &&
-    $distance.prop('selected') 
+    $amount.is(':checked') &&
+    $duration.is(':checked') &&
+    $metro.is('.cs-selected') &&
+    $distance.is('.cs-selected')
+
   ) {
     $('.calculator__btn').removeClass('calculator__btn--disabled');
+    $(".calculator__btn").prop("disabled", false);
   } else {
     $('.calculator__btn').addClass('calculator__btn--disabled');
+    $(".calculator__btn").prop("disabled", true);
   }
 });
 
-$('.calculator__btn').on('click', function(e) {
+$('.info').on('click', '.calculator__btn', function(e) {
   e.preventDefault();
   var $info          = $('.info'),
       $amount        = $info.find('[data-amount]:checked'),
