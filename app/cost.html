@@ -207,14 +207,7 @@
                   <form name="Калькулятор" class="clearfix contactForm" method="post" action="mail/mail.php" novalidate>
                     <div class="row">
                       <div class="col-xs-12">
-                        <div class="row">
-                          <div class="col-sm-7 col-mg-6 col-lg-5">
-                            <div class="calculator__title">Расчитать стоимость</div>
-                          </div>
-                          <div class="visible-md visible-lg col-md-6 col-lg-7">
-                            <div type="input" class="calculator__result">Итого: <span class="calculator__result calculator__result--total">0</span>руб.&nbsp<span class="calculator__result calculator__result--sale calculator__result--hidden">скидка <span class="calculator__result--discount">0</span>%</span></div>
-                          </div>
-                        </div>
+                        <div class="calculator__title">Расчитать стоимость</div>
                       </div>
                       
                       <div class="col-xs-12 col-sm-7 col-md-5">
@@ -225,7 +218,7 @@
                             <div class="row">
                               <div class="col-xs-4 col-xs-offset-2 col-sm-4 col-sm-offset-0">
                                 <div class="radio calculator__radio calculator__radio--learner">
-                                  <input class="radio-btn__control" name="amount" id="rbtn1" checked type="radio" data-amount="3950">
+                                  <input class="radio-btn__control" name="amount" id="rbtn1" type="radio" data-amount="3950" required>
                                   <label class="radio-btn__box" for="rbtn1">
                                     <span class="radio-btn__icon"></span>
                                     <span class="radio-btn__text">1-2</span>
@@ -234,7 +227,7 @@
                               </div>
                               <div class="col-xs-4">
                                 <div class="radio calculator__radio calculator__radio--learner">
-                                  <input class="radio-btn__control" name="amount" id="rbtn2" type="radio" data-amount="4950">
+                                  <input class="radio-btn__control" name="amount" id="rbtn2" type="radio" data-amount="4950" required>
                                   <label class="radio-btn__box" for="rbtn2">
                                     <span class="radio-btn__icon"></span>
                                     <span class="radio-btn__text">3-8</span>
@@ -248,7 +241,7 @@
                             <div class="row">
                               <div class="col-xs-12 col-sm-6">
                                 <div class="radio calculator__radio calculator__radio--classes">
-                                  <input class="radio-btn__control" name="duration" id="rbtn21" type="radio" checked data-duration="0">
+                                  <input class="radio-btn__control" name="duration" id="rbtn21" type="radio" data-duration="0" required>
                                   <label class="radio-btn__box" for="rbtn21">
                                     <span class="radio-btn__icon"></span>
                                     <span class="radio-btn__text">20 занятий</span>
@@ -257,7 +250,7 @@
                               </div>
                               <div class="col-xs-12 col-sm-6">
                                 <div class="radio calculator__radio calculator__radio--classes">
-                                  <input class="radio-btn__control" name="duration" id="rbtn22" type="radio" data-duration="5">
+                                  <input class="radio-btn__control" name="duration" id="rbtn22" type="radio" data-duration="5" required>
                                   <label class="radio-btn__box" for="rbtn22">
                                     <span class="radio-btn__icon"></span>
                                     <span class="radio-btn__text">40 занятий</span>
@@ -266,7 +259,7 @@
                               </div>
                               <div class="col-xs-12 col-sm-6">
                                 <div class="radio calculator__radio calculator__radio--classes">
-                                  <input class="radio-btn__control" name="duration" id="rbtn23" type="radio"  data-duration="7">
+                                  <input class="radio-btn__control" name="duration" id="rbtn23" type="radio"  data-duration="7" required>
                                   <label class="radio-btn__box" for="rbtn23">
                                     <span class="radio-btn__icon"></span>
                                     <span class="radio-btn__text">60 занятий</span>
@@ -282,7 +275,7 @@
                           <p class="calculator__heading">Станция метро, ближайшая к месту занятия (Ваш дом или офис)</p>
                           <div class="calculator__select-box metro__select">
                             <div class="cs-select cs-skin-elastic" tabindex="0">
-                              <select class="cs-select cs-skin-elastic">
+                              <select class="cs-select cs-skin-elastic" required>
                                 <option value="0" selected disabled>Выберите метро</option>
                                 <option value="0">Станция метро #1</option>
                                 <option value="0">Станция метро #2</option>
@@ -293,7 +286,7 @@
                           <p class="calculator__heading">Удаленность от станции метро</p>
                           <div class="calculator__select-box distance__select">
                             <div class="cs-skin-elastic" tabindex="0">
-                              <select class="cs-select cs-skin-elastic">
+                              <select class="cs-select cs-skin-elastic" required>
                                 <option value="0" disabled selected>Выберите удаленность</option>
                                 <option value="200">До 10 минут пешком</option>
                                 <option value="0">До 20 минут пешком</option>
@@ -303,16 +296,20 @@
                           </div>
                         </div>
                       </div>
+
+                      <div class="col-xs-12 col-md-6 col-lg-7">
+                        <div type="input" class="calculator__result calculator__result--hidden">Итого: <span class="calculator__result calculator__result--total">0</span>руб.<span class="calculator__result--sale calculator__result--hidden">скидка <span class="calculator__result--discount">0</span>%</span></div>
+                      </div>
                       <div class="col-xs-12 calculator--padding">
                         <div class="row">      
                           <div class="col-xs-12 col-sm-6 col-md-4 pull-right">
-                            <input aria-invalid="false" class="form-control form__input calculator__input--margin" placeholder="Ваше email" name="email" type="email" required>
+                            <input aria-invalid="false" class="form-control form__input form__input--email calculator__input--margin" placeholder="Ваше email" name="email" type="email" required>
                           </div> 
                           <div class="col-xs-12 col-sm-6 col-md-3 pull-right">
-                            <input aria-invalid="false" class="form-control form__input calculator__input--margin" placeholder="Ваше имя" name="name" type="text" required>
+                            <input aria-invalid="false" class="form-control form__input calculator__input--margin" placeholder="Ваше имя" name="name" type="text">
                           </div>
                           <div class="col-xs-12 col-sm-4 col-sm-offset-4 col-md-offset-0">
-                            <button type="submit" class="btn calculator__btn" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">рассчитать</button>
+                            <button type="submit" class="btn calculator__btn calculator__btn--disabled" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Файл отправляется...">рассчитать</button>
                           </div>
                         </div>
                       </div>

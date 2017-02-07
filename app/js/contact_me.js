@@ -61,6 +61,7 @@ $(function() {
 
                     //clear all fields
                     $('.contactForm').trigger("reset");
+            console.log('error');
                 },
             })
         },

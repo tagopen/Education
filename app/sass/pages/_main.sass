@@ -1890,10 +1890,18 @@ button.close
     box-shadow: none 
     width: 100%
     margin-bottom: 18px
+    cursor: pointer
     &:hover,
     &:focus
       background-color: #52ac62 * 1.2
+    &--disabled
+      background-color: #b7b3b3
+      &:hover,
+      &:focus
+        background-color: #b7b3b3
+
   &__result
+    margin: 25px 0
     background-color: #fffdda
     border-radius: 43px
     font: 400 16px/18px $font-leto    
@@ -1902,6 +1910,7 @@ button.close
     color: #282828
     width: 100%    
     &--sale
+      display: inline-block
       color: #ff0000
     &--hidden
       display: none

@@ -275,12 +275,6 @@ $('.comment__slider').slick({
     }
   ]
 });
-  
-$('.calculator__radio').bind('change', calculate);
-
-$('.distance__select, .metro__select')
-  .find('.cs-options li')
-  .bind('click', calculate); // Навешиваем вывод цены при клике на радиокнопку/выбор другого элемента во втором селекте
 
 $(document).ready(function() {
   $('.metro__select')
@@ -288,17 +282,44 @@ $(document).ready(function() {
     .prepend('<li><input class="filter" type="text" /></li>');
 });
 
-function calculate() {
-  var amount         = Number($('[data-amount]:checked').data('amount')),
-      duration       = Number($('[data-duration]:checked').data('duration')),
-      $select        = $('.distance__select, .metro__select').find('.cs-options ul li.cs-selected'),
-      $total         = $('.calculator__result--total'),
-      $sale          = $('.calculator__result--sale'),
-      $discount      = $('.calculator__result--discount'),
+$('.info').on('change', '[type=radio], select', function() {
+  var $info          = $('.info'),
+      $amount        = $info.find('.calculator__amount:checked'),
+      $duration      = $info.find('.calculator__duration:checked'),
+      $metro         = $info.find('.distance__select'),
+      $distance      = $info.find('.metro__select');
+  if (
+    
+    $amount != 'undefined' &&
+    $duration != 'undefined' &&
+    $metro.prop('selected') &&
+    $distance.prop('selected') 
+  ) {
+    $('.calculator__btn').removeClass('calculator__btn--disabled');
+  } else {
+    $('.calculator__btn').addClass('calculator__btn--disabled');
+  }
+});
+
+$('.calculator__btn').on('click', function(e) {
+  e.preventDefault();
+  var $info          = $('.info'),
+      $amount        = $info.find('[data-amount]:checked'),
+      $duration      = $info.find('[data-duration]:checked'),
+      amount         = Number($amount.data('amount')),
+      duration       = Number($duration.data('duration')),
+      $selects       = $info.find('.distance__select, .metro__select'),
+      $select        = $selects.find('.cs-options ul li.cs-selected'),
+      $total         = $info.find('.calculator__result--total'),
+      $sale          = $info.find('.calculator__result--sale'),
+      $discount      = $info.find('.calculator__result--discount'),
+      email          = $info.find('.form__input--email'),
       total          = 0,
       discount       = 0,
       totalRound     = 0,
       BreakException = {};
+
+  $('.calculator__result').removeClass('calculator__result--hidden');
 
   if (!isNaN(duration)) {
     discount = duration;
@@ -341,7 +362,7 @@ function calculate() {
 
   $total.text(total);
   $discount.text(discount);
-};
+});
 
 // search filter
 $(document).ready(function(){

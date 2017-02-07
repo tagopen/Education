@@ -3050,11 +3050,19 @@ button.close {
           box-shadow: none;
   width: 100%;
   margin-bottom: 18px;
+  cursor: pointer;
 }
 .calculator__btn:hover, .calculator__btn:focus {
   background-color: #62ce76;
 }
+.calculator__btn--disabled {
+  background-color: #b7b3b3;
+}
+.calculator__btn--disabled:hover, .calculator__btn--disabled:focus {
+  background-color: #b7b3b3;
+}
 .calculator__result {
+  margin: 25px 0;
   background-color: #fffdda;
   -webkit-border-radius: 43px;
           border-radius: 43px;
@@ -3065,6 +3073,7 @@ button.close {
   width: 100%;
 }
 .calculator__result--sale {
+  display: inline-block;
   color: #ff0000;
 }
 .calculator__result--hidden {
